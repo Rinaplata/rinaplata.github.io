@@ -7,7 +7,7 @@
     --header-height: 3rem;
     /*por defecto tiene tamaño de 16 pizeles(1rem=16) y no es escalable, osea no depende el padre*/
     /* Colors*/
-    --hue-color: 219;
+    --hue-color: 214;
 
     /*hsl(matiz, saturacion, luminucidad) color mode */
     --first-color: hsl(var(--hue-color), 99%, 53%);
@@ -305,7 +305,7 @@ img {
 }
 
 .home__scroll{
-    /*display:none;*/
+    display:none;
 }
 
 .home__scroll-button{
@@ -333,9 +333,49 @@ img {
 }
 
 /*==================== BUTTONS ====================*/
+.button{
+    display: inline-block; 
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
 
+.button:hover{
+    background-color: var(--first-color-alt);
+
+}
+
+.button__icon{
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex{
+   display: inline-flex;
+   align-items: center;
+
+}
 
 /*==================== ABOUT ====================*/
+.about__img{
+ width: 270px;
+ justify-self: center;
+ align-self: center;
+}
+
+.about__description{
+    text-align: center;
+    margin-bottom: var(--mb-0-5);
+}
+
+.about__buttons{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /*==================== SKILLS ====================*/
