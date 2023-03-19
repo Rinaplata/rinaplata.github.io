@@ -11,7 +11,7 @@
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
     <!--========= SWIPER CSS ======================-->
-    <link rel="stylessheet" href="" />
+    <link rel="stylessheet" href="./assets/css/swiper-bundle.min.css" />
 
     <!--========= CSS======================-->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -209,12 +209,130 @@
         </div>
       </div>
     </section>
-
-    <!--========= QUALIFICATION ======================-->
-
     <!--========= SERVICES ======================-->
-
+    <section class="services section" id="section">
+      <h2 class="section__title">Services</h2>
+      <span class="section__subtitle">service I offer</span>
+      <div class="service__container container grid">
+        <!-- SERVICES 1 -->
+        <div class="service__content">
+          <div>
+            <i class="uil uil-tablet service__icon"></i>
+            <h3 class="service__title">
+              UI/UX <br />
+              Designer
+            </h3>
+            <p>
+              Create I design the user interface and landing page development
+            </p>
+          </div>
+        </div>
+        <!-- SERVICES 2 -->
+        <div class="service__content">
+          <div>
+            <i class="uil uil-browser service__icon"></i>
+            <h3 class="service__title">Frontend Developer <br /></h3>
+            <p>
+              build and layout everything that makes up the visible part of a
+              web page, using a programming language.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--========= PORTFOLIO ======================-->
+    <section class="portfolio section" id="portfolio">
+      <h2 class="section__title">Portfolio</h2>
+      <span class="section__subtitle">Completed projects</span>
+      <div class="portfolio__container container swiper-container">
+        <div class="swiper-wrapper">
+          <!--========= PORTFOLIO 1 =================-->
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="./assets/img/portfolio1.png"
+              alt="portafolio uno"
+              class="portfolio__img"
+            />
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Wids 2022</h3>
+              <p class="portfolio__description">landing page the wids 2022</p>
+              <a
+                href="https://wids.datasciencefem.com/"
+                target="_blank"
+                class="button button--portfolio button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+          <!--========= PORTFOLIO 2 =================-->
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="./assets/img/portfolio2.png"
+              alt="portafolio uno"
+              class="portfolio__img"
+            />
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">MauiConf</h3>
+              <p class="portfolio__description">NET MAUI event lading page</p>
+              <a
+                href="https://mauiconf.net/"
+                target="_blank"
+                class="button button--portfolio button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+          <!--========= PORTFOLIO 3 =================-->
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="./assets/img/portafolio3.png"
+              alt="portafolio uno"
+              class="portfolio__img"
+            />
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">APi Colombia</h3>
+              <p class="portfolio__description">
+                landing Page for Api Colombia project
+              </p>
+              <a
+                href="https://api-colombia.com/"
+                target="_blank"
+                class="button button--portfolio button--small portfolio__button"
+              >
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+          <!--========= PORTFOLIO 4 =================-->
+          <div class="portfolio__content grid swiper-slide">
+            <img
+              src="./assets/img/portafolio4.png"
+              alt="portafolio uno"
+              class="portfolio__img"
+            />
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">Portafolio</h3>
+              <p class="portfolio__description">project personal</p>
+              <a
+                href=""
+                class="button button--small portfolio--button portfolio__botton"
+              >
+                Demo
+                <i class="uil uil-arrow-right button_icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
 
     <!--========= FOOTER ======================-->
 
@@ -223,7 +341,7 @@
     <!--========= SCROLL TOP ======================-->
 
     <!--========= SWIPER JS ======================-->
-    <script src=""></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
 
     <!--========= MAIN JS ======================-->
     <script src="assets/js/main.js"></script>

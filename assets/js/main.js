@@ -57,6 +57,21 @@ skillsHeader.forEach((el) =>{
 el.addEventListener('click', toggleSkills)
 })
 
+/*==================== Swiper ====================*/
+
+let swiper = new Swiper(".swiper-container", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
 /*==================== QUALIFICATION TABS ====================*/
 
 /*==================== QUALIFICATION TABS ====================*/

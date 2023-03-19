@@ -373,7 +373,7 @@ img {
 
 /*==================== SKILLS ====================*/
 
-.skills__container{
+.skills__container {
   row-gap: 0;
 }
 
@@ -385,71 +385,115 @@ img {
 }
 
 .skills__icon,
-.skills__arrow{
-    font-size: 2rem;
-    color: var(--first-color);
+.skills__arrow {
+  font-size: 2rem;
+  color: var(--first-color);
 }
 
-.skills__icon{
- margin-right: var(--mb-0-5);
+.skills__icon {
+  margin-right: var(--mb-0-5);
 }
 
-.skills__title{
- font-size: var(--h3-font-size);
+.skills__title {
+  font-size: var(--h3-font-size);
 }
 
-.skills__subtitle{
- font-size: var(--small-font-size);
- color: var(--text-color-light);
+.skills__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
 }
 
-.skills__arrow{
- margin-left: auto;
- transition: .4s;
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
 }
 
-.skills__titles{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: var(--mb-0-5);
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
 }
 
-.skills__name{
+.skills__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
 }
-.skills__list{
-    row-gap: 1.5rem;
-    padding-left: 2.7rem;
+.skills__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
 }
-.skills__close .skills__list{
-    height: 0;
-    overflow: hidden;
+.skills__close .skills__list {
+  height: 0;
+  overflow: hidden;
 }
-.skills__open .skills__list{
+.skills__open .skills__list {
   height: max-content;
   margin-bottom: var(--mb-2-5);
 }
 
-.skills__open .skills__arrow{
-    transform: rotate(-180deg);
+.skills__open .skills__arrow {
+  transform: rotate(-180deg);
 }
 
-
-/*==================== QUALIFICATION ====================*/
-
 /*==================== SERVICES ====================*/
+.service__container {
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
 
-/* Active Modal */
+.service__content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 3s;
+}
+
+.service__content :hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.service__icon {
+  display: block;
+  font-size: 1.7rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+}
+
+.service__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
 
 /*==================== PORTFOLIO ====================*/
+.portfolio__container {
+  overflow: initial; /*permite regular la visiblidad de los contenidos que sobresalen de una caja html*/
+}
 
-/*==================== PROJECT IN MIND ====================*/
+.portfolio__content {
+  padding: 0 1.5rem;
+}
 
-/*==================== TESTIMONIAL ====================*/
+.portfolio__img {
+  width: 270px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
 
-/*==================== CONTACT ME ====================*/
+.portfolio__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
 
+.portfolio__description {
+  margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__button:hover .button_icon {
+  transform: translateX(0.25rem);
+}
 /*==================== FOOTER ====================*/
 
 /*========== SCROLL UP ==========*/
