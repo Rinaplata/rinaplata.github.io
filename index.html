@@ -11,7 +11,10 @@
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
     <!--========= SWIPER CSS ======================-->
-    <link rel="stylessheet" href="./assets/css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
     <!--========= CSS======================-->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -23,7 +26,6 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">RinaPlata</a>
-
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
@@ -31,11 +33,6 @@
                 <i class="uil uil-estate nav__ico"></i>Home
               </a>
             </li>
-            <!-- <li class="nav__item">
-                <a href="#about" class="nav__link">
-                    <i class="uil uil-user nav__ico"></i>About  
-                </a>
-              </li> -->
             <li class="nav__item">
               <a href="#skills" class="nav__link">
                 <i class="uil uil-file-alt nav__ico"></i>skills
@@ -51,15 +48,9 @@
                 <i class="uil uil-scenery nav__ico"></i>Portfolio
               </a>
             </li>
-            <!--               <li class="nav__item">
-                <a href="#contact" class="nav__link">
-                    <i class="uil uil-message nav__ico"></i>Contactme
-                </a>
-              </li> -->
           </ul>
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
-
         <div class="nav__btns">
           <div class="nav__toggle" id="nav-toggle">
             <i class="uil uil-apps"></i>
@@ -70,279 +61,325 @@
 
     <!--========= MAIN ======================-->
     <main class="main"></main>
+      <!--========= HOME ======================-->
+      <section class="home section" id="home">
+        <div class="home__conteiner container grid">
+          <div class="home__content">
+            <div class="home__content grid">
+              <div class="home__social">
+                <a
+                  href="https://www.linkedin.com/in/rina-plata"
+                  class="home__social-icon"
+                  target="_blank"
+                >
+                  <i class="uil uil-linkedin-alt"></i>
+                </a>
+                <a
+                  href="https://github.com/Rinaplata"
+                  class="home__social-icon"
+                  target="_blank"
+                >
+                  <i class="uil uil-github-alt"></i>
+                </a>
+                <a
+                  href="https://www.figma.com/@rinaplata"
+                  class="home__social-icon"
+                  target="_blank"
+                >
+                  <iconify-icon
+                    inline
+                    icon="radix-icons:figma-logo"
+                  ></iconify-icon>
+                </a>
+              </div>
+              <div class="home__img">
+                <img src="assets/img/perfil.png" class="home__perfil" alt="" />
+              </div>
+              <div class="home__data">
+                <h1 class="home__title">Hi, I'am Rina Plata</h1>
+                <h3 class="home__subtitle">Frontend Developer- React</h3>
+                <p class="home__description">
+                  I'm a software engineering student, I have experience in HTML,
+                  CSS, JavaScript and React. I study on different learning
+                  platforms. I love cooking, cats, participating in
+                  technological communities and sharing time with my friends.
+                </p>
+                <a
+                  download=""
+                  href="assets/pdf/CurriculumRinaPlata.pdf"
+                  class="button button--flex"
+                  target="_blank"
+                >
+                  Download CV <i class="uil uil-download-alt button__icon"></i>
+                </a>
+              </div>
+            </div>
 
-    <!--========= HOME ======================-->
-    <section class="home section" id="home">
-      <div class="home__conteiner container grid">
-        <div class="home__content">
-          <div class="home__content grid">
-            <div class="home__social">
-              <a
-                href="https://www.linkedin.com/in/rina-plata"
-                class="home__social-icon"
-                target="_blank"
-              >
-                <i class="uil uil-linkedin-alt"></i>
-              </a>
-              <a
-                href="https://github.com/Rinaplata"
-                class="home__social-icon"
-                target="_blank"
-              >
-                <i class="uil uil-github-alt"></i>
-              </a>
-              <a
-                href="https://www.figma.com/@rinaplata"
-                class="home__social-icon"
-                target="_blank"
-              >
-                <iconify-icon
-                  inline
-                  icon="radix-icons:figma-logo"
-                ></iconify-icon>
-              </a>
-            </div>
-            <div class="home__img">
-              <img src="assets/img/perfil.png" class="home__perfil" alt="" />
-            </div>
-            <div class="home__data">
-              <h1 class="home__title">Hi, I'am Rina Plata</h1>
-              <h3 class="home__subtitle">Frontend Developer- React</h3>
-              <p class="home__description">
-                I'm a software engineering student, I have experience in HTML,
-                CSS, JavaScript and React. I study on different learning
-                platforms. I love cooking, cats, participating in technological
-                communities and sharing time with my friends.
-              </p>
-              <a
-                download=""
-                href="assets/pdf/CurriculumRinaPlata.pdf"
-                class="button button--flex"
-                target="_blank"
-              >
-                Download CV <i class="uil uil-download-alt button__icon"></i>
+            <div class="home__scroll">
+              <a href="#about" class="home__scroll-button button--flex">
+                <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+                <span class="home__scroll-name">Scroll down</span>
+                <i class="uil uil-arrow-down home__scroll-arrow"></i>
               </a>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">Technical Skills</span>
 
-          <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex">
-              <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
-              <span class="home__scroll-name">Scroll down</span>
-              <i class="uil uil-arrow-down home__scroll-arrow"></i>
+        <div class="skills__container container grid"></div>
+        <div>
+          <!--=========SKILLS UNO======================-->
+          <div class="skills__constent skills__open">
+            <div class="skills__header">
+              <i class="uil uil-brackets-curly skills__icon"></i>
+              <div>
+                <h1 class="skills__titles">Frontend Developer</h1>
+                <span class="skills__subtitle">One year of experience</span>
+              </div>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__title">
+                  <h3 class="skills__name">HTML</h3>
+                  <h3 class="skills__name">CSS</h3>
+                  <h3 class="skills__name">JavasScript</h3>
+                  <h3 class="skills__name">React.js</h3>
+                  <h3 class="skills__name">Git</h3>
+                  <h3 class="skills__name">SQL</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--=========SKILLS DOS======================-->
+          <div class="skills__constent skills__close">
+            <div class="skills__header">
+              <i class="uil uil-desktop skills__icon"></i>
+              <div>
+                <h1 class="skills__titles">Other</h1>
+                <span class="skills__subtitle">One year of experience</span>
+              </div>
+              <i class="uil uil-angle-down skills__arrow"></i>
+            </div>
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__title">
+                  <h3 class="skills__name">FIGMA</h3>
+                  <h3 class="skills__name">BOOTSTRAP</h3>
+                  <h3 class="skills__name">SCRUM</h3>
+                  <h3 class="skills__name">JIRA</h3>
+                  <h3 class="skills__name">GITHUG</h3>
+                  <h3 class="skills__name">VISUAL STUDIO CODE</h3>
+                  <h3 class="skills__name">NPM</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--========= SERVICES ======================-->
+      <section class="services section" id="services">
+        <h2 class="section__title">Services</h2>
+        <span class="section__subtitle">service I offer</span>
+        <div class="service__container container grid">
+          <!-- SERVICES 1 -->
+          <div class="service__content">
+            <div>
+              <i class="uil uil-tablet service__icon"></i>
+              <h3 class="service__title">
+                UI/UX <br />
+                Designer
+              </h3>
+              <p>
+                Create I design the user interface and landing page development
+              </p>
+            </div>
+          </div>
+          <!-- SERVICES 2 -->
+          <div class="service__content">
+            <div>
+              <i class="uil uil-browser service__icon"></i>
+              <h3 class="service__title">Frontend Developer <br /></h3>
+              <p>
+                build and layout everything that makes up the visible part of a
+                web page, using a programming language.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--========= PORTFOLIO ======================-->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <span class="section__subtitle">Completed projects</span>
+        <div class="portfolio__container container swiper swiper-container">
+          <div class="swiper-wrapper">
+            <!--========= PORTFOLIO 1 =================-->
+            <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./assets/img/portfolio1.png"
+                alt="portafolio uno"
+                class="portfolio__img"
+              />
+              <div class="portfolio-language-icon">
+                <i class="fa-brands fa-html5 language-icon-portfolio"></i>
+                <i class="fa-brands fa-css3-alt language-icon-portfolio"></i>
+                <i class="fa-brands fa-js language-icon-portfolio"></i>
+                <i class="fab fa-bootstrap language-icon-portfolio"></i>
+              </div>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Wids 2022</h3>
+                <p class="portfolio__description">landing page the wids 2022</p>
+                <a
+                  href="https://wids.datasciencefem.com/"
+                  target="_blank"
+                  class="button button--portfolio button--small portfolio__button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right button_icon"></i>
+                </a>
+              </div>
+            </div>
+            <!--========= PORTFOLIO 2 =================-->
+            <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./assets/img/portfolio2.png"
+                alt="portafolio uno"
+                class="portfolio__img"
+              />
+              <div class="portfolio-language-icon">
+                <i class="fa-brands fa-html5 language-icon-portfolio"></i>
+                <i class="fa-brands fa-css3-alt language-icon-portfolio"></i>
+                <i class="fa-brands fa-js language-icon-portfolio"></i>
+                <i class="fab fa-bootstrap language-icon-portfolio"></i>
+              </div>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">MauiConf</h3>
+                <p class="portfolio__description">NET MAUI event lading page</p>
+                <a
+                  href="https://mauiconf.net/"
+                  target="_blank"
+                  class="button button--portfolio button--small portfolio__button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right button_icon"></i>
+                </a>
+              </div>
+            </div>
+            <!--========= PORTFOLIO 3 =================-->
+            <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./assets/img/portafolio3.png"
+                alt="portafolio uno"
+                class="portfolio__img"
+              />
+              <div class="portfolio-language-icon">
+                <i class="fa-brands fa-html5 language-icon-portfolio"></i>
+                <i class="fa-brands fa-css3-alt language-icon-portfolio"></i>
+                <i class="fa-brands fa-js language-icon-portfolio"></i>
+              </div>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">APi Colombia</h3>
+                <p class="portfolio__description">
+                  landing Page for Api Colombia project
+                </p>
+                <a
+                  href="https://api-colombia.com/"
+                  target="_blank"
+                  class="button button--portfolio button--small portfolio__button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right button_icon"></i>
+                </a>
+              </div>
+            </div>
+            <!--========= PORTFOLIO 4 =================-->
+            <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./assets/img/portafolio4.png"
+                alt="portafolio uno"
+                class="portfolio__img"
+              />
+              <div class="portfolio-language-icon">
+                <i class="fa-brands fa-html5 language-icon-portfolio"></i>
+                <i class="fa-brands fa-css3-alt language-icon-portfolio"></i>
+                <i class="fa-brands fa-js language-icon-portfolio"></i>
+              </div>
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Portafolio</h3>
+                <p class="portfolio__description">project personal</p>
+                <a
+                  href=""
+                  class="button button--small portfolio--button portfolio__botton"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right button_icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    
+    <!--========= FOOTER ======================-->
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Rina Plata</h1>
+            <span class="footer__subtitle">Frontend Developer</span>
+          </div>
+          <ul class="footer__link">
+            <li>
+              <a href="#services" class="footer__link">Service</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer__link">Portfolio</a>
+            </li>
+            <li>
+              <a href="#home" class="footer__link">Home</a>
+            </li>
+          </ul>
+          <div class="footer__socials">
+            <a href="https://github.com/Rinaplata" target="_blank" class="footer__social">
+              <i class="uil uil-github-alt"></i>
+            </a>
+            <a href="https://twitter.com/rina_plata" target="_blank"  class="footer__social">
+              <i class="uil uil-twitter-alt"></i>
+            </a>
+            <a href="https://www.instagram.com/rina_plata/" target="_blank"  class="footer__social">
+              <i class="uil uil-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rina-plata/" target="_blank"  class="footer__social">
+              <i class="uil uil-linkedin-alt"></i>
             </a>
           </div>
         </div>
+        <p class="footer__copy">&#169; rinaplata. all right reserved</p>
       </div>
-    </section>
+    </footer>
 
-    <!--========= ABOUT AS ======================-->
-    <!--     <section class="about section" id="about"> 
-      <h2 class="section__title">About Me </h2>
-      <span class="section__subtitle">introduction</span>
-
-      <div class="about__container container grid">
-        <img src="assets/img/project.png" alt="" class="about__img">
-        <div class="about__data">
-          <p class="about__description"> web developer, experinence in javascript, 
-          html, css3 and react </p>
-        </div>
-        </div> 
-          <div class="about__buttons">
-
-          </div>
-      </div>
-    </section> -->
-    <!--========= SKILLS ======================-->
-    <section class="skills section" id="skills">
-      <h2 class="section__title">Skills</h2>
-      <span class="section__subtitle">Technical Skills</span>
-
-      <div class="skills__container container grid"></div>
-      <div>
-        <!--=========SKILLS UNO======================-->
-        <div class="skills__constent skills__open">
-          <div class="skills__header">
-            <i class="uil uil-brackets-curly skills__icon"></i>
-            <div>
-              <h1 class="skills__titles">Frontend Developer</h1>
-              <span class="skills__subtitle">One year of experience</span>
-            </div>
-            <i class="uil uil-angle-down skills__arrow"></i>
-          </div>
-          <div class="skills__list grid">
-            <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">HTML</h3>
-                <h3 class="skills__name">CSS</h3>
-                <h3 class="skills__name">JavasScript</h3>
-                <h3 class="skills__name">React.js</h3>
-                <h3 class="skills__name">Git</h3>
-                <h3 class="skills__name">SQL</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--=========SKILLS DOS======================-->
-        <div class="skills__constent skills__close">
-          <div class="skills__header">
-            <i class="uil uil-desktop skills__icon"></i>
-            <div>
-              <h1 class="skills__titles">Other</h1>
-              <span class="skills__subtitle">One year of experience</span>
-            </div>
-            <i class="uil uil-angle-down skills__arrow"></i>
-          </div>
-          <div class="skills__list grid">
-            <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">FIGMA</h3>
-                <h3 class="skills__name">BOOTSTRAP</h3>
-                <h3 class="skills__name">SCRUM</h3>
-                <h3 class="skills__name">JIRA</h3>
-                <h3 class="skills__name">GITHUG</h3>
-                <h3 class="skills__name">VISUAL STUDIO CODE</h3>
-                <h3 class="skills__name">NPM</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--========= SERVICES ======================-->
-    <section class="services section" id="section">
-      <h2 class="section__title">Services</h2>
-      <span class="section__subtitle">service I offer</span>
-      <div class="service__container container grid">
-        <!-- SERVICES 1 -->
-        <div class="service__content">
-          <div>
-            <i class="uil uil-tablet service__icon"></i>
-            <h3 class="service__title">
-              UI/UX <br />
-              Designer
-            </h3>
-            <p>
-              Create I design the user interface and landing page development
-            </p>
-          </div>
-        </div>
-        <!-- SERVICES 2 -->
-        <div class="service__content">
-          <div>
-            <i class="uil uil-browser service__icon"></i>
-            <h3 class="service__title">Frontend Developer <br /></h3>
-            <p>
-              build and layout everything that makes up the visible part of a
-              web page, using a programming language.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--========= PORTFOLIO ======================-->
-    <section class="portfolio section" id="portfolio">
-      <h2 class="section__title">Portfolio</h2>
-      <span class="section__subtitle">Completed projects</span>
-      <div class="portfolio__container container swiper-container">
-        <div class="swiper-wrapper">
-          <!--========= PORTFOLIO 1 =================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="./assets/img/portfolio1.png"
-              alt="portafolio uno"
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">Wids 2022</h3>
-              <p class="portfolio__description">landing page the wids 2022</p>
-              <a
-                href="https://wids.datasciencefem.com/"
-                target="_blank"
-                class="button button--portfolio button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-          <!--========= PORTFOLIO 2 =================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="./assets/img/portfolio2.png"
-              alt="portafolio uno"
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">MauiConf</h3>
-              <p class="portfolio__description">NET MAUI event lading page</p>
-              <a
-                href="https://mauiconf.net/"
-                target="_blank"
-                class="button button--portfolio button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-          <!--========= PORTFOLIO 3 =================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="./assets/img/portafolio3.png"
-              alt="portafolio uno"
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">APi Colombia</h3>
-              <p class="portfolio__description">
-                landing Page for Api Colombia project
-              </p>
-              <a
-                href="https://api-colombia.com/"
-                target="_blank"
-                class="button button--portfolio button--small portfolio__button"
-              >
-                Demo
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-          <!--========= PORTFOLIO 4 =================-->
-          <div class="portfolio__content grid swiper-slide">
-            <img
-              src="./assets/img/portafolio4.png"
-              alt="portafolio uno"
-              class="portfolio__img"
-            />
-            <div class="portfolio__data">
-              <h3 class="portfolio__title">Portafolio</h3>
-              <p class="portfolio__description">project personal</p>
-              <a
-                href=""
-                class="button button--small portfolio--button portfolio__botton"
-              >
-                Demo
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <!--========= FOOTER ======================-->
-
-    <!--========= CONTACT ======================-->
-
+ 
     <!--========= SCROLL TOP ======================-->
-
+    <a href="" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
     <!--========= SWIPER JS ======================-->
-    <script src="/assets/js/swiper-bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--========= fontawesome ======================-->
+    <script src="https://kit.fontawesome.com/87a7f503de.js"
+      crossorigin="anonymous"
+    ></script>
     <!--========= MAIN JS ======================-->
     <script src="assets/js/main.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>

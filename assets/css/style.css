@@ -39,7 +39,7 @@
 
   /*margenes bottom */
   /* .25 = 4px, .5rem = 8px, .75rem = 12px....*/
-  --mb-0-25: 25rem;
+  --mb-0-25: .25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
   --mb-1: 1rem;
@@ -69,7 +69,6 @@
 
 /*========== Variables Dark theme ==========*/
 
-/*========== Button Dark/Light ==========*/
 
 /*==================== BASE ====================*/
 * {
@@ -250,6 +249,9 @@ img {
 /* active link*/
 
 /* Chance background header */
+.scroll-header{
+box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
 
 /*==================== HOME ====================*/
 .home__container {
@@ -477,7 +479,7 @@ img {
 }
 
 .portfolio__img {
-  width: 270px;
+  width: 500px;
   border-radius: 0.5rem;
   justify-self: center;
 }
@@ -494,14 +496,141 @@ img {
 .portfolio__button:hover .button_icon {
   transform: translateX(0.25rem);
 }
-/*==================== FOOTER ====================*/
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: " ";
+}
+
+.swiper-portfolio-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.swiper-button-prev {
+  left: -0.5rem;
+  top: 5.0rem;
+}
+
+.swiper-button-next {
+  right: -0.5rem;
+  top: 5.0rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: revert;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet {
+  outline: none;
+}
+
+.portfolio-language-icon {
+    position: relative;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.language-icon-portfolio {
+  font-size: 2rem;
+  color: #434c55;
+}
+/*==================== FOOTER ====================*/
+.footer{
+  padding-top: 2rem;
+  
+}
+
+.footer__container{
+row-gap: 3.5rem;
+}
+
+.footer__bg{
+background-color: var(--first-color-second);
+padding: 2rem 0 3rem;
+}
+
+.footer__title{
+font-size: var(--h1-font-size);
+margin-bottom: var(--mb-0-25);
+}
+
+.footer__subtitle{
+  font-size: var(--small-font-size);
+}
+
+.footer__link{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.footer__link:hover{
+  color: hsl(210deg 1.89% 79.22%);;
+}
+
+.footer__social{
+  font-size: 1.25rem;
+  margin-right: var(--mb-1-5);
+}
+
+.footer__social:hover{
+  color: hsl(210deg 1.89% 79.22%);;
+}
+
+.footer__copy{
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  color: hsl(210deg 1.89% 79.22%);
+  margin-top: var(--mb-3);
+}
+
+.footer__link,
+.footer__social,
+.footer__title,
+.footer__subtitle{
+  color: #fff;
+}
 /*========== SCROLL UP ==========*/
 
+.scrollup{
+position: fixed;
+right: 1rem;
+bottom: -20%;
+background-color: var(--first-color);
+padding: 0 .3rem;
+border-radius: .4rem;
+z-index: var(--z-tooltip);
+transition: .4s;
+}
+
+.scrollup:hover{
+background-color: hsl(210deg 1.89% 79.22%);;
+}
+.scrollup__icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 /* Show scroll */
+.show-scroll{ 
+  bottom: 5rem;
+}
 
 /*========== SCROLL BAR ==========*/
-
+::-webkit-scrollbar{
+  
+}
 /*==================== MEDIA QUERIES ====================*/
 
 /* For small devices */
