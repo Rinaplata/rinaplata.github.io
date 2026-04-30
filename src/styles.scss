@@ -1,38 +1,40 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 :root {
   color-scheme: light;
-  --color-bg: #fffaf4;
-  --color-surface: #ffffff;
-  --color-surface-strong: #f7efe5;
-  --color-text: #18212f;
-  --color-muted: #526071;
-  --color-primary: #0f766e;
-  --color-primary-strong: #0b5e58;
-  --color-secondary: #c2410c;
-  --color-accent: #d97706;
-  --color-deep: #111827;
-  --color-border: rgba(24, 33, 47, 0.14);
-  --shadow: 0 22px 70px rgba(17, 24, 39, 0.13);
-  --focus-ring: #2563eb;
-  --max-width: 1180px;
+  --color-bg: #eeeeeb;
+  --color-surface: #fafaf7;
+  --color-surface-strong: #e6e6e2;
+  --color-text: #151515;
+  --color-muted: #3e3e3b;
+  --color-primary: #ff5f1f;
+  --color-primary-strong: #cc3d00;
+  --color-secondary: #151515;
+  --color-accent: #ff5f1f;
+  --color-deep: #151515;
+  --color-border: rgba(21, 21, 21, 0.2);
+  --color-grid: rgba(21, 21, 21, 0.1);
+  --shadow: none;
+  --focus-ring: #ff5f1f;
+  --max-width: 1440px;
 }
 
 :root.dark {
   color-scheme: dark;
-  --color-bg: #111827;
-  --color-surface: #1f2937;
-  --color-surface-strong: #263445;
-  --color-text: #f9fafb;
-  --color-muted: #cbd5e1;
-  --color-primary: #2dd4bf;
-  --color-primary-strong: #5eead4;
-  --color-secondary: #fb923c;
-  --color-accent: #facc15;
-  --color-deep: #0b1120;
-  --color-border: rgba(249, 250, 251, 0.16);
-  --shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
-  --focus-ring: #93c5fd;
+  --color-bg: #111111;
+  --color-surface: #1a1a1a;
+  --color-surface-strong: #202020;
+  --color-text: #f5f3ef;
+  --color-muted: #c7c2ba;
+  --color-primary: #ff6a24;
+  --color-primary-strong: #ffb088;
+  --color-secondary: #f5f3ef;
+  --color-accent: #ff6a24;
+  --color-deep: #050505;
+  --color-border: rgba(245, 243, 239, 0.22);
+  --color-grid: rgba(245, 243, 239, 0.1);
+  --shadow: none;
+  --focus-ring: #ff8a4c;
 }
 
 * {
@@ -46,9 +48,11 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   background: var(--color-bg);
   color: var(--color-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body::before {
@@ -58,8 +62,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(135deg, rgba(15, 118, 110, 0.09) 0 18%, transparent 18% 100%),
-    repeating-linear-gradient(90deg, transparent 0 44px, rgba(194, 65, 12, 0.045) 44px 46px);
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 112px 112px;
 }
 
 img {
@@ -79,8 +84,8 @@ textarea {
 }
 
 :focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: 3px;
+  outline: 4px solid var(--focus-ring);
+  outline-offset: 4px;
 }
 
 .skip-link {
@@ -90,7 +95,7 @@ textarea {
   z-index: 20;
   transform: translateY(-150%);
   padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0;
   background: var(--color-deep);
   color: #ffffff;
 }
@@ -104,12 +109,12 @@ textarea {
   top: 0;
   z-index: 10;
   border-bottom: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
-  backdrop-filter: blur(18px);
+  background: color-mix(in srgb, var(--color-bg) 96%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .nav {
-  max-width: var(--max-width);
+  max-width: none;
   min-height: 4.5rem;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -119,8 +124,13 @@ textarea {
 }
 
 .brand {
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.5rem;
+  border-right: 1px solid var(--color-border);
+  padding-right: 1.25rem;
+  font-family: "Space Grotesk", "IBM Plex Mono", sans-serif;
+  font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -137,16 +147,16 @@ textarea {
   display: inline-flex;
   align-items: center;
   padding: 0.35rem 0.7rem;
-  border-radius: 0.45rem;
+  border-radius: 0;
   color: var(--color-muted);
-  font-size: 0.92rem;
-  font-weight: 700;
+  font-size: 0.86rem;
+  font-weight: 600;
   text-decoration: none;
 }
 
 .nav-panel a:hover {
   color: var(--color-primary);
-  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  background: transparent;
 }
 
 .icon-button,
@@ -154,7 +164,7 @@ textarea {
   min-width: 44px;
   min-height: 44px;
   border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
+  border-radius: 0;
   background: var(--color-surface);
   color: var(--color-text);
   cursor: pointer;
@@ -172,47 +182,59 @@ textarea {
 }
 
 .hero {
-  max-width: var(--max-width);
+  max-width: none;
   min-height: calc(100svh - 4.5rem);
-  margin: 0 auto;
-  padding: clamp(4rem, 8vw, 7rem) 1.25rem 4rem;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(290px, 0.8fr);
-  align-items: center;
-  gap: clamp(2rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .eyebrow,
 .section-heading p,
 .meta {
   color: var(--color-primary);
-  font-size: 0.86rem;
-  font-weight: 900;
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
+.hero__content {
+  display: flex;
+  min-height: calc(100svh - 4.5rem);
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--color-border);
+  padding: clamp(2rem, 5vw, 4.5rem);
+}
+
 .hero h1 {
   margin: 0;
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: clamp(3.2rem, 8vw, 6.5rem);
-  line-height: 0.95;
+  font-family: "Space Grotesk", "IBM Plex Mono", sans-serif;
+  font-size: clamp(4.5rem, 12vw, 12rem);
+  line-height: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .hero__role {
   margin: 1.25rem 0 0;
   color: var(--color-secondary);
-  font-size: clamp(1.25rem, 3vw, 2.1rem);
-  font-weight: 900;
-  line-height: 1.2;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .hero__description {
   max-width: 64ch;
   margin: 1.1rem 0 0;
   color: var(--color-muted);
-  font-size: 1.12rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .hero__actions,
@@ -237,10 +259,16 @@ textarea {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-border);
-  border-radius: 0.55rem;
+  border-radius: 0;
   background: var(--color-surface);
-  color: var(--color-primary-strong);
+  color: var(--color-text);
   text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.hero__socials a:hover {
+  background: var(--color-primary);
+  color: #111111;
 }
 
 .button,
@@ -250,20 +278,18 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 0.82rem 1.1rem;
-  border-radius: 0.55rem;
-  font-weight: 900;
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
   text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
-.button--primary {
-  border: 0;
-  background: var(--color-primary);
-  color: #ffffff;
-}
-
+.button--primary,
 .button--secondary {
-  background: var(--color-secondary);
-  color: #ffffff;
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #111111;
 }
 
 .button--ghost,
@@ -272,32 +298,42 @@ textarea {
   background: var(--color-surface);
 }
 
-.hero__portrait {
-  position: relative;
+.button--ghost:hover,
+.card-actions a:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #111111;
 }
 
-.hero__portrait::before {
-  content: "";
-  position: absolute;
-  inset: -1.1rem;
-  z-index: -1;
-  border-radius: 1.2rem;
-  background:
-    linear-gradient(135deg, var(--color-primary), transparent 34%),
-    linear-gradient(315deg, var(--color-secondary), transparent 42%);
-}
-
-.hero__portrait img,
 .about__grid img,
 .talk-card img,
 .project-card img {
-  border-radius: 0.8rem;
+  border-radius: 0;
   object-fit: cover;
-  box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
+}
+
+.hero__visual {
+  min-width: 0;
+}
+
+.scene-placeholder {
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+  border-left: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 120px 120px;
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .section {
   padding: clamp(4rem, 8vw, 6.5rem) 1.25rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .section--warm {
@@ -315,16 +351,18 @@ textarea {
 }
 
 .section-heading {
-  max-width: var(--max-width);
+  max-width: min(var(--max-width), calc(100vw - 2.5rem));
   margin: 0 auto 2.5rem;
 }
 
 .section-heading h2 {
   max-width: 780px;
   margin: 0.35rem 0 0;
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: clamp(2rem, 4.5vw, 3.6rem);
-  line-height: 1.04;
+  font-family: "Space Grotesk", "IBM Plex Mono", sans-serif;
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .section-heading span {
@@ -373,9 +411,9 @@ textarea {
 .contact-form,
 .contact-card {
   border: 1px solid var(--color-border);
-  border-radius: 0.8rem;
+  border-radius: 0;
   background: var(--color-surface);
-  box-shadow: 0 12px 38px rgba(17, 24, 39, 0.08);
+  box-shadow: none;
 }
 
 .card {
@@ -396,6 +434,8 @@ textarea {
   margin: 0.25rem 0 0.55rem;
   color: var(--color-text);
   font-size: 1.35rem;
+  font-family: "Space Grotesk", "IBM Plex Mono", sans-serif;
+  text-transform: uppercase;
 }
 
 .section--deep .project-card h3 {
@@ -434,9 +474,9 @@ textarea {
   min-height: 32px;
   padding: 0.35rem 0.65rem;
   border: 1px solid color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--color-primary) 9%, transparent);
-  color: var(--color-primary-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text);
   font-size: 0.85rem;
   font-weight: 800;
 }
@@ -527,7 +567,7 @@ textarea {
 .contact-form textarea {
   width: 100%;
   border: 1px solid var(--color-border);
-  border-radius: 0.55rem;
+  border-radius: 0;
   background: var(--color-bg);
   color: var(--color-text);
   padding: 0.9rem 1rem;
@@ -550,7 +590,7 @@ textarea {
 }
 
 .footer {
-  max-width: var(--max-width);
+  max-width: none;
   margin: 0 auto;
   padding: 2rem 1.25rem;
   display: flex;
@@ -575,7 +615,7 @@ textarea {
 }
 
 .reveal {
-  animation: reveal 700ms ease both;
+  animation: reveal 1200ms ease both;
 }
 
 @keyframes reveal {

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { PROFILE } from '../../data/profile.data';
+import { HeroSceneComponent } from './hero-scene.component';
 import { SocialIconComponent } from '../../shared/components/social-icon.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [SocialIconComponent],
+  imports: [HeroSceneComponent, SocialIconComponent],
   template: `
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__content reveal">
@@ -31,13 +32,14 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
         </div>
       </div>
 
-      <div class="hero__portrait reveal" aria-label="Retrato de Rina Plata">
-        <img
-          src="assets/images/perfil.png"
-          width="460"
-          height="460"
-          alt="Retrato profesional de Rina Plata"
-        >
+      <div class="hero__visual reveal">
+        @defer (on viewport) {
+          <app-hero-scene />
+        } @placeholder {
+          <div class="scene-placeholder" aria-hidden="true">
+            <span>WEBGL / FRONTEND</span>
+          </div>
+        }
       </div>
     </section>
   `
