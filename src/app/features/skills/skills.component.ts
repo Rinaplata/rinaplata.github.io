@@ -21,7 +21,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
             <h3>{{ group.category }}</h3>
             <div class="tags tags--large">
               @for (skill of group.skills; track skill) {
-                <span>{{ skill }}</span>
+                <span [class]="getSkillClass(group.category)">{{ skill }}</span>
               }
             </div>
           </article>
@@ -32,4 +32,26 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 })
 export class SkillsComponent {
   readonly skillGroups = SKILLS;
+
+  getSkillClass(category: string): string {
+    const normalized = category.toLowerCase();
+
+    if (normalized.includes('frontend')) {
+      return 'pill--frontend';
+    }
+
+    if (normalized.includes('backend') || normalized.includes('api')) {
+      return 'pill--backend';
+    }
+
+    if (normalized.includes('herramientas')) {
+      return 'pill--design';
+    }
+
+    if (normalized.includes('accesibilidad')) {
+      return 'pill--accessibility';
+    }
+
+    return 'pill--community';
+  }
 }

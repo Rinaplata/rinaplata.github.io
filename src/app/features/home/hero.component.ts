@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { PROFILE } from '../../data/profile.data';
-import { HeroSceneComponent } from './hero-scene.component';
 import { SocialIconComponent } from '../../shared/components/social-icon.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeroSceneComponent, SocialIconComponent],
+  imports: [SocialIconComponent],
   template: `
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__content reveal">
@@ -33,13 +32,22 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
       </div>
 
       <div class="hero__visual reveal">
-        @defer (on viewport) {
-          <app-hero-scene />
-        } @placeholder {
-          <div class="scene-placeholder" aria-hidden="true">
-            <span>WEBGL / FRONTEND</span>
-          </div>
-        }
+        <div class="hero__photo-card">
+          <img
+            src="assets/images/perfil.png"
+            width="520"
+            height="520"
+            alt="Retrato profesional de Rina Plata"
+          >
+        </div>
+        <div class="hero__floating-card hero__floating-card--top">
+          <strong>Frontend</strong>
+          <span>Angular · React · Accesibilidad</span>
+        </div>
+        <div class="hero__floating-card hero__floating-card--bottom">
+          <strong>Comunidad</strong>
+          <span>Tecnología, inclusión e identidad Wayuu</span>
+        </div>
       </div>
     </section>
   `
