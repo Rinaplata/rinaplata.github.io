@@ -1,0 +1,27 @@
+import { Project } from '../models/portfolio.models';
+
+export const PROJECTS: Project[] = [
+  {
+    name: 'Portafolio profesional',
+    description: 'Sitio personal construido para presentar experiencia, charlas, comunidades y proyectos destacados.',
+    impact: 'Comunica una identidad profesional conectada con tecnología, accesibilidad e interculturalidad.',
+    technologies: ['Angular', 'TypeScript', 'SCSS', 'Accesibilidad'],
+    image: 'assets/images/portfolio1.png',
+    githubUrl: 'https://github.com/Rinaplata/rinaplata.github.io',
+    demoUrl: 'https://rinaplata.github.io'
+  },
+  {
+    name: 'Interfaces accesibles',
+    description: 'Componentes frontend enfocados en navegación por teclado, contraste y estructura semántica.',
+    impact: 'Mejora la experiencia de personas con distintas formas de navegar la web.',
+    technologies: ['React', 'HTML', 'CSS', 'WCAG', 'axe DevTools'],
+    image: 'assets/images/portfolio2.png'
+  },
+  {
+    name: 'Tecnología para comunidades',
+    description: 'Prototipos y contenidos digitales para educación, comunidad e impacto social.',
+    impact: 'Acerca herramientas tecnológicas a conversaciones sobre territorio, educación e identidad.',
+    technologies: ['Figma', 'JavaScript', 'HTML', 'CSS'],
+    image: 'assets/images/portafolio3.png'
+  }
+];
