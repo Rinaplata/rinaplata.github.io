@@ -20,7 +20,7 @@ Desde Colombia participo en espacios de tecnología, educación e inclusión, co
 - **Charlas y eventos:** participación como speaker en comunidades y eventos tecnológicos.
 - **Comunidades:** Guardianes Ancestrales, Pioneras Dev, Women Techmakers, WiDS Medellín, API Colombia y espacios indígenas/tecnológicos.
 - **Proyectos:** proyectos destacados con enfoque en frontend, educación, accesibilidad e impacto social.
-- **Habilidades:** Angular, React, TypeScript, JavaScript, HTML, CSS, Tailwind, PrimeNG, C#, .NET, REST APIs, WCAG, Lighthouse, WAVE, axe DevTools, Figma, GitHub, Azure DevOps, Vercel, Claude, WinSof y prompt engineering.
+- **Habilidades:** Angular, React, TypeScript, JavaScript, HTML, CSS, Tailwind, PrimeNG, C#, .NET, REST APIs, WCAG, Lighthouse, WAVE, axe DevTools, Figma, GitHub, Azure DevOps, Vercel, Claude, winsuft y prompt engineering.
 - **Contacto:** formulario y enlaces a redes profesionales.
 
 ## Tecnologías
