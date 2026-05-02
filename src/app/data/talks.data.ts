@@ -111,7 +111,7 @@ export const TALKS: Talk[] = [
     event: 'Pioneras Dev / Instituto Tecnológico de Putumayo',
     date: '22 mayo 2024',
     description: 'Charla en el encuentro Inspiración y Tecnología sobre preservación de saberes ancestrales desde la tecnología, realizada en el bloque laboratorio del Instituto Tecnológico de Putumayo.',
-    topics: ['Conocimientos ancestrales', 'Tecnología', 'Comunidad'],
+    topics: ['Conocimientos ancestrales', 'Tecnología', 'Comunidad', 'Panel'],
     image: 'assets/images/speaker/puyumayo-2024-inspiracion-tecnologia.png',
   },
   {

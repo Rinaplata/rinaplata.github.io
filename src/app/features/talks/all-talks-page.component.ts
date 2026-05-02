@@ -28,7 +28,19 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
               <div class="talk-card__body">
                 <p class="meta">{{ talk.event }} · {{ talk.date }}</p>
                 <h3>{{ talk.title }}</h3>
-                <p>{{ talk.description }}</p>
+                <p class="talk-card__description" [class.is-expanded]="isDescriptionExpanded(talk.title)">
+                  {{ talk.description }}
+                </p>
+                @if (hasLongDescription(talk.description)) {
+                  <button
+                    type="button"
+                    class="talk-card__description-toggle"
+                    (click)="toggleDescription(talk.title)"
+                    [attr.aria-expanded]="isDescriptionExpanded(talk.title)"
+                  >
+                    {{ isDescriptionExpanded(talk.title) ? 'Ver menos' : 'Ver más' }}
+                  </button>
+                }
                 <div class="tags">
                   @for (topic of talk.topics; track topic) {
                     <span>{{ topic }}</span>
@@ -48,5 +60,27 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
   `
 })
 export class AllTalksPageComponent {
-  readonly talks = TALKS;
+  readonly talks = [...TALKS].sort((firstTalk, secondTalk) => this.getTalkYear(secondTalk.date) - this.getTalkYear(firstTalk.date));
+  readonly expandedDescriptions = new Set<string>();
+
+  hasLongDescription(description: string): boolean {
+    return description.length > 110;
+  }
+
+  isDescriptionExpanded(title: string): boolean {
+    return this.expandedDescriptions.has(title);
+  }
+
+  toggleDescription(title: string): void {
+    if (this.expandedDescriptions.has(title)) {
+      this.expandedDescriptions.delete(title);
+      return;
+    }
+
+    this.expandedDescriptions.add(title);
+  }
+
+  private getTalkYear(date: string): number {
+    return Number(date.match(/\d{4}/)?.[0] ?? 0);
+  }
 }
