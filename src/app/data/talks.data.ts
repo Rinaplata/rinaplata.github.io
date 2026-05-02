@@ -104,6 +104,12 @@ export const TALKS: Talk[] = [
     description: 'Panel en vivo sobre mujeres en tecnología y experiencias profesionales en la industria junto a Valentina Pinzón, Caro Castañeda y Carlos Alarcón.',
     topics: ['Mujeres en tecnología', 'Comunidad', 'Panel'],
     image: 'assets/images/speaker/tech-talk-ellas-en-el-codigo-2024.jpg',
+    images: [
+      {
+        src: 'assets/images/speaker/tech-talk-ellas-en-el-codigo-2024.jpg',
+        alt: 'Imagen del panel Tech Talk: Ellas en el Código'
+      }
+    ],
     url: 'https://youtu.be/JISBiVHm9DY'
   },
   {

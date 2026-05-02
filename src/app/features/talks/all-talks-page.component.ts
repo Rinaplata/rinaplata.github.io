@@ -24,7 +24,36 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         <div class="talks-list">
           @for (talk of talks; track talk.title) {
             <article class="talk-card talk-card--compact">
-              <img [src]="talk.image" width="220" height="140" loading="lazy" [alt]="'Imagen relacionada con ' + talk.title">
+              <div class="talk-card__carousel" aria-label="Imágenes de la charla">
+                <img
+                  [src]="currentTalkImage(talk).src"
+                  width="420"
+                  height="263"
+                  loading="lazy"
+                  [alt]="currentTalkImage(talk).alt"
+                >
+                @if (talkImages(talk).length > 1) {
+                  <div class="talk-card__carousel-controls">
+                    <button
+                      type="button"
+                      (click)="previousTalkImage(talk.title, talkImages(talk).length)"
+                      aria-label="Ver imagen anterior de la charla"
+                    >
+                      Anterior
+                    </button>
+                    <span aria-live="polite">
+                      {{ currentTalkImageIndex(talk.title) + 1 }} / {{ talkImages(talk).length }}
+                    </span>
+                    <button
+                      type="button"
+                      (click)="nextTalkImage(talk.title, talkImages(talk).length)"
+                      aria-label="Ver siguiente imagen de la charla"
+                    >
+                      Siguiente
+                    </button>
+                  </div>
+                }
+              </div>
               <div class="talk-card__body">
                 <p class="meta">{{ talk.event }} · {{ talk.date }}</p>
                 <h3>{{ talk.title }}</h3>
@@ -62,6 +91,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 export class AllTalksPageComponent {
   readonly talks = [...TALKS].sort((firstTalk, secondTalk) => this.getTalkYear(secondTalk.date) - this.getTalkYear(firstTalk.date));
   readonly expandedDescriptions = new Set<string>();
+  private readonly imageIndexes = new Map<string, number>();
 
   hasLongDescription(description: string): boolean {
     return description.length > 110;
@@ -78,6 +108,35 @@ export class AllTalksPageComponent {
     }
 
     this.expandedDescriptions.add(title);
+  }
+
+  talkImages(talk: typeof TALKS[number]) {
+    return talk.images?.length
+      ? talk.images
+      : [
+          {
+            src: talk.image,
+            alt: `Imagen de la charla ${talk.title} en ${talk.event}`
+          }
+        ];
+  }
+
+  currentTalkImageIndex(title: string): number {
+    return this.imageIndexes.get(title) ?? 0;
+  }
+
+  currentTalkImage(talk: typeof TALKS[number]) {
+    return this.talkImages(talk)[this.currentTalkImageIndex(talk.title)];
+  }
+
+  previousTalkImage(title: string, total: number): void {
+    const current = this.currentTalkImageIndex(title);
+    this.imageIndexes.set(title, (current - 1 + total) % total);
+  }
+
+  nextTalkImage(title: string, total: number): void {
+    const current = this.currentTalkImageIndex(title);
+    this.imageIndexes.set(title, (current + 1) % total);
   }
 
   private getTalkYear(date: string): number {

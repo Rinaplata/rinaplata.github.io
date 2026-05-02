@@ -15,6 +15,10 @@ export interface Talk {
   description: string;
   topics: string[];
   image: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
   url?: string;
 }
 
@@ -23,6 +27,7 @@ export interface Community {
   role: string;
   description: string;
   impact: string;
+  image?: string;
   url?: string;
 }
 
@@ -45,4 +50,10 @@ export interface Achievement {
   title: string;
   description: string;
   year: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
+  url?: string;
+  urlLabel?: string;
 }

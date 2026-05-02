@@ -18,6 +18,16 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
       <div class="cards-grid cards-grid--three">
         @for (community of communities; track community.name) {
           <article class="card community-card">
+            @if (community.image) {
+              <img
+                class="community-card__logo"
+                [src]="community.image"
+                width="88"
+                height="88"
+                loading="lazy"
+                [alt]="'Logo de ' + community.name"
+              >
+            }
             <p class="meta">{{ community.role }}</p>
             <h3>{{ community.name }}</h3>
             <p>{{ community.description }}</p>
