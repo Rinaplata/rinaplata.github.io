@@ -1,25 +1,27 @@
 import { Component, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ThemeService } from '../services/theme.service';
 
 const NAV_ITEMS = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Sobre mí', href: '#sobre-mi' },
-  { label: 'Experiencia', href: '#experiencia' },
-  { label: 'Charlas', href: '#charlas' },
-  { label: 'Comunidades', href: '#comunidades' },
-  { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Contacto', href: '#contacto' }
+  { label: 'Inicio', fragment: 'inicio' },
+  { label: 'Sobre mí', fragment: 'sobre-mi' },
+  { label: 'Experiencia', fragment: 'experiencia' },
+  { label: 'Charlas', fragment: 'charlas' },
+  { label: 'Comunidades', fragment: 'comunidades' },
+  { label: 'Proyectos', fragment: 'proyectos' },
+  { label: 'Contacto', fragment: 'contacto' }
 ];
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  imports: [RouterLink],
   template: `
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header class="site-header">
       <nav class="nav" aria-label="Navegación principal">
-        <a class="brand" href="#inicio" (click)="closeMenu()">Rina Plata</a>
+        <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()">Rina Plata</a>
 
         <button
           class="icon-button nav-toggle"
@@ -33,8 +35,8 @@ const NAV_ITEMS = [
         </button>
 
         <div class="nav-panel" [class.is-open]="menuOpen()" id="main-menu">
-          @for (item of navItems; track item.href) {
-            <a [href]="item.href" (click)="closeMenu()">{{ item.label }}</a>
+          @for (item of navItems; track item.fragment) {
+            <a routerLink="/" [fragment]="item.fragment" (click)="closeMenu()">{{ item.label }}</a>
           }
         </div>
 

@@ -624,8 +624,26 @@ html.dark .hero__floating-card {
   gap: 1.1rem;
 }
 
+.talks-layout,
+.talks-all {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.talks-layout {
+  display: grid;
+  gap: 1.15rem;
+}
+
 .talk-card {
   overflow: hidden;
+}
+
+.talk-card--featured,
+.talk-card--compact {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 0.58fr);
+  align-items: stretch;
 }
 
 .talk-card img,
@@ -634,15 +652,103 @@ html.dark .hero__floating-card {
   aspect-ratio: 16 / 10;
 }
 
+.talk-card--featured img,
+.talk-card--compact img {
+  height: 100%;
+  min-height: 230px;
+  aspect-ratio: auto;
+  border-radius: 28px 0 0 28px;
+}
+
 .talk-card__body,
 .project-card__body {
   padding: 1.25rem;
+}
+
+.talk-card--featured .talk-card__body,
+.talk-card--compact .talk-card__body {
+  display: grid;
+  align-content: center;
+}
+
+.talk-card--featured h3 {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
 }
 
 .talk-card p,
 .project-card p {
   color: var(--color-muted);
   line-height: 1.7;
+}
+
+.talks-more {
+  max-width: var(--max-width);
+  margin: 1.4rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.talks-more .button {
+  cursor: pointer;
+}
+
+.talks-page {
+  min-height: 70svh;
+}
+
+.talks-page__actions {
+  max-width: var(--max-width);
+  margin: -1.25rem auto 2rem;
+}
+
+.talks-all {
+  margin-top: 2rem;
+}
+
+.talks-all--page {
+  margin-top: 0;
+}
+
+.talks-all > h3 {
+  margin: 0 0 1rem;
+  color: var(--color-text);
+  font-family: Sora, "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+}
+
+.talks-list {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.talk-card--compact {
+  grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.talk-card--compact img {
+  min-height: 100%;
+}
+
+.talk-card--compact .talk-card__body {
+  padding: 1rem 1.15rem;
+}
+
+.talk-card--compact h3 {
+  font-size: 1.05rem;
+}
+
+.talk-card--compact p {
+  margin: 0;
+}
+
+.talk-card--compact .tags span {
+  min-height: 30px;
+  padding: 0.32rem 0.62rem;
+  font-size: 0.78rem;
+}
+
+.talk-card--compact .card-actions {
+  margin-top: 0.8rem;
 }
 
 .projects-grid {
@@ -807,6 +913,19 @@ html.dark .hero__floating-card {
   .footer {
     flex-direction: column;
   }
+
+  .talk-card--featured,
+  .talk-card--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-card--featured img,
+  .talk-card--compact img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    border-radius: 28px 28px 0 0;
+  }
 }
 
 @media (max-width: 620px) {
@@ -836,6 +955,14 @@ html.dark .hero__floating-card {
   .section--deep {
     margin: 0 0.5rem;
     border-radius: 32px;
+  }
+
+  .talk-card--featured h3 {
+    font-size: 1.2rem;
+  }
+
+  .talk-card--compact .talk-card__body {
+    padding: 1rem;
   }
 }
 
