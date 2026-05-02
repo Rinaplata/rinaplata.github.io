@@ -24,15 +24,17 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         >
         <div class="about__copy">
           <p>
-            Soy Rina Plata, ingeniera de software y desarrolladora frontend.
-            Como mujer indígena wayuu de Colombia, entiendo la tecnología como
+            Soy Rina Plata, ingeniera de software con experiencia en desarrillo frontend, 
+            accesibilidad web y liderazgo comunitario. Entiendo la tecnología como
             una herramienta para abrir oportunidades, contar historias y crear
             productos más humanos.
           </p>
           <p>
             Me apasiona construir interfaces accesibles, claras y útiles. Trabajo
-            con Angular, React, TypeScript y buenas prácticas de UX para que las
-            experiencias digitales funcionen bien para más personas.
+            con Angular, React, TypeScript, accesibilidad y buenas prácticas de UX para que las
+            experiencias digitales funcionen bien para más personas. Actualmente, incomporo inteligencia
+             artificial en mis proyectos para mejorar la eficiencia y la personalización, 
+             siempre con un enfoque ético y centrado en el usuario.
           </p>
           <p>
             También lidero y participo en comunidades donde hablo sobre educación,

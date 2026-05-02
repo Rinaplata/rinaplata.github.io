@@ -46,7 +46,7 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
         </div>
         <div class="hero__floating-card hero__floating-card--bottom">
           <strong>Comunidad</strong>
-          <span>Tecnología, inclusión e identidad Wayuu</span>
+          <span>Tecnología e inclusión</span>
         </div>
       </div>
     </section>

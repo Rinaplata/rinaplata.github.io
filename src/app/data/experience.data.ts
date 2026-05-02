@@ -6,7 +6,7 @@ export const EXPERIENCE: Experience[] = [
     company: 'enerBit',
     period: 'Mar 2026 - Actualidad',
     location: 'Medellín, Antioquia, Colombia · En remoto',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'TanStack', 'Accesibilidad', 'Performance'],
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'TanStack', 'Accesibilidad', 'Performance', 'claude.ai', 'chatGPT', 'windsurf', 'cursor'],
     responsibilities: [
       'Desarrollo de interfaces web modernas y eficientes.',
       'Construcción de experiencias enfocadas en rendimiento, accesibilidad y usabilidad.',
@@ -81,20 +81,4 @@ export const EXPERIENCE: Experience[] = [
       'Experiencia temprana articulando educación, tecnología y gestión de personas.'
     ]
   },
-  {
-    role: 'Ingeniera de software en formación y líder comunitaria',
-    company: 'Guardianes Ancestrales y comunidades tech',
-    period: '2020 - Actualidad',
-    location: 'Colombia',
-    technologies: ['GitHub', 'Figma', 'WCAG', 'Mentoría', 'Organización de eventos'],
-    responsibilities: [
-      'Mentoría y acompañamiento a personas que inician en tecnología.',
-      'Diseño de contenidos técnicos sobre frontend, accesibilidad e inclusión.',
-      'Organización y participación en espacios de aprendizaje comunitario.'
-    ],
-    achievements: [
-      'Representación de mujeres indígenas en tecnología.',
-      'Charlas y participación en eventos nacionales de comunidades tech.'
-    ]
-  }
 ];
