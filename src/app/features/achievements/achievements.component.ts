@@ -32,6 +32,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
               [style.transform]="'translateX(-' + (currentSlideIndex(featuredCard.title) * 100) + '%)'"
             >
               <div class="achievement-carousel__slide" role="group" aria-label="Slide 1 de 2">
+                <span class="achievement-featured__badge">Reconocimiento destacado</span>
                 <p class="meta">{{ featuredCard.year }}</p>
                 <h3>{{ featuredCard.title }}</h3>
                 <p>{{ featuredCard.description }}</p>

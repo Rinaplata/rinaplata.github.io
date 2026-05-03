@@ -3,13 +3,12 @@ export const PROFILE = {
   role: 'Ingeniera de software, desarrolladora frontend y líder comunitaria',
   email: 'rinamarcelaplata@gmail.com',
   location: 'Medellín, Antioquia, Colombia',
-  cv: 'assets/pdf/CurriculumRinaPlata.pdf',
-  guardianesUrl: 'https://guardianesancestrales.com/acerca-de',
+  cv: 'assets/pdf/Rina_Plata_Frontend_Software_Engineer_ATS.pdf',
+  guardianesUrl: 'https://guardianesancestrales.com/#about',
   socials: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rina-plata/', icon: 'linkedin' },
     { label: 'GitHub', url: 'https://github.com/Rinaplata', icon: 'github' },
     { label: 'Instagram', url: 'https://www.instagram.com/rina_plata/', icon: 'instagram' },
-    { label: 'Figma', url: 'https://www.figma.com/@rinaplata', icon: 'figma' },
-    { label: 'Guardianes Ancestrales', url: 'https://guardianesancestrales.com/acerca-de', icon: 'external' }
+    { label: 'Guardianes Ancestrales', url: 'https://guardianesancestrales.com/#about', icon: 'external' }
   ]
 };

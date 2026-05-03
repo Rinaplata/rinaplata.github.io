@@ -452,8 +452,7 @@ html.dark .hero__floating-card {
   line-height: 1.75;
 }
 
-.about__grid,
-.contact__grid {
+.about__grid {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
@@ -496,9 +495,7 @@ html.dark .hero__floating-card {
 
 .card,
 .talk-card,
-.project-card,
-.contact-form,
-.contact-card {
+.project-card {
   border: 1px solid var(--color-border);
   border-radius: 28px;
   background: var(--gradient-card);
@@ -526,8 +523,7 @@ html.dark .hero__floating-card {
 .timeline__item h3,
 .card h3,
 .talk-card h3,
-.project-card h3,
-.contact-card h3 {
+.project-card h3 {
   margin: 0.25rem 0 0.55rem;
   color: var(--color-text);
   font-family: Sora, "Plus Jakarta Sans", sans-serif;
@@ -572,7 +568,7 @@ html.dark .hero__floating-card {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(390px, 0.82fr);
   gap: clamp(1.25rem, 3vw, 2rem);
   align-items: start;
 }
@@ -584,11 +580,40 @@ html.dark .hero__floating-card {
 }
 
 .achievement-card--featured {
+  position: relative;
   padding: 0;
   overflow: hidden;
   height: clamp(18rem, 24vw, 21rem);
   min-height: 0;
-  background: var(--gradient-card);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 72%, var(--color-accent));
+  background:
+    radial-gradient(circle at 22% 20%, rgba(236, 72, 153, 0.12), transparent 15rem),
+    radial-gradient(circle at 82% 12%, rgba(124, 58, 237, 0.12), transparent 14rem),
+    linear-gradient(135deg, #fff 0%, #fff7fb 54%, #fbf2ff 100%);
+  box-shadow: 0 24px 60px rgba(88, 28, 135, 0.14), 0 14px 34px rgba(236, 72, 153, 0.1);
+}
+
+.achievement-card--featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.42), rgba(124, 58, 237, 0.34), rgba(236, 72, 153, 0.1));
+  height: 4px;
+  z-index: 2;
+}
+
+.achievement-card--featured::after {
+  content: '';
+  position: absolute;
+  right: -3rem;
+  bottom: -4rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 999px;
+  background: rgba(236, 72, 153, 0.13);
+  filter: blur(10px);
+  pointer-events: none;
 }
 
 .achievement-secondary-list {
@@ -603,6 +628,7 @@ html.dark .hero__floating-card {
   align-content: start;
   gap: 0.42rem;
   padding: 0.95rem;
+  box-shadow: 0 12px 30px rgba(88, 28, 135, 0.06);
 }
 
 .achievement-card--secondary h3 {
@@ -622,6 +648,7 @@ html.dark .hero__floating-card {
   min-height: inherit;
   border-radius: 28px;
   touch-action: pan-y;
+  z-index: 1;
 }
 
 .achievement-carousel__track {
@@ -649,9 +676,26 @@ html.dark .hero__floating-card {
   text-align: center;
 }
 
+.achievement-featured__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0.32rem 0.72rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-secondary));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-accent) 9%, #ffffff);
+  color: #5f2bb8;
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+}
+
 .achievement-carousel__slide h3 {
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  max-width: 660px;
+  font-size: clamp(1.35rem, 2.3vw, 1.95rem);
   margin: 0.15rem 0;
+  line-height: 1.14;
 }
 
 .achievement-carousel__slide p:not(.meta) {
@@ -664,8 +708,10 @@ html.dark .hero__floating-card {
 .achievement-carousel__slide .button,
 .achievement-carousel__slide .card-actions a {
   min-height: 38px;
-  padding: 0.55rem 0.9rem;
+  padding: 0.58rem 1rem;
   font-size: 0.9rem;
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-secondary));
+  box-shadow: 0 10px 24px rgba(107, 33, 168, 0.08);
 }
 
 .achievement-carousel__slide--image {
@@ -701,7 +747,7 @@ html.dark .hero__floating-card {
   bottom: 0.72rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: rgba(33, 21, 34, 0.45);
+  background: rgba(33, 21, 34, 0.58);
   padding: 0.26rem 0.56rem;
   backdrop-filter: blur(10px);
 }
@@ -714,7 +760,7 @@ html.dark .hero__floating-card {
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: 999px;
-  background: rgba(33, 21, 34, 0.5);
+  background: rgba(33, 21, 34, 0.52);
   color: #ffffff;
   cursor: pointer;
   font-size: 1.55rem;
@@ -1016,7 +1062,7 @@ html.dark .hero__floating-card {
   background: color-mix(in srgb, var(--color-surface-lilac) 78%, #ffffff);
   color: color-mix(in srgb, var(--color-primary-strong) 82%, var(--color-muted));
   font-size: 0.8rem;
-  box-shadow: none;
+  box-shadow: 0 10px 20px rgba(33, 21, 34, 0.14);
 }
 
 .talk-card .card-actions a:hover {
@@ -1120,75 +1166,116 @@ html.dark .hero__floating-card {
   font-weight: 800;
 }
 
-.contact__grid {
-  align-items: start;
-}
-
-.contact-form,
-.contact-card {
-  padding: clamp(1.25rem, 3vw, 1.75rem);
-}
-
-.contact-form {
+.contact-socials {
+  max-width: 900px;
+  margin: 0 auto;
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.contact-form label {
+.contact-socials a {
+  min-height: 10.25rem;
+  padding: 1.25rem;
   display: grid;
-  gap: 0.45rem;
-  color: var(--color-text);
-  font-weight: 800;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-  background: var(--color-surface);
-  color: var(--color-text);
-  padding: 0.95rem 1rem;
-}
-
-.contact-card {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.contact-card a {
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  border-bottom: 1px solid var(--color-border);
+  align-content: center;
+  justify-items: center;
+  gap: 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 36%, var(--color-border));
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), color-mix(in srgb, var(--color-surface) 86%, #fff3f8));
   color: var(--color-primary-strong);
-  font-weight: 800;
+  text-align: center;
   text-decoration: none;
+  box-shadow: 0 12px 30px rgba(88, 28, 135, 0.07);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.contact-socials a:hover {
+  transform: translateY(-3px) scale(1.01);
+  border-color: color-mix(in srgb, var(--color-accent) 52%, var(--color-secondary));
+  background:
+    linear-gradient(180deg, #fff, color-mix(in srgb, var(--color-surface) 80%, #fff0f7));
+  box-shadow: 0 18px 40px rgba(88, 28, 135, 0.11);
+}
+
+.contact-socials a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 52%, transparent);
+  outline-offset: 4px;
+}
+
+.contact-socials__icon {
+  width: 4rem;
+  height: 4rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 12%, #fff), color-mix(in srgb, var(--color-secondary) 16%, #fff6fb));
+  color: #5f2bb8;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-secondary) 36%, transparent);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.contact-socials app-social-icon {
+  width: 2.05rem;
+  height: 2.05rem;
+}
+
+.contact-socials a:hover .contact-socials__icon {
+  transform: translateY(-2px);
+  color: var(--color-accent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 42%, transparent), 0 14px 28px rgba(88, 28, 135, 0.1);
+}
+
+.contact-socials__content {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.contact-socials__title {
+  color: var(--color-primary-strong);
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.contact-socials__action {
+  color: color-mix(in srgb, var(--color-muted) 86%, var(--color-primary-strong));
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.contact-socials__download {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 9%, #fff), color-mix(in srgb, var(--color-surface) 82%, #fff0f7));
+  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-secondary));
+}
+
+.contact-socials__download .contact-socials__icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #6d28d9, color-mix(in srgb, #6d28d9 74%, var(--color-primary-strong)));
+  color: #fff;
+}
+
+.contact-socials__download app-social-icon {
+  width: 2.05rem;
+  height: 2.05rem;
+}
+
+.contact-socials__download .contact-socials__action {
+  color: #5f2bb8;
 }
 
 .footer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
   color: var(--color-muted);
-}
-
-.footer__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 800;
-  text-decoration: none;
+  text-align: center;
 }
 
 .reveal {
@@ -1226,6 +1313,10 @@ html.dark .hero__floating-card {
   .achievement-card--featured {
     height: clamp(18rem, 44vw, 22rem);
   }
+
+  .contact-socials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 820px) {
@@ -1258,8 +1349,7 @@ html.dark .hero__floating-card {
   }
 
   .hero,
-  .about__grid,
-  .contact__grid {
+  .about__grid {
     grid-template-columns: 1fr;
   }
 
@@ -1313,6 +1403,10 @@ html.dark .hero__floating-card {
   }
 
   .achievement-secondary-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-socials {
     grid-template-columns: 1fr;
   }
 

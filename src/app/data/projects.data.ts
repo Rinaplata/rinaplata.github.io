@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     name: 'Tecnología para comunidades',
     description: 'Prototipos y contenidos digitales para educación, comunidad e impacto social.',
     impact: 'Acerca herramientas tecnológicas a conversaciones sobre territorio, educación e identidad.',
-    technologies: ['Figma', 'JavaScript', 'HTML', 'CSS'],
+    technologies: ['JavaScript', 'HTML', 'CSS'],
     image: 'assets/images/portafolio3.png'
   }
 ];

@@ -100,7 +100,7 @@ El repositorio incluye workflow de GitHub Actions para publicar en **GitHub Page
 - LinkedIn: https://www.linkedin.com/in/rina-plata/
 - GitHub: https://github.com/Rinaplata
 - Instagram: https://www.instagram.com/rina_plata/
-- Guardianes Ancestrales: https://guardianesancestrales.com/acerca-de
+- Guardianes Ancestrales: https://guardianesancestrales.com/#about
 
 ## Autoría
 

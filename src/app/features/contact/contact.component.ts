@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { PROFILE } from '../../data/profile.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
 import { SocialIconComponent } from '../../shared/components/social-icon.component';
@@ -7,68 +6,50 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, SectionHeadingComponent, SocialIconComponent],
+  imports: [SectionHeadingComponent, SocialIconComponent],
   template: `
     <section class="section contact" id="contacto" aria-labelledby="contact-title">
       <app-section-heading
         eyebrow="Contacto"
         title="Hablemos de tecnología, comunidad o colaboración"
         headingId="contact-title"
-        description="Puedes escribirme por correo, LinkedIn o dejar preparado tu mensaje."
+        description="Conversemos por mis canales principales para colaborar, construir comunidad o compartir ideas."
       />
 
-      <div class="contact__grid">
-        <form class="contact-form" aria-label="Formulario de contacto" (ngSubmit)="submit()">
-          <label>
-            Nombre
-            <input type="text" name="name" autocomplete="name" [(ngModel)]="form.name" required>
-          </label>
-
-          <label>
-            Correo
-            <input type="email" name="email" autocomplete="email" [(ngModel)]="form.email" required>
-          </label>
-
-          <label>
-            Mensaje
-            <textarea name="message" rows="6" [(ngModel)]="form.message" required></textarea>
-          </label>
-
-          <button class="button button--primary" type="submit">Preparar correo</button>
-        </form>
-
-        <aside class="contact-card" aria-label="Enlaces de contacto">
-          <h3>Encuéntrame en</h3>
-          <a [href]="'mailto:' + profile.email">
+      <div class="contact-socials" aria-label="Canales de contacto">
+        <a [href]="'mailto:' + profile.email" aria-label="Enviar correo a Rina Plata">
+          <span class="contact-socials__icon" aria-hidden="true">
             <app-social-icon name="mail" />
-            <span>{{ profile.email }}</span>
-          </a>
-          @for (social of profile.socials; track social.url) {
-            <a [href]="social.url" target="_blank" rel="noreferrer">
+          </span>
+          <span class="contact-socials__content">
+            <span class="contact-socials__title">Correo</span>
+            <span class="contact-socials__action">Enviar mensaje</span>
+          </span>
+        </a>
+        @for (social of profile.socials; track social.url) {
+          <a [href]="social.url" target="_blank" rel="noreferrer" [attr.aria-label]="social.label">
+            <span class="contact-socials__icon" aria-hidden="true">
               <app-social-icon [name]="social.icon" />
-              <span>{{ social.label }}</span>
-            </a>
-          }
-          <a [href]="profile.cv" target="_blank">
-            <app-social-icon name="external" />
-            <span>Ver CV</span>
+            </span>
+            <span class="contact-socials__content">
+              <span class="contact-socials__title">{{ social.label }}</span>
+              <span class="contact-socials__action">Abrir enlace</span>
+            </span>
           </a>
-        </aside>
+        }
+        <a class="contact-socials__download" [href]="profile.cv" download aria-label="Descargar hoja de vida de Rina Plata">
+          <span class="contact-socials__icon" aria-hidden="true">
+            <app-social-icon name="download" />
+          </span>
+          <span class="contact-socials__content">
+            <span class="contact-socials__title">Currículo</span>
+            <span class="contact-socials__action">Descargar PDF</span>
+          </span>
+        </a>
       </div>
     </section>
   `
 })
 export class ContactComponent {
   readonly profile = PROFILE;
-  readonly form = {
-    name: '',
-    email: '',
-    message: ''
-  };
-
-  submit(): void {
-    const subject = encodeURIComponent(`Contacto desde portafolio - ${this.form.name}`);
-    const body = encodeURIComponent(`${this.form.message}\n\n${this.form.name}\n${this.form.email}`);
-    window.location.href = `mailto:${this.profile.email}?subject=${subject}&body=${body}`;
-  }
 }
