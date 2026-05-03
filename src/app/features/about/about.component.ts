@@ -24,7 +24,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         >
         <div class="about__copy">
           <p>
-            Soy Rina Plata, ingeniera de software con experiencia en desarrillo frontend, 
+            Soy Rina Plata, ingeniera de software con experiencia en desarrollo frontend, 
             accesibilidad web y liderazgo comunitario. Entiendo la tecnología como
             una herramienta para abrir oportunidades, contar historias y crear
             productos más humanos.
@@ -32,7 +32,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
           <p>
             Me apasiona construir interfaces accesibles, claras y útiles. Trabajo
             con Angular, React, TypeScript, accesibilidad y buenas prácticas de UX para que las
-            experiencias digitales funcionen bien para más personas. Actualmente, incomporo inteligencia
+            experiencias digitales funcionen bien para más personas. Actualmente, incorporo inteligencia
              artificial en mis proyectos para mejorar la eficiencia y la personalización, 
              siempre con un enfoque ético y centrado en el usuario.
           </p>

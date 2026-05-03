@@ -11,13 +11,6 @@ export const PROJECTS: Project[] = [
     demoUrl: 'https://rinaplata.github.io'
   },
   {
-    name: 'Interfaces accesibles',
-    description: 'Componentes frontend enfocados en navegación por teclado, contraste y estructura semántica.',
-    impact: 'Mejora la experiencia de personas con distintas formas de navegar la web.',
-    technologies: ['React', 'HTML', 'CSS', 'WCAG', 'axe DevTools'],
-    image: 'assets/images/portfolio2.png'
-  },
-  {
     name: 'Tecnología para comunidades',
     description: 'Prototipos y contenidos digitales para educación, comunidad e impacto social.',
     impact: 'Acerca herramientas tecnológicas a conversaciones sobre territorio, educación e identidad.',

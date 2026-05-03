@@ -122,8 +122,8 @@ export const TALKS: Talk[] = [
   },
   {
     title: 'Programar para incluir con JavaScript: tecnología accesible',
-    event: 'BoyaConf / JSConf',
-    date: '2024',
+    event: 'BoyaConf',
+    date: '2025',
     description: 'Charla sobre cómo crear experiencias web accesibles e inclusivas utilizando JavaScript, enfocada en estándares WCAG y mejores prácticas de desarrollo.',
     topics: ['Accesibilidad', 'wcag', 'JavaScript', 'herramientas de testing'],
     image: 'assets/images/speaker/boyaconf-2024-wcag.jpeg',
