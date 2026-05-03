@@ -3,7 +3,7 @@ export const PROFILE = {
   role: 'Ingeniera de software, desarrolladora frontend y líder comunitaria',
   email: 'rinamarcelaplata@gmail.com',
   location: 'Medellín, Antioquia, Colombia',
-  cv: 'assets/pdf/Rina_Plata_Frontend_Software_Engineer_ATS.pdf',
+  cv: 'assets/pdf/Rina_Plata_Frontend_EN.pdf',
   guardianesUrl: 'https://guardianesancestrales.com/#about',
   socials: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rina-plata/', icon: 'linkedin' },
