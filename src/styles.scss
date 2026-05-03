@@ -210,8 +210,17 @@ textarea {
 }
 
 .theme-toggle {
-  padding: 0 0.9rem;
+  width: 44px;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
   font-weight: 800;
+}
+
+.theme-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
 }
 
 .hero {
@@ -591,9 +600,9 @@ html.dark .hero__floating-card {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 12% 18%, rgba(249, 168, 212, 0.22), transparent 28rem),
-    radial-gradient(circle at 88% 12%, rgba(192, 132, 252, 0.16), transparent 24rem),
-    linear-gradient(180deg, #fff7fb 0%, #fdf2ff 100%);
+    radial-gradient(circle at 12% 18%, rgba(249, 168, 212, 0.14), transparent 28rem),
+    radial-gradient(circle at 88% 12%, rgba(126, 34, 206, 0.1), transparent 24rem),
+    linear-gradient(180deg, #fffafd 0%, #fff7fb 100%);
 }
 
 .achievements-layout {
@@ -606,9 +615,9 @@ html.dark .hero__floating-card {
 }
 
 .achievement-card {
-  border-color: color-mix(in srgb, var(--color-secondary) 42%, var(--color-border));
+  border-color: color-mix(in srgb, var(--color-secondary) 50%, var(--color-border));
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-surface) 88%, #fff1f7), var(--color-surface));
+    linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--color-surface) 94%, #fff6fb));
 }
 
 .achievement-card--featured {
@@ -617,11 +626,11 @@ html.dark .hero__floating-card {
   overflow: hidden;
   height: clamp(18rem, 24vw, 21rem);
   min-height: 0;
-  border: 1px solid color-mix(in srgb, var(--color-secondary) 72%, var(--color-accent));
+  border: 1px solid color-mix(in srgb, var(--color-primary-strong) 26%, var(--color-secondary));
   background:
-    radial-gradient(circle at 22% 20%, rgba(236, 72, 153, 0.12), transparent 15rem),
-    radial-gradient(circle at 82% 12%, rgba(124, 58, 237, 0.12), transparent 14rem),
-    linear-gradient(135deg, #fff 0%, #fff7fb 54%, #fbf2ff 100%);
+    radial-gradient(circle at 22% 20%, rgba(236, 72, 153, 0.07), transparent 15rem),
+    radial-gradient(circle at 82% 12%, rgba(107, 33, 168, 0.08), transparent 14rem),
+    linear-gradient(135deg, #ffffff 0%, #fffafb 56%, #fbf7ff 100%);
   box-shadow: 0 24px 60px rgba(88, 28, 135, 0.14), 0 14px 34px rgba(236, 72, 153, 0.1);
 }
 
@@ -630,7 +639,7 @@ html.dark .hero__floating-card {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(236, 72, 153, 0.42), rgba(124, 58, 237, 0.34), rgba(236, 72, 153, 0.1));
+  background: linear-gradient(90deg, rgba(190, 24, 93, 0.72), rgba(107, 33, 168, 0.64), rgba(190, 24, 93, 0.28));
   height: 4px;
   z-index: 2;
 }
@@ -660,6 +669,8 @@ html.dark .hero__floating-card {
   align-content: start;
   gap: 0.42rem;
   padding: 0.95rem;
+  border-color: color-mix(in srgb, var(--color-primary-strong) 18%, var(--color-secondary));
+  background: #ffffff;
   box-shadow: 0 12px 30px rgba(88, 28, 135, 0.06);
 }
 
@@ -669,8 +680,30 @@ html.dark .hero__floating-card {
 }
 
 .achievement-card--secondary p:not(.meta) {
+  color: #493c4c;
   font-size: 0.84rem;
   line-height: 1.5;
+}
+
+:root.dark .achievement-card--secondary,
+html.dark .achievement-card--secondary {
+  border-color: rgba(255, 241, 247, 0.24);
+  background: var(--color-surface);
+}
+
+:root.dark .achievement-card--secondary h3,
+html.dark .achievement-card--secondary h3 {
+  color: var(--color-text);
+}
+
+:root.dark .achievement-card--secondary .meta,
+html.dark .achievement-card--secondary .meta {
+  color: #f5d0fe;
+}
+
+:root.dark .achievement-card--secondary p:not(.meta),
+html.dark .achievement-card--secondary p:not(.meta) {
+  color: var(--color-muted);
 }
 
 .achievement-carousel {
@@ -714,10 +747,10 @@ html.dark .hero__floating-card {
   justify-content: center;
   min-height: 30px;
   padding: 0.32rem 0.72rem;
-  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-secondary));
+  border: 1px solid color-mix(in srgb, #6b21a8 36%, var(--color-secondary));
   border-radius: 999px;
-  background: color-mix(in srgb, var(--color-accent) 9%, #ffffff);
-  color: #5f2bb8;
+  background: #ffffff;
+  color: #4c1d95;
   font-size: 0.74rem;
   font-weight: 850;
   letter-spacing: 0.02em;
@@ -725,6 +758,7 @@ html.dark .hero__floating-card {
 
 .achievement-carousel__slide h3 {
   max-width: 660px;
+  color: #211522;
   font-size: 1.72rem;
   margin: 0.15rem 0;
   line-height: 1.14;
@@ -733,6 +767,7 @@ html.dark .hero__floating-card {
 .achievement-carousel__slide p:not(.meta) {
   max-width: 600px;
   margin-inline: auto;
+  color: #493c4c;
   font-size: 0.94rem;
   line-height: 1.58;
 }
@@ -742,7 +777,9 @@ html.dark .hero__floating-card {
   min-height: 38px;
   padding: 0.58rem 1rem;
   font-size: 0.9rem;
-  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-secondary));
+  border-color: color-mix(in srgb, #6b21a8 34%, var(--color-secondary));
+  color: #5b21b6;
+  background: #ffffff;
   box-shadow: 0 10px 24px rgba(107, 33, 168, 0.08);
 }
 
@@ -779,7 +816,7 @@ html.dark .hero__floating-card {
   bottom: 0.72rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: rgba(33, 21, 34, 0.58);
+  background: rgba(33, 21, 34, 0.72);
   padding: 0.26rem 0.56rem;
   backdrop-filter: blur(10px);
 }
@@ -792,7 +829,7 @@ html.dark .hero__floating-card {
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: 999px;
-  background: rgba(33, 21, 34, 0.52);
+  background: rgba(33, 21, 34, 0.74);
   color: #ffffff;
   cursor: pointer;
   font-size: 1.55rem;
@@ -837,10 +874,12 @@ html.dark .hero__floating-card {
   width: min(100%, 11rem);
   height: 4.75rem;
   object-fit: contain;
-  border: 1px solid color-mix(in srgb, var(--color-border) 82%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary-strong) 18%, var(--color-border));
   border-radius: 18px;
-  background: color-mix(in srgb, var(--color-surface-lilac) 72%, #ffffff);
-  padding: 0.55rem;
+  background:
+    linear-gradient(180deg, #ffffff 0%, color-mix(in srgb, #ffffff 92%, var(--color-surface-soft)) 100%);
+  padding: 0.68rem;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.88), 0 10px 22px rgba(88, 28, 135, 0.06);
 }
 
 .tags {
@@ -1377,7 +1416,7 @@ html.dark .hero__floating-card {
   }
 
   .theme-toggle {
-    padding: 0 0.75rem;
+    padding: 0;
   }
 
   .hero,

@@ -44,9 +44,19 @@ const NAV_ITEMS = [
           class="theme-toggle"
           type="button"
           [attr.aria-pressed]="theme.isDark()"
+          [attr.aria-label]="theme.isDark() ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
           (click)="theme.toggle()"
         >
-          {{ theme.isDark() ? 'Claro' : 'Oscuro' }}
+          @if (theme.isDark()) {
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M12 4.5V2h2v2.5h-2Zm0 17.5v-2.5h2V22h-2ZM4.5 14H2v-2h2.5v2Zm17.5 0h-2.5v-2H22v2ZM6.4 7.8 4.7 6.1l1.4-1.4 1.7 1.7-1.4 1.4Zm11.5 11.5-1.7-1.7 1.4-1.4 1.7 1.7-1.4 1.4Zm-.3-11.5-1.4-1.4 1.7-1.7 1.4 1.4-1.7 1.7ZM6.1 19.3l-1.4-1.4 1.7-1.7 1.4 1.4-1.7 1.7ZM13 17a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+            </svg>
+          } @else {
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M18.9 15.4A7.8 7.8 0 0 1 8.6 5.1 8.5 8.5 0 1 0 18.9 15.4ZM12 21a7 7 0 0 1-5.4-11.5 9.8 9.8 0 0 0 7.9 7.9A7 7 0 0 1 12 21Z" />
+              <path d="M18.7 4.2 19.4 6l1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7L18 6l.7-1.8ZM14.6 2l.45 1.15L16.2 3.6l-1.15.45L14.6 5.2l-.45-1.15L13 3.6l1.15-.45L14.6 2Z" />
+            </svg>
+          }
         </button>
       </nav>
     </header>
