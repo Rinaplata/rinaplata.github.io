@@ -16,10 +16,10 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         description="Conferencias, paneles, entrevistas y podcasts sobre frontend, accesibilidad, identidad y liderazgo."
       />
 
-      <div class="talks-layout" aria-label="Charlas destacadas" aria-live="polite">
+      <div class="talks-layout" role="list" aria-label="Charlas destacadas" aria-live="polite">
         @for (talk of visibleTalks; track talk.title) {
-          <article class="talk-card talk-card--featured" tabindex="0">
-            <div class="talk-card__carousel" aria-label="Imágenes de la charla">
+          <article class="talk-card talk-card--featured" role="listitem">
+            <div class="talk-card__carousel" role="group" aria-label="Imágenes de la charla">
               <img
                 [src]="currentTalkImage(talk).src"
                 width="420"
@@ -32,7 +32,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                   <button
                     type="button"
                     (click)="previousTalkImage(talk.title, talkImages(talk).length)"
-                    aria-label="Ver imagen anterior de la charla"
+                    aria-label="Anterior: ver imagen anterior de la charla"
                   >
                     Anterior
                   </button>
@@ -42,7 +42,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                   <button
                     type="button"
                     (click)="nextTalkImage(talk.title, talkImages(talk).length)"
-                    aria-label="Ver siguiente imagen de la charla"
+                    aria-label="Siguiente: ver siguiente imagen de la charla"
                   >
                     Siguiente
                   </button>
@@ -65,9 +65,9 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                   {{ isDescriptionExpanded(talk.title) ? 'Ver menos' : 'Ver más' }}
                 </button>
               }
-              <div class="tags">
+              <div class="tags" role="list" aria-label="Temas de la charla">
                 @for (topic of talk.topics; track topic) {
-                  <span>{{ topic }}</span>
+                  <span role="listitem">{{ topic }}</span>
                 }
               </div>
               @if (talk.url) {
@@ -76,9 +76,8 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                     [href]="talk.url"
                     target="_blank"
                     rel="noreferrer"
-                    [attr.aria-label]="'Ver evento de la charla ' + talk.title"
                   >
-                    Ver evento
+                    Ver evento<span class="sr-only"> de la charla {{ talk.title }} en una nueva pestaña</span>
                   </a>
                 </div>
               }
@@ -91,9 +90,8 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         <a
           class="button button--secondary talks-more__button"
           routerLink="/charlas"
-          aria-label="Ver todas las charlas en una página aparte"
         >
-          Ver más charlas
+          Ver más charlas<span class="sr-only"> en una página aparte</span>
         </a>
       </div>
     </section>

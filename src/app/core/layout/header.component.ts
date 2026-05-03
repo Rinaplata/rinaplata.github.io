@@ -17,9 +17,9 @@ const NAV_ITEMS = [
   standalone: true,
   imports: [RouterLink],
   template: `
-    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
-
     <header class="site-header">
+      <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()">Rina Plata</a>
 

@@ -5,10 +5,10 @@ import { Component, input } from '@angular/core';
   standalone: true,
   template: `
     <div class="section-heading">
-      <p>{{ eyebrow() }}</p>
+      <span class="section-heading__eyebrow">{{ eyebrow() }}</span>
       <h2 [id]="headingId()">{{ title() }}</h2>
       @if (description()) {
-        <span>{{ description() }}</span>
+        <p>{{ description() }}</p>
       }
     </div>
   `

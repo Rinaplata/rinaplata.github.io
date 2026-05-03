@@ -35,7 +35,9 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
             <p>{{ community.impact }}</p>
             @if (community.url) {
               <div class="card-actions">
-                <a [href]="community.url" target="_blank" rel="noreferrer">Ver comunidad</a>
+                <a [href]="community.url" target="_blank" rel="noreferrer">
+                  Ver comunidad<span class="sr-only"> {{ community.name }} en una nueva pestaña</span>
+                </a>
               </div>
             }
           </article>

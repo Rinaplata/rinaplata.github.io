@@ -16,8 +16,8 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
         description="Conversemos por mis canales principales para colaborar, construir comunidad o compartir ideas."
       />
 
-      <div class="contact-socials" aria-label="Canales de contacto">
-        <a [href]="'mailto:' + profile.email" aria-label="Enviar correo a Rina Plata">
+      <div class="contact-socials" role="group" aria-label="Canales de contacto">
+        <a [href]="'mailto:' + profile.email">
           <span class="contact-socials__icon" aria-hidden="true">
             <app-social-icon name="mail" />
           </span>
@@ -27,17 +27,17 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
           </span>
         </a>
         @for (social of profile.socials; track social.url) {
-          <a [href]="social.url" target="_blank" rel="noreferrer" [attr.aria-label]="social.label">
+          <a [href]="social.url" target="_blank" rel="noreferrer">
             <span class="contact-socials__icon" aria-hidden="true">
               <app-social-icon [name]="social.icon" />
             </span>
             <span class="contact-socials__content">
               <span class="contact-socials__title">{{ social.label }}</span>
-              <span class="contact-socials__action">Abrir enlace</span>
+              <span class="contact-socials__action">Abrir enlace<span class="sr-only"> en una nueva pestaña</span></span>
             </span>
           </a>
         }
-        <a class="contact-socials__download" [href]="profile.cv" download aria-label="Descargar hoja de vida de Rina Plata">
+        <a class="contact-socials__download" [href]="profile.cv" download>
           <span class="contact-socials__icon" aria-hidden="true">
             <app-social-icon name="download" />
           </span>

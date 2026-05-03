@@ -19,8 +19,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         <article class="card achievement-card achievement-card--carousel achievement-card--featured">
           <div
             class="achievement-carousel"
-            tabindex="0"
-            aria-roledescription="carrusel"
+            role="group"
             [attr.aria-label]="'Reconocimiento: ' + featuredCard.title"
             (focusin)="setActiveCarousel(featuredCard.title)"
             (focusout)="clearActiveCarousel()"
@@ -42,9 +41,8 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                       [href]="featuredCard.url"
                       target="_blank"
                       rel="noreferrer"
-                      [attr.aria-label]="(featuredCard.urlLabel || 'Ver reconocimiento') + ': ' + featuredCard.title"
                     >
-                      {{ featuredCard.urlLabel || 'Ver reconocimiento' }}
+                      {{ featuredCard.urlLabel || 'Ver reconocimiento' }}<span class="sr-only">: {{ featuredCard.title }} en una nueva pestaña</span>
                     </a>
                   </div>
                 }
@@ -86,10 +84,11 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
           </div>
         </article>
 
-        <div class="achievement-secondary-list" aria-label="Otros logros">
+        <div class="achievement-secondary-list" role="list" aria-label="Otros logros">
           @for (achievement of secondaryCards; track achievement.title) {
           <article
             class="card achievement-card achievement-card--secondary"
+            role="listitem"
           >
             <p class="meta">{{ achievement.year }}</p>
             <h3>{{ achievement.title }}</h3>

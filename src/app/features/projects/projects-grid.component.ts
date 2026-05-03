@@ -23,17 +23,21 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
               <h3>{{ project.name }}</h3>
               <p>{{ project.description }}</p>
               <p class="impact">{{ project.impact }}</p>
-              <div class="tags">
+              <div class="tags" role="list" aria-label="Tecnologías del proyecto">
                 @for (tech of project.technologies; track tech) {
-                  <span>{{ tech }}</span>
+                  <span role="listitem">{{ tech }}</span>
                 }
               </div>
               <div class="card-actions">
                 @if (project.githubUrl) {
-                  <a [href]="project.githubUrl" target="_blank" rel="noreferrer">GitHub</a>
+                  <a [href]="project.githubUrl" target="_blank" rel="noreferrer">
+                    GitHub<span class="sr-only"> del proyecto {{ project.name }} en una nueva pestaña</span>
+                  </a>
                 }
                 @if (project.demoUrl) {
-                  <a [href]="project.demoUrl" target="_blank" rel="noreferrer">Demo</a>
+                  <a [href]="project.demoUrl" target="_blank" rel="noreferrer">
+                    Demo<span class="sr-only"> del proyecto {{ project.name }} en una nueva pestaña</span>
+                  </a>
                 }
               </div>
             </div>

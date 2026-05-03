@@ -28,9 +28,9 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                 <li>{{ responsibility }}</li>
               }
             </ul>
-            <div class="tags" aria-label="Tecnologías usadas">
+            <div class="tags" role="list" aria-label="Tecnologías usadas">
               @for (tech of item.technologies; track tech) {
-                <span>{{ tech }}</span>
+                <span role="listitem">{{ tech }}</span>
               }
             </div>
             <div class="achievement-list">
