@@ -17,9 +17,9 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
           inclusión, liderazgo femenino y comunidades indígenas de Colombia.
         </p>
         <div class="hero__actions" role="group" aria-label="Acciones principales">
-          <a class="button button--primary" href="#proyectos">Ver proyectos</a>
-          <a class="button button--secondary" href="#charlas">Ver charlas</a>
-          <a class="button button--ghost" href="#redes-sociales">Contactarme</a>
+          <a class="button button--primary" href="#proyectos" (click)="scrollToSection('proyectos', $event)">Ver proyectos</a>
+          <a class="button button--secondary" href="#charlas" (click)="scrollToSection('charlas', $event)">Ver charlas</a>
+          <a class="button button--ghost" href="#redes-sociales" (click)="scrollToSection('redes-sociales', $event)">Contactarme</a>
         </div>
 
         <div class="hero__socials" role="group" aria-label="Redes sociales">
@@ -57,4 +57,23 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
 })
 export class HeroComponent {
   readonly profile = PROFILE;
+
+  scrollToSection(fragment: string, event: MouseEvent): void {
+    event.preventDefault();
+    this.scrollWhenReady(fragment);
+  }
+
+  private scrollWhenReady(fragment: string, attempts = 0): void {
+    const target = document.getElementById(fragment);
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', `#${fragment}`);
+      return;
+    }
+
+    if (attempts < 40) {
+      window.setTimeout(() => this.scrollWhenReady(fragment, attempts + 1), 75);
+    }
+  }
 }
