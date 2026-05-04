@@ -25,14 +25,46 @@ import { TalksGalleryComponent } from '../talks/talks-gallery.component';
   ],
   template: `
     <app-hero />
-    <app-about />
-    <app-experience-timeline />
-    <app-talks-gallery />
-    <app-communities />
-    <app-projects-grid />
-    <app-skills />
-    <app-achievements />
-    <app-contact />
+    @defer (on idle) {
+      <app-about />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-experience-timeline />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-talks-gallery />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-communities />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-projects-grid />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-skills />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-achievements />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-contact />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
   `
 })
 export class HomePageComponent {}

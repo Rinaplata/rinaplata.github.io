@@ -18,7 +18,14 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
       <div class="projects-grid">
         @for (project of projects; track project.name) {
           <article class="project-card">
-            <img [src]="project.image" width="560" height="340" loading="lazy" [alt]="'Captura del proyecto ' + project.name">
+            <img
+              [src]="project.image"
+              width="560"
+              height="340"
+              loading="lazy"
+              decoding="async"
+              [alt]="'Captura del proyecto ' + project.name"
+            >
             <div class="project-card__body">
               <h3>{{ project.name }}</h3>
               <p>{{ project.description }}</p>

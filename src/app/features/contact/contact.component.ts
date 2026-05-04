@@ -16,7 +16,7 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
         description="Conversemos por mis canales principales para colaborar, construir comunidad o compartir ideas."
       />
 
-      <div class="contact-socials" role="group" aria-label="Canales de contacto">
+      <div class="contact-socials" id="redes-sociales" role="group" aria-label="Canales de contacto">
         <a [href]="'mailto:' + profile.email">
           <span class="contact-socials__icon" aria-hidden="true">
             <app-social-icon name="mail" />

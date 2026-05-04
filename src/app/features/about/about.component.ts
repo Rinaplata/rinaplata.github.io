@@ -16,10 +16,11 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 
       <div class="about__grid">
         <img
-          src="assets/images/about.jpg"
+          src="assets/images/optimized/about-700.jpg"
           width="520"
           height="640"
           loading="lazy"
+          decoding="async"
           alt="Rina Plata en un espacio profesional y comunitario"
         >
         <div class="about__copy">

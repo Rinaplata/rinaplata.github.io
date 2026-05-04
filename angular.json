@@ -26,7 +26,24 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "ignore": [
+                  "**/.DS_Store",
+                  "assets/images/perfil.png",
+                  "assets/images/perfil.jpg",
+                  "assets/images/about.jpg",
+                  "assets/images/project.png",
+                  "assets/images/portfolio1.png",
+                  "assets/images/portfolio2.png",
+                  "assets/images/portafolio3.png",
+                  "assets/images/portafolio4.png",
+                  "assets/images/preview.png",
+                  "assets/images/speaker/*.png",
+                  "assets/images/speaker/*.jpg",
+                  "assets/images/speaker/*.jpeg",
+                  "assets/pdf/CurriculumRinaPlata.pdf",
+                  "assets/pdf/Rina_Plata_Frontend_Software_Engineer_ATS.pdf"
+                ]
               }
             ],
             "styles": ["src/styles.scss"]

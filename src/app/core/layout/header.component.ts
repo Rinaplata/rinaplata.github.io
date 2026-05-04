@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: 'Charlas', fragment: 'charlas' },
   { label: 'Comunidades', fragment: 'comunidades' },
   { label: 'Proyectos', fragment: 'proyectos' },
-  { label: 'Contacto', fragment: 'contacto' }
+  { label: 'Contacto', fragment: 'redes-sociales' }
 ];
 
 @Component({

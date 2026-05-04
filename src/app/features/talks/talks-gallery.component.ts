@@ -25,6 +25,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                 width="420"
                 height="263"
                 loading="lazy"
+                decoding="async"
                 [alt]="currentTalkImage(talk).alt"
               >
               @if (talkImages(talk).length > 1) {

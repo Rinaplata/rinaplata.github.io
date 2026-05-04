@@ -25,6 +25,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                 width="88"
                 height="88"
                 loading="lazy"
+                decoding="async"
                 [alt]="'Logo de ' + community.name"
               >
             }

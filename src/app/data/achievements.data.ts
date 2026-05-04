@@ -7,7 +7,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     year: 'Marzo 2024',
     images: [
       {
-        src: 'assets/images/speaker/reconocimiento-rina.png',
+        src: 'assets/images/speaker/optimized/reconocimiento-rina-900.jpg',
         alt: 'Rina Plata sosteniendo el reconocimiento Mujer destacada en el área de tecnología otorgado por el Tecnológico de Antioquia'
       }
     ],

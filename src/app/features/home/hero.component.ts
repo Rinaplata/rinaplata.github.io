@@ -19,7 +19,7 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
         <div class="hero__actions" role="group" aria-label="Acciones principales">
           <a class="button button--primary" href="#proyectos">Ver proyectos</a>
           <a class="button button--secondary" href="#charlas">Ver charlas</a>
-          <a class="button button--ghost" href="#contacto">Contactarme</a>
+          <a class="button button--ghost" href="#redes-sociales">Contactarme</a>
         </div>
 
         <div class="hero__socials" role="group" aria-label="Redes sociales">
@@ -35,9 +35,11 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
       <div class="hero__visual reveal">
         <div class="hero__photo-card">
           <img
-            src="assets/images/perfil.png"
+            src="assets/images/optimized/perfil-560.jpg"
             width="520"
             height="520"
+            fetchpriority="high"
+            decoding="async"
             alt="Retrato profesional de Rina Plata"
           >
         </div>

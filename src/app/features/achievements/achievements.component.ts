@@ -53,6 +53,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                   width="640"
                   height="520"
                   loading="lazy"
+                  decoding="async"
                   [alt]="featuredCard.images![0].alt"
                 >
               </div>
