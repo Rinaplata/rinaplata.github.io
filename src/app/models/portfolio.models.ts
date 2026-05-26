@@ -15,6 +15,7 @@ export interface Talk {
   description: string;
   topics: string[];
   image: string;
+  type: 'speaker' | 'panel' | 'entrevista' | 'hackathon';
   images?: {
     src: string;
     alt: string;
