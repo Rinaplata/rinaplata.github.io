@@ -16,14 +16,14 @@
     "talkImageAlt": "{{ title }} presentado en {{ event }}",
     "previousTalkImage": "Anterior: ver imagen anterior de la charla",
     "nextTalkImage": "Siguiente: ver siguiente imagen de la charla",
-    "openTalkNewTab": "de la charla {{ title }} en una nueva pestaña",
+    "openTalkNewTab": "de la charla {{ title }}",
     "separatePage": "en una página aparte",
-    "projectGithubNewTab": "del proyecto {{ name }} en una nueva pestaña",
-    "projectDemoNewTab": "del proyecto {{ name }} en una nueva pestaña",
+    "projectGithubNewTab": "del proyecto {{ name }}",
+    "projectDemoNewTab": "del proyecto {{ name }}",
     "projectScreenshot": "Vista previa del proyecto {{ name }}",
     "communityLogo": "Logo de {{ name }}",
-    "communityNewTab": "{{ name }} en una nueva pestaña",
-    "openNewTab": "en una nueva pestaña",
+    "communityNewTab": "{{ name }}",
+    "openNewTab": "",
     "achievementGroup": "Reconocimiento: {{ title }}",
     "achievementSlideText": "Slide 1 de 2",
     "achievementSlideImage": "Slide 2 de 2",
@@ -70,6 +70,16 @@
       "Soy Rina Plata, ingeniera de software con experiencia en desarrollo frontend, accesibilidad web y liderazgo comunitario. Entiendo la tecnología como una herramienta para abrir oportunidades, contar historias y crear productos más humanos.",
       "Me apasiona construir interfaces accesibles, claras y útiles. Trabajo con Angular, React, TypeScript, accesibilidad y buenas prácticas de UX para que las experiencias digitales funcionen bien para más personas. Actualmente, incorporo inteligencia artificial en mis proyectos para mejorar la eficiencia y la personalización, siempre con un enfoque ético y centrado en el usuario.",
       "También lidero y participo en comunidades donde hablo sobre educación, accesibilidad web, liderazgo femenino, identidad indígena e impacto social desde la tecnología."
+    ]
+  },
+  "plain": {
+    "title": "Resumen en lenguaje claro",
+    "description": "Esta es la versión corta de este sitio.",
+    "items": [
+      "Construyo sitios y aplicaciones más fáciles de usar.",
+      "Trabajo con equipos, comunidades y mujeres en tecnología.",
+      "Comparto charlas sobre código, accesibilidad, identidad y aprendizaje.",
+      "Abajo puedes ver mi experiencia, charlas, proyectos y formas de contacto."
     ]
   },
   "experience": {
@@ -399,7 +409,7 @@
     "openLink": "Abrir enlace",
     "cv": "Currículo",
     "downloadPDF": "Descargar PDF",
-    "newTab": "en una nueva pestaña"
+    "newTab": ""
   },
   "footer": {
     "builtWith": "Construido con Angular, accesibilidad y comunidad."

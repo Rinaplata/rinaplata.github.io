@@ -500,6 +500,40 @@ html.dark .hero__floating-card {
   min-height: 1px;
 }
 
+.plain-summary {
+  padding: 2rem 1.25rem 0;
+}
+
+.plain-summary__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.plain-summary h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.plain-summary p {
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+}
+
+.plain-summary ul {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--color-muted);
+}
+
 .section--warm {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(253, 242, 248, 0.82));
 }

@@ -32,13 +32,13 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         </li>
         @for (social of profile.socials; track social.url) {
           <li>
-            <a [href]="social.url" target="_blank" rel="noreferrer">
+            <a [href]="social.url">
               <span class="contact-socials__icon" aria-hidden="true">
                 <app-social-icon [name]="social.icon" />
               </span>
               <span class="contact-socials__content">
                 <span class="contact-socials__title">{{ social.label }}</span>
-                <span class="contact-socials__action">{{ 'contact.openLink' | t }}<span class="sr-only"> {{ 'contact.newTab' | t }}</span></span>
+                <span class="contact-socials__action">{{ 'contact.openLink' | t }}</span>
               </span>
             </a>
           </li>

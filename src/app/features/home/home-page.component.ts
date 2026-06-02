@@ -8,6 +8,7 @@ import { HeroComponent } from './hero.component';
 import { ProjectsGridComponent } from '../projects/projects-grid.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { TalksGalleryComponent } from '../talks/talks-gallery.component';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-home-page',
@@ -21,10 +22,23 @@ import { TalksGalleryComponent } from '../talks/talks-gallery.component';
     ProjectsGridComponent,
     SkillsComponent,
     AchievementsComponent,
-    ContactComponent
+    ContactComponent,
+    TranslatePipe
   ],
   template: `
     <app-hero />
+    <section class="plain-summary" aria-labelledby="plain-summary-title">
+      <div class="plain-summary__inner">
+        <h2 id="plain-summary-title">{{ 'plain.title' | t }}</h2>
+        <p>{{ 'plain.description' | t }}</p>
+        <ul>
+          <li>{{ 'plain.items.0' | t }}</li>
+          <li>{{ 'plain.items.1' | t }}</li>
+          <li>{{ 'plain.items.2' | t }}</li>
+          <li>{{ 'plain.items.3' | t }}</li>
+        </ul>
+      </div>
+    </section>
     @defer (on idle) {
       <app-about />
     } @placeholder {

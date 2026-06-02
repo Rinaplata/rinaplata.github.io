@@ -32,9 +32,9 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         <ul class="hero__socials" [attr.aria-label]="'a11y.socialLinks' | t">
           @for (social of profile.socials; track social.url) {
             <li>
-              <a [href]="social.url" target="_blank" rel="noreferrer">
+              <a [href]="social.url">
                 <app-social-icon [name]="social.icon" />
-                <span class="sr-only">{{ social.label }} {{ 'contact.newTab' | t }}</span>
+                <span class="sr-only">{{ social.label }}</span>
               </a>
             </li>
           }

@@ -41,8 +41,6 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
                   <div class="card-actions">
                     <a
                       [href]="featuredCard.url"
-                      target="_blank"
-                      rel="noreferrer"
                     >
                       {{ (featuredCard.urlLabel || 'achievements.viewRecognition') | t }}<span class="sr-only">: {{ featuredCard.title | t }} {{ 'a11y.openNewTab' | t }}</span>
                     </a>

@@ -39,7 +39,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
             <p>{{ community.impact | t }}</p>
             @if (community.url) {
               <div class="card-actions">
-                <a [href]="community.url" target="_blank" rel="noreferrer">
+                <a [href]="community.url">
                   {{ 'communities.viewCommunity' | t }}<span class="sr-only"> {{ 'a11y.communityNewTab' | t: { name: community.name } }}</span>
                 </a>
               </div>

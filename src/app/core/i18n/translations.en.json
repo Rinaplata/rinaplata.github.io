@@ -16,14 +16,14 @@
     "talkImageAlt": "{{ title }} presented at {{ event }}",
     "previousTalkImage": "Previous: view the previous talk image",
     "nextTalkImage": "Next: view the next talk image",
-    "openTalkNewTab": "for the talk {{ title }} in a new tab",
+    "openTalkNewTab": "for the talk {{ title }}",
     "separatePage": "on a separate page",
-    "projectGithubNewTab": "for the project {{ name }} in a new tab",
-    "projectDemoNewTab": "for the project {{ name }} in a new tab",
+    "projectGithubNewTab": "for the project {{ name }}",
+    "projectDemoNewTab": "for the project {{ name }}",
     "projectScreenshot": "{{ name }} project preview",
     "communityLogo": "{{ name }} logo",
-    "communityNewTab": "{{ name }} in a new tab",
-    "openNewTab": "in a new tab",
+    "communityNewTab": "{{ name }}",
+    "openNewTab": "",
     "achievementGroup": "Recognition: {{ title }}",
     "achievementSlideText": "Slide 1 of 2",
     "achievementSlideImage": "Slide 2 of 2",
@@ -49,7 +49,7 @@
   "hero": {
     "eyebrow": "Frontend · Accessibility · Community · Wayuu Identity",
     "role": "Software Engineer, Frontend Developer, and Community Leader",
-    "description": "I build modern, accessible web experiences that connect technology, inclusion, women's leadership, and Indigenous communities in Colombia.",
+    "description": "I build modern web experiences that are easy to use and open to more people. My work connects tech, inclusion, women leaders, and native communities in Colombia.",
     "imageAlt": "Rina Plata",
     "frontendCard": "Frontend",
     "frontendStack": "Angular · React · Accessibility",
@@ -64,18 +64,28 @@
   "about": {
     "eyebrow": "About",
     "title": "More than code",
-    "description": "My story connects software engineering, frontend development, community, and Wayuu identity.",
-    "imageAlt": "Rina Plata participating in a technology community space",
+    "description": "My story connects software, frontend work, community, and Wayuu identity.",
+    "imageAlt": "Rina Plata at a tech community event",
     "paragraphs": [
-      "I am Rina Plata, a software engineer with experience in frontend development, web accessibility, and community leadership. I see technology as a tool for opening opportunities, telling stories, and creating more human-centered products.",
-      "I am passionate about building accessible, clear, and useful interfaces. I work with Angular, React, TypeScript, accessibility, and UX best practices so digital experiences work well for more people. I also incorporate artificial intelligence into my projects to improve efficiency and personalization, always with an ethical, user-centered approach.",
-      "I also lead and participate in communities where I speak about education, web accessibility, women's leadership, Indigenous identity, and social impact through technology."
+      "I am Rina Plata, a software engineer with experience in frontend work, web access, and community leadership. I see tech as a tool to open doors, tell stories, and build products that feel more human.",
+      "I enjoy building clear and useful interfaces. I work with Angular, React, TypeScript, access needs, and UX good practices so more people can use digital products. I also use AI in my projects to save time and improve the user experience, with care and respect for users.",
+      "I also lead and join communities. I speak about education, web access, women in tech, native identity, and social impact."
+    ]
+  },
+  "plain": {
+    "title": "Plain Language Summary",
+    "description": "Here is the short version of this site.",
+    "items": [
+      "I build websites and apps that are easier for people to use.",
+      "I work with teams, communities, and women in tech.",
+      "I share talks about code, access, identity, and learning.",
+      "You can see my work, talks, projects, and ways to contact me below."
     ]
   },
   "experience": {
     "eyebrow": "Experience",
     "title": "My Professional Journey",
-    "description": "Hands-on experience across interfaces, APIs, accessibility, and communities.",
+    "description": "Hands-on work with interfaces, APIs, access needs, and communities.",
     "items": {
       "enerbit": {
         "role": "Software Engineer",
@@ -83,11 +93,11 @@
         "location": "Medellin, Antioquia, Colombia · Remote",
         "responsibilities": [
           "Develop modern, efficient web interfaces.",
-          "Build experiences focused on performance, accessibility, and usability.",
+          "Build fast, clear, and easy-to-use experiences.",
           "Work remotely with product and technology teams."
         ],
         "achievements": [
-          "Contributed to digital products in the energy sector.",
+          "Helped build products for the energy field.",
           "Applied modern frontend best practices."
         ]
       },
@@ -96,13 +106,13 @@
         "period": "Nov 2025 - Present",
         "location": "Medellin, Antioquia, Colombia · Remote",
         "responsibilities": [
-          "Develop secure, scalable, high-quality web applications.",
+          "Build secure, scalable web apps.",
           "Work with .NET and Blazor on healthcare and insurance solutions.",
-          "Build interfaces and flows with attention to web accessibility."
+          "Build screens and flows that more people can use."
         ],
         "achievements": [
-          "Participated in critical products focused on security and scalability.",
-          "Integrated frontend and backend skills into real-world solutions."
+          "Worked on key products with a focus on safety and scale.",
+          "Used frontend and backend skills in real projects."
         ]
       },
       "syspotec": {
@@ -111,12 +121,12 @@
         "location": "Colombia · Remote",
         "responsibilities": [
           "Developed web applications using Angular.",
-          "Created innovative, accessible, and efficient solutions for different projects.",
+          "Built clear and useful solutions for different projects.",
           "Built layouts, components, and service integrations."
         ],
         "achievements": [
-          "Actively contributed to real web products for more than two years.",
-          "Strengthened experience in Angular, accessibility, and remote collaboration."
+          "Contributed to real web products for more than two years.",
+          "Grew my skills in Angular, access needs, and remote work."
         ]
       },
       "bcpartners": {
@@ -129,7 +139,7 @@
           "Participated in interface updates and maintenance."
         ],
         "achievements": [
-          "Built early experience in remote professional collaboration.",
+          "Built early experience working with remote teams.",
           "Used AngularJS in a real project context."
         ]
       },
@@ -138,24 +148,24 @@
         "period": "Jan 2020 - Nov 2021",
         "location": "Antioquia, Colombia",
         "responsibilities": [
-          "Managed social media moderation and supported course authors.",
-          "Monitored online courses and participated in live streams.",
+          "Managed social media and helped course authors.",
+          "Checked online courses and joined live streams.",
           "Supported recruitment of new instructors."
         ],
         "achievements": [
-          "Strengthened community and educational communication processes.",
-          "Built early experience connecting education, technology, and people operations."
+          "Improved community and education workflows.",
+          "Built early experience connecting education, tech, and people work."
         ]
       }
     }
   },
   "talks": {
     "eyebrow": "Talks & Events",
-    "title": "Speaking on Technology, Community, and Inclusion",
-    "description": "Conferences, panels, interviews, and podcasts about frontend, accessibility, identity, and leadership.",
+    "title": "Speaking on Tech, Community, and Inclusion",
+    "description": "Talks, panels, interviews, and podcasts about code, access, identity, and leadership.",
     "viewMore": "View more talks",
     "allTalksTitle": "All Talks, Podcasts, and Interviews",
-    "allTalksDescription": "A complete overview of conferences, panels, podcasts, articles, and community events.",
+    "allTalksDescription": "A full list of talks, panels, podcasts, articles, and community events.",
     "viewEvent": "View event",
     "backToHighlights": "Back to highlights",
     "previous": "Previous",
@@ -177,151 +187,151 @@
       "jsconf-wayuu": {
         "title": "My Experience as a Wayuu Programmer in Technology",
         "date": "2023",
-        "description": "A talk about professional experience, Wayuu identity, and the participation of Indigenous communities in technology.",
+        "description": "A talk about work experience, Wayuu identity, and native communities in tech.",
         "topics": ["Wayuu", "Community", "Inclusion"]
       },
       "wtm-emancipation": {
         "title": "Technology as a Tool for Women's Emancipation",
         "date": "March 6, 2026",
-        "description": "A lightning talk on how technology strengthens freedom, identity, and women's roles in society, presented with Miguel Teheran at Universidad EAFIT.",
+        "description": "A short talk on how tech can support freedom, identity, and women in society. Presented with Miguel Teheran at Universidad EAFIT.",
         "topics": ["Women Techmakers", "Technology", "Women in Tech"]
       },
       "caribeconf-accessibility": {
         "title": "Accessibility: Inclusion from Your Code",
         "date": "April 26, 2025",
-        "description": "A talk about intercultural, accessible, and inclusive technology, integrating Indigenous languages such as Wayuunaiki, WCAG standards, and tools like Playwright.",
+        "description": "A talk about tech that includes more cultures and more people. It covers Wayuunaiki, WCAG, and tools like Playwright.",
         "topics": ["Accessibility", "WCAG", "Wayuunaiki", "Playwright"]
       },
       "ciandt-ai-inclusion": {
-        "title": "Technology for Everyone: Rethinking Innovation and AI with Inclusion",
+        "title": "Technology for Everyone: AI and Inclusion",
         "date": "November 2025",
-        "description": "A talk about artificial intelligence, innovation, and inclusion to build technology that is more accessible and useful for different communities.",
+        "description": "A talk about AI, new ideas, and inclusion. It shows how to build tech that is useful for different communities.",
         "topics": ["Artificial Intelligence", "Innovation", "Inclusion"]
       },
       "pioneras-learning": {
         "title": "Developer Learning Tools",
         "date": "July 25, 2020",
-        "description": "My first talk as a speaker at the launch of the Pioneras Cartagena chapter, with a panel about the role of women from Cartagena in technology.",
+        "description": "My first talk as a speaker, at the launch of Pioneras Cartagena. The event also had a panel about women from Cartagena in tech.",
         "topics": ["Learning", "Women in Tech", "Community"]
       },
       "we-can-code-it": {
         "title": "We Can Code It!",
         "date": "September 16, 2023",
-        "description": "A conversation about talent, history, and women's participation in technology with Daniela Gomez, Sandy Atencio, and Vrilly Castro.",
+        "description": "A talk about talent, history, and women in tech with Daniela Gomez, Sandy Atencio, and Vrilly Castro.",
         "topics": ["Women in Tech", "Community", "Tech Stories"]
       },
       "datasoul-wayuu": {
         "title": "Wayuu Programmer in the Tech Industry",
         "date": "Podcast",
-        "description": "An episode about professional experience, Wayuu identity, and the participation of Indigenous women in the technology industry.",
+        "description": "An episode about work experience, Wayuu identity, and native women in the tech industry.",
         "topics": ["Podcast", "Wayuu", "Tech Industry"]
       },
       "devlokos-career": {
         "title": "The Challenge of Starting in Software Development",
         "date": "2025",
-        "description": "S2 Ep042 episode about the challenges, lessons, and experiences of starting a career in software development.",
+        "description": "S2 Ep042 about the challenges and lessons of starting a software career.",
         "topics": ["Podcast", "Software Development", "Tech Career"]
       },
       "telerik-inspiring": {
         "title": "Inspiring Women: Rina Plata",
         "date": "November 14, 2024",
-        "description": "An interview about Wayuu identity, a career in technology, communities, leadership, and lessons learned while building a STEM career.",
+        "description": "An interview about Wayuu identity, tech work, communities, leadership, and STEM lessons.",
         "topics": ["Interview", "Wayuu", "STEM", "Community"]
       },
       "pioneras-api-colombia": {
         "title": "Discovering the Power of Open Data: Exploring API Colombia with React.js",
         "date": "2023",
-        "description": "A talk about using open data and consuming public Colombian APIs to create frontend experiences with React.js.",
+        "description": "A talk about using open data and public Colombian APIs to build frontend projects with React.js.",
         "topics": ["React.js", "Open Data", "API Colombia"]
       },
       "kcd-diversity": {
-        "title": "Diversity and Inclusion in the STEAM Industry",
+        "title": "Diversity and Inclusion in STEAM",
         "date": "2023",
-        "description": "A panel about diversity, inclusion, and representation in the STEAM industry with Marian Villa, Veronica Rodriguez, Kaky Rodriguez, and Mariana Ramirez.",
+        "description": "A panel about diversity and inclusion in STEAM.",
         "topics": ["Diversity", "Inclusion", "STEAM"]
       },
       "tech-talk-code": {
         "title": "Tech Talk: Women in Code",
         "date": "September 24, 2024",
-        "description": "A live panel about women in technology and professional experiences in the industry with Valentina Pinzon, Caro Castaneda, and Carlos Alarcon.",
+        "description": "A live panel about women in tech and work stories.",
         "topics": ["Women in Tech", "Community", "Panel"],
         "alt": "Tech Talk: Women in Code panel with speakers from the technology community"
       },
       "putumayo-ancestral": {
-        "title": "The Impact of Technology on Preserving Ancestral Knowledge",
+        "title": "Using Tech to Keep Ancestral Knowledge Alive",
         "date": "May 22, 2024",
-        "description": "A talk at the Inspiration and Technology gathering about preserving ancestral knowledge through technology, held in the lab building at Instituto Tecnologico de Putumayo.",
+        "description": "A talk about keeping ancestral knowledge alive with tech. It was part of the Inspiration and Technology event at Instituto Tecnologico de Putumayo.",
         "topics": ["Ancestral Knowledge", "Technology", "Community", "Panel"]
       },
       "boyaconf-accessible-js": {
         "title": "Programming to Include with JavaScript: Accessible Technology",
         "date": "2025",
-        "description": "A talk about creating accessible and inclusive web experiences with JavaScript, focused on WCAG standards and development best practices.",
+        "description": "A talk about building web experiences with JavaScript that more people can use. It focuses on WCAG and good coding practices.",
         "topics": ["Accessibility", "WCAG", "JavaScript", "Testing Tools"]
       },
       "hackseiiis": {
         "title": "HACKSEIIIS - TDEA's First Hackathon",
         "date": "2023",
-        "description": "Leadership and organization of the first hackathon organized by students and faculty at Tecnologico de Antioquia. The event brought together different universities and demonstrated the impact of community collaboration, women's leadership, and technological innovation.",
+        "description": "I helped lead the first hackathon run by students and teachers at Tecnologico de Antioquia. The event brought several universities together. It showed the value of community work, women leaders, and new tech ideas.",
         "topics": ["Hackathon", "Leadership", "Innovation", "Community", "Education"],
-        "alt": "HACKSEIIIS organizing team, the first hackathon at Tecnologico de Antioquia"
+        "alt": "HACKSEIIIS team at Tecnologico de Antioquia"
       }
     }
   },
   "communities": {
     "eyebrow": "Communities",
     "title": "Community Leadership and Learning Networks",
-    "description": "Spaces where I contribute through mentoring, organization, talks, and representation.",
+    "description": "Spaces where I help through mentoring, events, talks, and service.",
     "impactLabel": "Impact",
     "viewCommunity": "View community",
     "items": {
       "guardianes": {
         "role": "Founder and Community Leader",
-        "description": "An initiative that connects identity, memory, education, and technology to make Indigenous knowledge more visible.",
-        "impact": "Created learning and support spaces for Wayuu girls, boys, and communities in La Guajira."
+        "description": "A project that shares native knowledge through stories, learning, and tech.",
+        "impact": "Created learning and support spaces for Wayuu children and communities in La Guajira."
       },
       "api-colombia": {
         "role": "Contributor",
-        "description": "An open source project that provides a free public REST API with no authentication required to query information about Colombia.",
-        "impact": "Contributed to open access to data about departments, regions, tourism, culture, Native communities, airports, and more, supporting educational projects and digital products."
+        "description": "An open source project with a free public REST API for data about Colombia.",
+        "impact": "Helped people access data about regions, tourism, culture, native communities, airports, and more. This supports learning projects and digital products."
       },
       "tech-community": {
         "role": "Organizer",
-        "description": "A Colombian community that connects people, learning, and opportunities around technology.",
-        "impact": "Organized spaces to share knowledge, strengthen professional networks, and highlight tech talent."
+        "description": "A Colombian community for people, learning, and tech jobs.",
+        "impact": "Organized spaces to share knowledge, build networks, and show tech talent."
       },
       "pioneras-dev": {
         "role": "Active Member",
-        "description": "A community that supports the growth of women in technology.",
-        "impact": "Talks, mentoring, and support for women strengthening their professional paths."
+        "description": "A community that supports women in tech.",
+        "impact": "Talks, mentoring, and support for women as they grow their careers."
       },
       "women-techmakers": {
         "role": "Ambassador until 2025",
-        "description": "A global program that promotes visibility, community, and resources for women in technology.",
-        "impact": "Participated in conversations about women's leadership, inclusion, and tech community through 2025."
+        "description": "A global program that gives women in tech more support, community, and resources.",
+        "impact": "Joined talks about women leaders, inclusion, and tech community through 2025."
       },
       "wids": {
         "role": "Ambassador 2023-2024",
-        "description": "A community focused on data, learning, and visibility for women in science and technology.",
-        "impact": "Represented WiDS as an Ambassador in Medellin through 2024, connecting education, technology, and opportunities for women."
+        "description": "A community focused on data, learning, and women in science and tech.",
+        "impact": "Represented WiDS in Medellin through 2024. I helped connect education, tech, and opportunities for women."
       }
     }
   },
   "projects": {
     "eyebrow": "Projects",
     "title": "Digital Products with a Human Approach",
-    "description": "Frontend, accessibility, education, and social impact.",
+    "description": "Frontend work, access, education, and social impact.",
     "items": {
       "portfolio": {
         "name": "Professional Portfolio",
-        "description": "Personal website built to present experience, talks, communities, and featured projects.",
-        "impact": "Communicates a professional identity connected to technology, accessibility, and intercultural work.",
+        "description": "Personal website built to show experience, talks, communities, and projects.",
+        "impact": "Shows work connected to tech, access, and different cultures.",
         "technologies": ["Angular", "TypeScript", "SCSS", "Accessibility"]
       },
       "communities": {
         "name": "Technology for Communities",
-        "description": "Digital prototypes and content for education, community, and social impact.",
-        "impact": "Brings technology tools into conversations about territory, education, and identity.",
+        "description": "Digital content for learning, community, and social impact.",
+        "impact": "Brings tech tools into talks about land, education, and identity.",
         "technologies": ["JavaScript", "HTML", "CSS"]
       }
     }
@@ -357,25 +367,25 @@
   "achievements": {
     "eyebrow": "Achievements",
     "title": "Recognition and Milestones",
-    "description": "Milestones that reflect learning, representation, and contribution.",
+    "description": "Milestones that show learning, service, and community work.",
     "featuredBadge": "Featured Recognition",
     "viewRecognition": "View recognition",
     "items": {
       "featured": {
         "title": "Outstanding Woman in Technology",
-        "description": "Recognition awarded by Tecnologico de Antioquia Institucion Universitaria for contributions to technology, community leadership, WiDS, Women Techmakers, and Guardianes Ancestrales.",
+        "description": "Award from Tecnologico de Antioquia for work in tech and community leadership.",
         "year": "March 2024",
-        "alt": "Rina Plata holding the Outstanding Woman in Technology recognition awarded by Tecnologico de Antioquia",
+        "alt": "Rina Plata holding a tech award",
         "urlLabel": "View institution"
       },
       "jsconf": {
         "title": "Speaker at JSConf",
-        "description": "Talk about her experience as a Wayuu developer in the technology industry.",
+        "description": "Talk about her experience as a Wayuu developer in tech.",
         "year": "2023"
       },
       "community": {
         "title": "Indigenous Community Leadership",
-        "description": "Development of Guardianes Ancestrales as a bridge between identity, education, and technology.",
+        "description": "Growth of Guardianes Ancestrales as a bridge between identity, learning, and tech.",
         "year": "Present"
       },
       "education": {
@@ -385,21 +395,21 @@
       },
       "languages": {
         "title": "Languages and Identity",
-        "description": "Native Spanish and Wayuunaiki speaker, with A2 English proficiency.",
+        "description": "Native Spanish and Wayuunaiki speaker, with A2 English level.",
         "year": "Profile"
       }
     }
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let's Talk About Technology, Community, or Collaboration",
-    "description": "Reach out through my main channels to collaborate, build community, or share ideas.",
+    "title": "Let's Talk About Tech, Community, or Collaboration",
+    "description": "Reach out through my main channels to work together, build community, or share ideas.",
     "email": "Email",
     "sendMessage": "Send message",
     "openLink": "Open link",
     "cv": "Resume",
     "downloadPDF": "Download PDF",
-    "newTab": "in a new tab"
+    "newTab": ""
   },
   "footer": {
     "builtWith": "Built with Angular, accessibility, and community."

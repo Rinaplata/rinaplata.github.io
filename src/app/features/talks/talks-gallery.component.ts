@@ -78,8 +78,6 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
                 <div class="card-actions">
                   <a
                     [href]="talk.url"
-                    target="_blank"
-                    rel="noreferrer"
                   >
                     {{ 'talks.viewEvent' | t }}<span class="sr-only"> {{ 'a11y.openTalkNewTab' | t: { title: (talk.title | t) } }}</span>
                   </a>

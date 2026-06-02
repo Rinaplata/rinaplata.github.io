@@ -96,7 +96,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
                 </div>
                 @if (talk.url) {
                   <div class="card-actions">
-                    <a [href]="talk.url" target="_blank" rel="noreferrer">
+                    <a [href]="talk.url">
                       {{ 'talks.viewEvent' | t }}<span class="sr-only"> {{ 'a11y.openTalkNewTab' | t: { title: (talk.title | t) } }}</span>
                     </a>
                   </div>

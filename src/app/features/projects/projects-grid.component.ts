@@ -40,12 +40,12 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
               </div>
               <div class="card-actions">
                 @if (project.githubUrl) {
-                  <a [href]="project.githubUrl" target="_blank" rel="noreferrer">
+                  <a [href]="project.githubUrl">
                     GitHub<span class="sr-only"> {{ 'a11y.projectGithubNewTab' | t: { name: (project.name | t) } }}</span>
                   </a>
                 }
                 @if (project.demoUrl) {
-                  <a [href]="project.demoUrl" target="_blank" rel="noreferrer">
+                  <a [href]="project.demoUrl">
                     Demo<span class="sr-only"> {{ 'a11y.projectDemoNewTab' | t: { name: (project.name | t) } }}</span>
                   </a>
                 }
