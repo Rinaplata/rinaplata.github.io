@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [SectionHeadingComponent],
+  imports: [SectionHeadingComponent, TranslatePipe],
   template: `
     <section class="section about" id="sobre-mi" aria-labelledby="about-title">
       <app-section-heading
-        eyebrow="Sobre mí"
-        title="Tecnología con raíz, propósito e impacto"
+        [eyebrow]="'about.eyebrow' | t"
+        [title]="'about.title' | t"
         headingId="about-title"
-        description="Mi historia une ingeniería, frontend, comunidad e identidad wayuu."
+        [description]="'about.description' | t"
       />
 
       <div class="about__grid">
@@ -21,30 +23,24 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
           height="640"
           loading="lazy"
           decoding="async"
-          alt="Rina Plata en un espacio profesional y comunitario"
+          alt=""
+          aria-hidden="true"
         >
         <div class="about__copy">
           <p>
-            Soy Rina Plata, ingeniera de software con experiencia en desarrollo frontend, 
-            accesibilidad web y liderazgo comunitario. Entiendo la tecnología como
-            una herramienta para abrir oportunidades, contar historias y crear
-            productos más humanos.
+            {{ 'about.paragraphs.0' | t }}
           </p>
           <p>
-            Me apasiona construir interfaces accesibles, claras y útiles. Trabajo
-            con Angular, React, TypeScript, accesibilidad y buenas prácticas de UX para que las
-            experiencias digitales funcionen bien para más personas. Actualmente, incorporo inteligencia
-             artificial en mis proyectos para mejorar la eficiencia y la personalización, 
-             siempre con un enfoque ético y centrado en el usuario.
+            {{ 'about.paragraphs.1' | t }}
           </p>
           <p>
-            También lidero y participo en comunidades donde hablo sobre educación,
-            accesibilidad web, liderazgo femenino, identidad indígena e impacto
-            social desde la tecnología.
+            {{ 'about.paragraphs.2' | t }}
           </p>
         </div>
       </div>
     </section>
   `
 })
-export class AboutComponent {}
+export class AboutComponent {
+  readonly i18n = inject(I18nService);
+}

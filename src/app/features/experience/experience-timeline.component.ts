@@ -1,41 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { EXPERIENCE } from '../../data/experience.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-experience-timeline',
   standalone: true,
-  imports: [SectionHeadingComponent],
+  imports: [SectionHeadingComponent, TranslatePipe],
   template: `
     <section class="section" id="experiencia" aria-labelledby="experience-title">
       <app-section-heading
-        eyebrow="Experiencia"
-        title="Frontend, producto y trabajo colaborativo"
+        [eyebrow]="'experience.eyebrow' | t"
+        [title]="'experience.title' | t"
         headingId="experience-title"
-        description="Experiencia aplicada en interfaces, APIs, accesibilidad y comunidades."
+        [description]="'experience.description' | t"
       />
 
       <div class="timeline">
         @for (item of experience; track item.role + item.company) {
           <article class="timeline__item card">
             <div>
-              <p class="meta">{{ item.period }} · {{ item.location }}</p>
-              <h3>{{ item.role }}</h3>
+              <p class="meta">{{ item.period | t }} · {{ item.location | t }}</p>
+              <h3>{{ item.role | t }}</h3>
               <strong>{{ item.company }}</strong>
             </div>
             <ul>
               @for (responsibility of item.responsibilities; track responsibility) {
-                <li>{{ responsibility }}</li>
+                <li>{{ responsibility | t }}</li>
               }
             </ul>
-            <div class="tags" role="list" aria-label="Tecnologías usadas">
+            <div class="tags" role="list" [attr.aria-label]="'a11y.usedTechnologies' | t">
               @for (tech of item.technologies; track tech) {
-                <span role="listitem">{{ tech }}</span>
+                <span role="listitem">{{ tech | t }}</span>
               }
             </div>
             <div class="achievement-list">
               @for (achievement of item.achievements; track achievement) {
-                <p>{{ achievement }}</p>
+                <p>{{ achievement | t }}</p>
               }
             </div>
           </article>
@@ -46,4 +48,5 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 })
 export class ExperienceTimelineComponent {
   readonly experience = EXPERIENCE;
+  readonly i18n = inject(I18nService);
 }

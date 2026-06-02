@@ -2,83 +2,83 @@ import { Experience } from '../models/portfolio.models';
 
 export const EXPERIENCE: Experience[] = [
   {
-    role: 'Ingeniera de software',
+    role: 'experience.items.enerbit.role',
     company: 'enerBit',
-    period: 'Mar 2026 - Actualidad',
-    location: 'Medellín, Antioquia, Colombia · En remoto',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'TanStack', 'Accesibilidad', 'Performance', 'claude.ai', 'chatGPT', 'windsurf', 'cursor'],
+    period: 'experience.items.enerbit.period',
+    location: 'experience.items.enerbit.location',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'TanStack', 'skills.items.accessibility', 'Performance', 'claude.ai', 'chatGPT', 'windsurf', 'cursor'],
     responsibilities: [
-      'Desarrollo de interfaces web modernas y eficientes.',
-      'Construcción de experiencias enfocadas en rendimiento, accesibilidad y usabilidad.',
-      'Trabajo remoto con equipos de producto y tecnología.'
+      'experience.items.enerbit.responsibilities.0',
+      'experience.items.enerbit.responsibilities.1',
+      'experience.items.enerbit.responsibilities.2'
     ],
     achievements: [
-      'Contribución a productos digitales del sector energético.',
-      'Aplicación de buenas prácticas modernas de frontend.'
+      'experience.items.enerbit.achievements.0',
+      'experience.items.enerbit.achievements.1'
     ]
   },
   {
-    role: 'Desarrolladora freelance',
+    role: 'experience.items.freelance.role',
     company: 'freelance',
-    period: 'Nov 2025 - Actualidad',
-    location: 'Medellín, Antioquia, Colombia · En remoto',
-    technologies: ['.NET', 'Blazor', 'Angular', 'Accesibilidad Web', 'Aplicaciones web', 'Calidad de software'],
+    period: 'experience.items.freelance.period',
+    location: 'experience.items.freelance.location',
+    technologies: ['.NET', 'Blazor', 'Angular', 'skills.items.webAccessibility', 'skills.items.webApplications', 'skills.items.softwareQuality'],
     responsibilities: [
-      'Desarrollo de aplicaciones web seguras, escalables y de alta calidad.',
-      'Trabajo con .NET y Blazor para soluciones del sector salud/seguros.',
-      'Construcción de interfaces y flujos con atención a accesibilidad web.'
+      'experience.items.freelance.responsibilities.0',
+      'experience.items.freelance.responsibilities.1',
+      'experience.items.freelance.responsibilities.2'
     ],
     achievements: [
-      'Participación en productos críticos con foco en seguridad y escalabilidad.',
-      'Integración de habilidades frontend y backend en soluciones reales.'
+      'experience.items.freelance.achievements.0',
+      'experience.items.freelance.achievements.1'
     ]
   },
   {
-    role: 'Desarrollador de front-end',
+    role: 'experience.items.syspotec.role',
     company: 'Syspotec S.A.S',
     period: 'Nov 2023 - Nov 2025',
-    location: 'Colombia · En remoto',
-    technologies: ['Angular', 'CSS', 'HTML5', 'JavaScript', 'TypeScript', 'Frontend', 'Accesibilidad', 'APIs REST'],
+    location: 'experience.items.syspotec.location',
+    technologies: ['Angular', 'CSS', 'HTML5', 'JavaScript', 'TypeScript', 'Frontend', 'skills.items.accessibility', 'REST APIs'],
     responsibilities: [
-      'Desarrollo de aplicaciones web utilizando Angular.',
-      'Creación de soluciones innovadoras, accesibles y eficientes para distintos proyectos.',
-      'Maquetación, construcción de componentes e integración con servicios.'
+      'experience.items.syspotec.responsibilities.0',
+      'experience.items.syspotec.responsibilities.1',
+      'experience.items.syspotec.responsibilities.2'
     ],
     achievements: [
-      'Contribución activa en productos web reales durante más de dos años.',
-      'Fortalecimiento de experiencia en Angular, accesibilidad y trabajo remoto.'
+      'experience.items.syspotec.achievements.0',
+      'experience.items.syspotec.achievements.1'
     ]
   },
   {
-    role: 'Frontend Developer freelance',
+    role: 'experience.items.bcpartners.role',
     company: 'BCPartners Tech',
     period: 'Feb 2022 - Mar 2022',
     location: 'Colombia',
-    technologies: ['Asana', 'AngularJS', 'Frontend', 'Documentación técnica'],
+    technologies: ['Asana', 'AngularJS', 'Frontend', 'skills.items.technicalDocumentation'],
     responsibilities: [
-      'Apoyo frontend como profesional independiente.',
-      'Seguimiento de tareas y documentación en Asana.',
-      'Participación en ajustes y mantenimiento de interfaces.'
+      'experience.items.bcpartners.responsibilities.0',
+      'experience.items.bcpartners.responsibilities.1',
+      'experience.items.bcpartners.responsibilities.2'
     ],
     achievements: [
-      'Experiencia inicial en colaboración profesional remota.',
-      'Uso de AngularJS en contexto de proyecto real.'
+      'experience.items.bcpartners.achievements.0',
+      'experience.items.bcpartners.achievements.1'
     ]
   },
   {
     role: 'Authors Relationships Lead',
     company: 'Net University',
-    period: 'Ene 2020 - Nov 2021',
+    period: 'experience.items.netuniversity.period',
     location: 'Antioquia, Colombia',
-    technologies: ['Comunicación', 'Gestión de comunidad', 'Streaming', 'Seguimiento de cursos'],
+    technologies: ['skills.items.communication', 'skills.items.communityManagement', 'Streaming', 'skills.items.courseTracking'],
     responsibilities: [
-      'Moderación de redes sociales y acompañamiento a autores.',
-      'Seguimiento de cursos en línea y presencia en transmisiones.',
-      'Apoyo en reclutamiento de nuevos docentes.'
+      'experience.items.netuniversity.responsibilities.0',
+      'experience.items.netuniversity.responsibilities.1',
+      'experience.items.netuniversity.responsibilities.2'
     ],
     achievements: [
-      'Fortalecimiento de procesos de comunidad y comunicación educativa.',
-      'Experiencia temprana articulando educación, tecnología y gestión de personas.'
+      'experience.items.netuniversity.achievements.0',
+      'experience.items.netuniversity.achievements.1'
     ]
   },
 ];

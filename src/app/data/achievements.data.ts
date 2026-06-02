@@ -2,37 +2,36 @@ import { Achievement } from '../models/portfolio.models';
 
 export const ACHIEVEMENTS: Achievement[] = [
   {
-    title: 'Mujer destacada en el área de la tecnología',
-    description: 'Reconocimiento otorgado por el Tecnológico de Antioquia Institución Universitaria por contribuciones en tecnología, liderazgo comunitario, WiDS, Women Techmakers y Guardianes Ancestrales.',
-    year: 'Marzo 2024',
+    title: 'achievements.items.featured.title',
+    description: 'achievements.items.featured.description',
+    year: 'achievements.items.featured.year',
     images: [
       {
         src: 'assets/images/speaker/optimized/reconocimiento-rina-900.jpg',
-        alt: 'Rina Plata sosteniendo el reconocimiento Mujer destacada en el área de tecnología otorgado por el Tecnológico de Antioquia'
+        alt: 'achievements.items.featured.alt'
       }
     ],
     url: 'https://tdea.edu.co/',
-    urlLabel: 'Ver institución'
+    urlLabel: 'achievements.items.featured.urlLabel'
   },
   {
-    title: 'Speaker en JSConf',
-    description: 'Charla sobre su experiencia como desarrolladora wayuu en la industria tecnológica.',
+    title: 'achievements.items.jsconf.title',
+    description: 'achievements.items.jsconf.description',
     year: '2023'
   },
   {
-    title: 'Liderazgo comunitario indígena',
-    description: 'Impulso de Guardianes Ancestrales como puente entre identidad, educación y tecnología.',
-    year: 'Actualidad'
+    title: 'achievements.items.community.title',
+    description: 'achievements.items.community.description',
+    year: 'achievements.items.community.year'
   },
   {
-    title: 'Formación en ingeniería de software',
-    description: 'Estudiante de Ingeniería de Software en el Tecnológico de Antioquia.',
+    title: 'achievements.items.education.title',
+    description: 'achievements.items.education.description',
     year: '2020 - 2025'
   },
   {
-    title: 'Lenguas e identidad',
-    description: 'Español y Wayuunaiki nativos, con inglés en nivel A2.',
-    year: 'Perfil'
+    title: 'achievements.items.languages.title',
+    description: 'achievements.items.languages.description',
+    year: 'achievements.items.languages.year'
   }
 ];
-

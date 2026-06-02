@@ -1,0 +1,19 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Background teal circle -->
+  <rect width="256" height="256" fill="#1ab394" rx="64"/>
+  
+  <!-- White stylized speech/message icon -->
+  <g fill="white">
+    <!-- Top bubble -->
+    <circle cx="128" cy="52" r="38"/>
+    
+    <!-- Right arrow/message tail -->
+    <polygon points="90,140 190,180 90,220"/>
+    
+    <!-- Bottom left rounded corner -->
+    <circle cx="70" cy="200" r="30"/>
+  </g>
+  
+  <!-- Accent circle (small white dot top right) -->
+  <circle cx="200" cy="65" r="22" fill="white" opacity="0.9"/>
+</svg>

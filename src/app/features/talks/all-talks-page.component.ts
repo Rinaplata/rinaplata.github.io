@@ -1,23 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TALKS } from '../../data/talks.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-all-talks-page',
   standalone: true,
-  imports: [RouterLink, SectionHeadingComponent],
+  imports: [RouterLink, SectionHeadingComponent, TranslatePipe],
   template: `
-    <section class="section section--warm talks-page" aria-labelledby="all-talks-title">
+    <section id="/charlas" class="section section--warm talks-page" aria-labelledby="all-talks-title">
       <app-section-heading
-        eyebrow="Archivo speaker"
-        title="Todas las charlas, podcasts y entrevistas"
+        [eyebrow]="'talks.eyebrow' | t"
+        [title]="'talks.allTalksTitle' | t"
         headingId="all-talks-title"
-        description="Un recorrido completo por conferencias, paneles, podcasts, artículos y encuentros comunitarios."
+        level="h1"
+        [description]="'talks.allTalksDescription' | t"
       />
 
       <div class="talks-page__actions">
-        <a class="button button--secondary" routerLink="/" fragment="charlas">Volver a destacadas</a>
+        <a class="button button--secondary" routerLink="/" fragment="charlas">{{ 'talks.backToHighlights' | t }}</a>
       </div>
 
       <div class="talks-filters">
@@ -37,23 +40,24 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
         <div class="talks-list">
           @for (talk of filteredTalks; track talk.title) {
             <article class="talk-card talk-card--compact">
-              <div class="talk-card__carousel" role="group" aria-label="Imágenes de la charla">
+              <div class="talk-card__carousel" role="group" [attr.aria-label]="'a11y.talkImages' | t">
                 <img
                   [src]="currentTalkImage(talk).src"
                   width="420"
                   height="263"
                   loading="lazy"
                   decoding="async"
-                  [alt]="currentTalkImage(talk).alt"
+                  alt=""
+                  aria-hidden="true"
                 >
                 @if (talkImages(talk).length > 1) {
                   <div class="talk-card__carousel-controls">
                     <button
                       type="button"
                       (click)="previousTalkImage(talk.title, talkImages(talk).length)"
-                      aria-label="Anterior: ver imagen anterior de la charla"
+                      [attr.aria-label]="'a11y.previousTalkImage' | t"
                     >
-                      Anterior
+                      {{ 'talks.previous' | t }}
                     </button>
                     <span aria-live="polite">
                       {{ currentTalkImageIndex(talk.title) + 1 }} / {{ talkImages(talk).length }}
@@ -61,39 +65,39 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                     <button
                       type="button"
                       (click)="nextTalkImage(talk.title, talkImages(talk).length)"
-                      aria-label="Siguiente: ver siguiente imagen de la charla"
+                      [attr.aria-label]="'a11y.nextTalkImage' | t"
                     >
-                      Siguiente
+                      {{ 'talks.next' | t }}
                     </button>
                   </div>
                 }
               </div>
               <div class="talk-card__body">
-                <p class="meta">{{ talk.event }} · {{ talk.date }}</p>
+                <p class="meta">{{ talk.event }} · {{ talk.date | t }}</p>
                 <div class="talk-card__type-badge">{{ getTypeLabel(talk.type) }}</div>
-                <h3>{{ talk.title }}</h3>
+                <h3>{{ talk.title | t }}</h3>
                 <p class="talk-card__description" [class.is-expanded]="isDescriptionExpanded(talk.title)">
-                  {{ talk.description }}
+                  {{ talk.description | t }}
                 </p>
-                @if (hasLongDescription(talk.description)) {
+                @if (hasLongDescription(talk.description | t)) {
                   <button
                     type="button"
                     class="talk-card__description-toggle"
                     (click)="toggleDescription(talk.title)"
                     [attr.aria-expanded]="isDescriptionExpanded(talk.title)"
                   >
-                    {{ isDescriptionExpanded(talk.title) ? 'Ver menos' : 'Ver más' }}
+                    {{ isDescriptionExpanded(talk.title) ? ('common.viewLess' | t) : ('common.viewMore' | t) }}
                   </button>
                 }
-                <div class="tags" role="list" aria-label="Temas de la charla">
+                <div class="tags" role="list" [attr.aria-label]="'a11y.talkTopics' | t">
                   @for (topic of talk.topics; track topic) {
-                    <span role="listitem">{{ topic }}</span>
+                    <span role="listitem">{{ topic | t }}</span>
                   }
                 </div>
                 @if (talk.url) {
                   <div class="card-actions">
                     <a [href]="talk.url" target="_blank" rel="noreferrer">
-                      Ver evento<span class="sr-only"> de la charla {{ talk.title }} en una nueva pestaña</span>
+                      {{ 'talks.viewEvent' | t }}<span class="sr-only"> {{ 'a11y.openTalkNewTab' | t: { title: (talk.title | t) } }}</span>
                     </a>
                   </div>
                 }
@@ -114,22 +118,22 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
     }
 
     .filter-button {
+      min-height: 44px;
       padding: 0.75rem 1.5rem;
-      border: 2px solid var(--color-primary);
+      border: 2px solid var(--color-primary-strong);
       background: var(--color-surface);
-      color: var(--color-primary);
+      color: var(--color-primary-strong);
       border-radius: 2rem;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       transition: all 0.3s ease;
-      text-transform: capitalize;
       min-width: 120px;
       text-align: center;
     }
 
     .filter-button:hover {
-      background: var(--color-primary);
+      background: var(--color-primary-strong);
       color: var(--color-surface);
       box-shadow: 0 4px 12px rgba(217, 70, 239, 0.25);
     }
@@ -140,7 +144,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
     }
 
     .filter-button.active {
-      background: var(--color-primary);
+      background: var(--color-primary-strong);
       color: var(--color-surface);
       font-weight: 700;
       box-shadow: 0 4px 12px rgba(217, 70, 239, 0.35);
@@ -153,19 +157,42 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 
     .talk-card__type-badge {
       display: inline-block;
-      background: var(--color-accent);
-      color: var(--color-deep);
+      background: #4c1d95;
+      color: #ffffff;
       padding: 0.35rem 0.85rem;
       border-radius: 0.5rem;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       font-weight: 700;
-      text-transform: uppercase;
       margin-bottom: 0.5rem;
-      letter-spacing: 0.5px;
+      letter-spacing: 0;
+    }
+
+    @media (prefers-contrast: more) {
+      .filter-button {
+        border: 2px solid currentColor;
+        background: var(--color-surface);
+        color: var(--color-primary-strong);
+        box-shadow: none;
+      }
+
+      .filter-button:hover,
+      .filter-button.active,
+      .filter-button.active:hover {
+        background: var(--color-primary-strong);
+        color: var(--color-surface);
+        box-shadow: none;
+      }
+
+      .talk-card__type-badge {
+        border: 2px solid currentColor;
+        background: var(--color-surface);
+        color: var(--color-text);
+      }
     }
   `]
 })
 export class AllTalksPageComponent {
+  readonly i18n = inject(I18nService);
   readonly talks = [...TALKS].sort((firstTalk, secondTalk) => this.getTalkYear(secondTalk.date) - this.getTalkYear(firstTalk.date));
   readonly expandedDescriptions = new Set<string>();
   readonly filterTypes: Array<'all' | 'speaker' | 'panel' | 'entrevista' | 'hackathon'> = ['all', 'speaker', 'panel', 'entrevista', 'hackathon'];
@@ -184,24 +211,13 @@ export class AllTalksPageComponent {
   }
 
   getFilterLabel(filter: string): string {
-    const labels: Record<string, string> = {
-      'all': 'Todas',
-      'speaker': 'Speakers',
-      'panel': 'Paneles',
-      'entrevista': 'Entrevistas',
-      'hackathon': 'Hackathon'
-    };
-    return labels[filter] || filter;
+    const key = `talks.filters.${filter}`;
+    return this.i18n.translate(key);
   }
 
   getTypeLabel(type: string): string {
-    const labels: Record<string, string> = {
-      'speaker': 'Speaker',
-      'panel': 'Panel',
-      'entrevista': 'Entrevista',
-      'hackathon': 'Hackathon'
-    };
-    return labels[type] || type;
+    const key = `talks.types.${type}`;
+    return this.i18n.translate(key);
   }
 
   hasLongDescription(description: string): boolean {
@@ -227,7 +243,7 @@ export class AllTalksPageComponent {
       : [
           {
             src: talk.image,
-            alt: `Imagen de la charla ${talk.title} en ${talk.event}`
+            alt: this.i18n.translateWithParams('a11y.talkImageAlt', { title: this.i18n.translate(talk.title), event: talk.event })
           }
         ];
   }
@@ -251,6 +267,6 @@ export class AllTalksPageComponent {
   }
 
   private getTalkYear(date: string): number {
-    return Number(date.match(/\d{4}/)?.[0] ?? 0);
+    return Number(this.i18n.translate(date).match(/\d{4}/)?.[0] ?? 0);
   }
 }

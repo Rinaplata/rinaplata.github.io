@@ -1,27 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SKILLS } from '../../data/skills.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [SectionHeadingComponent],
+  imports: [SectionHeadingComponent, TranslatePipe],
   template: `
     <section class="section" id="habilidades" aria-labelledby="skills-title">
       <app-section-heading
-        eyebrow="Habilidades"
-        title="Stack técnico y liderazgo"
+        [eyebrow]="'skills.eyebrow' | t"
+        [title]="'skills.title' | t"
         headingId="skills-title"
-        description="Habilidades organizadas por áreas de trabajo."
+        [description]="'skills.description' | t"
       />
 
       <div class="cards-grid cards-grid--three">
         @for (group of skillGroups; track group.category) {
           <article class="card skill-card">
-            <h3>{{ group.category }}</h3>
+            <h3>{{ group.category | t }}</h3>
             <div class="tags tags--large">
               @for (skill of group.skills; track skill) {
-                <span [class]="getSkillClass(group.category)">{{ skill }}</span>
+                <span [class]="getSkillClass(group.category)">{{ skill | t }}</span>
               }
             </div>
           </article>
@@ -32,6 +34,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 })
 export class SkillsComponent {
   readonly skillGroups = SKILLS;
+  readonly i18n = inject(I18nService);
 
   getSkillClass(category: string): string {
     const normalized = category.toLowerCase();
@@ -44,11 +47,11 @@ export class SkillsComponent {
       return 'pill--backend';
     }
 
-    if (normalized.includes('herramientas')) {
+    if (normalized.includes('tools')) {
       return 'pill--design';
     }
 
-    if (normalized.includes('accesibilidad')) {
+    if (normalized.includes('accessibility')) {
       return 'pill--accessibility';
     }
 

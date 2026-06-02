@@ -1,35 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PROFILE } from '../../data/profile.data';
 import { SocialIconComponent } from '../../shared/components/social-icon.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [SocialIconComponent],
+  imports: [SocialIconComponent, TranslatePipe],
   template: `
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero__content reveal">
-        <span class="eyebrow">Frontend · Accesibilidad · Comunidad · Identidad Wayuu</span>
+        <span class="eyebrow">{{ 'hero.eyebrow' | t }}</span>
         <h1 id="hero-title">{{ profile.name }}</h1>
-        <p class="hero__role">{{ profile.role }}</p>
+        <p class="hero__role">{{ profile.roleKey | t }}</p>
         <p class="hero__description">
-          Construyo experiencias web modernas y accesibles, conectando tecnología,
-          inclusión, liderazgo femenino y comunidades indígenas de Colombia.
+          {{ 'hero.description' | t }}
         </p>
-        <div class="hero__actions" role="group" aria-label="Acciones principales">
-          <a class="button button--primary" href="#proyectos" (click)="scrollToSection('proyectos', $event)">Ver proyectos</a>
-          <a class="button button--secondary" href="#charlas" (click)="scrollToSection('charlas', $event)">Ver charlas</a>
-          <a class="button button--ghost" href="#redes-sociales" (click)="scrollToSection('redes-sociales', $event)">Contactarme</a>
-        </div>
+        <ul class="hero__actions" [attr.aria-label]="'a11y.primaryActions' | t">
+          <li>
+            <a class="button button--primary" href="#proyectos" (click)="scrollToSection('proyectos', $event)">{{ 'hero.cta.projects' | t }}</a>
+          </li>
+          <li>
+            <a class="button button--secondary" href="#charlas" (click)="scrollToSection('charlas', $event)">{{ 'hero.cta.talks' | t }}</a>
+          </li>
+          <li>
+            <a class="button button--ghost" href="#contacto" (click)="scrollToSection('contacto', $event)">{{ 'hero.cta.contact' | t }}</a>
+          </li>
+        </ul>
 
-        <div class="hero__socials" role="group" aria-label="Redes sociales">
+        <ul class="hero__socials" [attr.aria-label]="'a11y.socialLinks' | t">
           @for (social of profile.socials; track social.url) {
-            <a [href]="social.url" target="_blank" rel="noreferrer">
-              <app-social-icon [name]="social.icon" />
-              <span class="sr-only">{{ social.label }} se abre en una nueva pestaña</span>
-            </a>
+            <li>
+              <a [href]="social.url" target="_blank" rel="noreferrer">
+                <app-social-icon [name]="social.icon" />
+                <span class="sr-only">{{ social.label }} {{ 'contact.newTab' | t }}</span>
+              </a>
+            </li>
           }
-        </div>
+        </ul>
       </div>
 
       <div class="hero__visual reveal">
@@ -40,16 +49,17 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
             height="520"
             fetchpriority="high"
             decoding="async"
-            alt="Retrato profesional de Rina Plata"
+            alt=""
+            aria-hidden="true"
           >
         </div>
         <div class="hero__floating-card hero__floating-card--top">
-          <strong>Frontend</strong>
-          <span>Angular · React · Accesibilidad</span>
+          <strong>{{ 'hero.frontendCard' | t }}</strong>
+          <span>{{ 'hero.frontendStack' | t }}</span>
         </div>
         <div class="hero__floating-card hero__floating-card--bottom">
-          <strong>Comunidad</strong>
-          <span>Tecnología e inclusión</span>
+          <strong>{{ 'hero.communityCard' | t }}</strong>
+          <span>{{ 'hero.communityStack' | t }}</span>
         </div>
       </div>
     </section>
@@ -57,6 +67,7 @@ import { SocialIconComponent } from '../../shared/components/social-icon.compone
 })
 export class HeroComponent {
   readonly profile = PROFILE;
+  readonly i18n = inject(I18nService);
 
   scrollToSection(fragment: string, event: MouseEvent): void {
     event.preventDefault();

@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: 'Rina Plata',
-  role: 'Ingeniera de software, desarrolladora frontend y líder comunitaria',
+  roleKey: 'hero.role',
   email: 'rinamarcelaplata@gmail.com',
   location: 'Medellín, Antioquia, Colombia',
   cv: 'assets/pdf/Rina_Plata_Frontend_EN.pdf',
@@ -9,6 +9,7 @@ export const PROFILE = {
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rina-plata/', icon: 'linkedin' },
     { label: 'GitHub', url: 'https://github.com/Rinaplata', icon: 'github' },
     { label: 'Instagram', url: 'https://www.instagram.com/rina_plata/', icon: 'instagram' },
+    { label: 'Sessionize', url: 'https://sessionize.com/RinaPlata/', icon: 'sessionize' },
     { label: 'Guardianes Ancestrales', url: 'https://guardianesancestrales.com/#about', icon: 'external' }
   ]
 };

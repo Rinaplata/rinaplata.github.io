@@ -1,41 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TALKS } from '../../data/talks.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-talks-gallery',
   standalone: true,
-  imports: [RouterLink, SectionHeadingComponent],
+  imports: [RouterLink, SectionHeadingComponent, TranslatePipe],
   template: `
     <section class="section section--warm talks-section" id="charlas" aria-labelledby="talks-title">
       <app-section-heading
-        eyebrow="Charlas y eventos"
-        title="Speaker en tecnología, comunidad e inclusión"
+        [eyebrow]="'talks.eyebrow' | t"
+        [title]="'talks.title' | t"
         headingId="talks-title"
-        description="Conferencias, paneles, entrevistas y podcasts sobre frontend, accesibilidad, identidad y liderazgo."
+        [description]="'talks.description' | t"
       />
 
-      <div class="talks-layout" role="list" aria-label="Charlas destacadas" aria-live="polite">
+      <div class="talks-layout" role="list" [attr.aria-label]="'a11y.featuredTalks' | t" aria-live="polite">
         @for (talk of visibleTalks; track talk.title) {
           <article class="talk-card talk-card--featured" role="listitem">
-            <div class="talk-card__carousel" role="group" aria-label="Imágenes de la charla">
+            <div class="talk-card__carousel" role="group" [attr.aria-label]="'a11y.talkImages' | t">
               <img
                 [src]="currentTalkImage(talk).src"
                 width="420"
                 height="263"
                 loading="lazy"
                 decoding="async"
-                [alt]="currentTalkImage(talk).alt"
+                alt=""
+                aria-hidden="true"
               >
               @if (talkImages(talk).length > 1) {
                 <div class="talk-card__carousel-controls">
                   <button
                     type="button"
                     (click)="previousTalkImage(talk.title, talkImages(talk).length)"
-                    aria-label="Anterior: ver imagen anterior de la charla"
+                    [attr.aria-label]="'a11y.previousTalkImage' | t"
                   >
-                    Anterior
+                    {{ 'talks.previous' | t }}
                   </button>
                   <span aria-live="polite">
                     {{ currentTalkImageIndex(talk.title) + 1 }} / {{ talkImages(talk).length }}
@@ -43,32 +46,32 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                   <button
                     type="button"
                     (click)="nextTalkImage(talk.title, talkImages(talk).length)"
-                    aria-label="Siguiente: ver siguiente imagen de la charla"
+                    [attr.aria-label]="'a11y.nextTalkImage' | t"
                   >
-                    Siguiente
+                    {{ 'talks.next' | t }}
                   </button>
                 </div>
               }
             </div>
             <div class="talk-card__body">
-              <p class="meta">{{ talk.event }} · {{ talk.date }}</p>
-              <h3>{{ talk.title }}</h3>
+              <p class="meta">{{ talk.event }} · {{ talk.date | t }}</p>
+              <h3>{{ talk.title | t }}</h3>
               <p class="talk-card__description" [class.is-expanded]="isDescriptionExpanded(talk.title)">
-                {{ talk.description }}
+                {{ talk.description | t }}
               </p>
-              @if (hasLongDescription(talk.description)) {
+              @if (hasLongDescription(talk.description | t)) {
                 <button
                   type="button"
                   class="talk-card__description-toggle"
                   (click)="toggleDescription(talk.title)"
                   [attr.aria-expanded]="isDescriptionExpanded(talk.title)"
                 >
-                  {{ isDescriptionExpanded(talk.title) ? 'Ver menos' : 'Ver más' }}
+                  {{ isDescriptionExpanded(talk.title) ? ('common.viewLess' | t) : ('common.viewMore' | t) }}
                 </button>
               }
-              <div class="tags" role="list" aria-label="Temas de la charla">
+              <div class="tags" role="list" [attr.aria-label]="'a11y.talkTopics' | t">
                 @for (topic of talk.topics; track topic) {
-                  <span role="listitem">{{ topic }}</span>
+                  <span role="listitem">{{ topic | t }}</span>
                 }
               </div>
               @if (talk.url) {
@@ -78,7 +81,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Ver evento<span class="sr-only"> de la charla {{ talk.title }} en una nueva pestaña</span>
+                    {{ 'talks.viewEvent' | t }}<span class="sr-only"> {{ 'a11y.openTalkNewTab' | t: { title: (talk.title | t) } }}</span>
                   </a>
                 </div>
               }
@@ -89,16 +92,18 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 
       <div class="talks-controls">
         <a
+          id="/charlas"
           class="button button--secondary talks-more__button"
           routerLink="/charlas"
         >
-          Ver más charlas<span class="sr-only"> en una página aparte</span>
+          {{ 'talks.viewMore' | t }}<span class="sr-only"> {{ 'a11y.separatePage' | t }}</span>
         </a>
       </div>
     </section>
   `
 })
 export class TalksGalleryComponent {
+  readonly i18n = inject(I18nService);
   readonly talks = [...TALKS].sort((firstTalk, secondTalk) => this.getTalkYear(secondTalk.date) - this.getTalkYear(firstTalk.date));
   readonly visibleCount = 6;
   readonly expandedDescriptions = new Set<string>();
@@ -131,7 +136,7 @@ export class TalksGalleryComponent {
       : [
           {
             src: talk.image,
-            alt: `Imagen de la charla ${talk.title} en ${talk.event}`
+            alt: this.i18n.translateWithParams('a11y.talkImageAlt', { title: this.i18n.translate(talk.title), event: talk.event })
           }
         ];
   }
@@ -155,6 +160,6 @@ export class TalksGalleryComponent {
   }
 
   private getTalkYear(date: string): number {
-    return Number(date.match(/\d{4}/)?.[0] ?? 0);
+    return Number(this.i18n.translate(date).match(/\d{4}/)?.[0] ?? 0);
   }
 }

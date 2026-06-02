@@ -1,0 +1,417 @@
+{
+  "a11y": {
+    "mainNavigation": "Navegación principal",
+    "skipToMain": "Saltar al contenido principal",
+    "menuToggle": "Abrir o cerrar menú",
+    "primaryActions": "Acciones principales",
+    "socialLinks": "Redes sociales",
+    "contactChannels": "Canales de contacto",
+    "languageSelector": "Selector de idioma",
+    "preferredLanguage": "Selecciona tu idioma preferido",
+    "projectTechnologies": "Tecnologías del proyecto",
+    "usedTechnologies": "Tecnologías usadas",
+    "talkTopics": "Temas de la charla",
+    "featuredTalks": "Charlas destacadas",
+    "talkImages": "Imágenes de la charla",
+    "talkImageAlt": "{{ title }} presentado en {{ event }}",
+    "previousTalkImage": "Anterior: ver imagen anterior de la charla",
+    "nextTalkImage": "Siguiente: ver siguiente imagen de la charla",
+    "openTalkNewTab": "de la charla {{ title }} en una nueva pestaña",
+    "separatePage": "en una página aparte",
+    "projectGithubNewTab": "del proyecto {{ name }} en una nueva pestaña",
+    "projectDemoNewTab": "del proyecto {{ name }} en una nueva pestaña",
+    "projectScreenshot": "Vista previa del proyecto {{ name }}",
+    "communityLogo": "Logo de {{ name }}",
+    "communityNewTab": "{{ name }} en una nueva pestaña",
+    "openNewTab": "en una nueva pestaña",
+    "achievementGroup": "Reconocimiento: {{ title }}",
+    "achievementSlideText": "Slide 1 de 2",
+    "achievementSlideImage": "Slide 2 de 2",
+    "achievementText": "Ver texto del reconocimiento",
+    "achievementPhoto": "Ver fotografía del reconocimiento",
+    "otherAchievements": "Otros logros",
+    "themeLight": "Cambiar a modo claro",
+    "themeDark": "Cambiar a modo oscuro"
+  },
+  "header": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "experience": "Experiencia",
+      "talks": "Charlas",
+      "communities": "Comunidades",
+      "projects": "Proyectos",
+      "skills": "Habilidades",
+      "achievements": "Logros",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "eyebrow": "Frontend · Accesibilidad · Comunidad · Identidad Wayuu",
+    "role": "Ingeniera de software, desarrolladora frontend y líder comunitaria",
+    "description": "Construyo experiencias web modernas y accesibles, conectando tecnología, inclusión, liderazgo femenino y comunidades indígenas de Colombia.",
+    "imageAlt": "Rina Plata",
+    "frontendCard": "Frontend",
+    "frontendStack": "Angular · React · Accesibilidad",
+    "communityCard": "Comunidad",
+    "communityStack": "Tecnología e inclusión",
+    "cta": {
+      "projects": "Ver proyectos",
+      "talks": "Ver charlas",
+      "contact": "Contactarme"
+    }
+  },
+  "about": {
+    "eyebrow": "Acerca de",
+    "title": "Más que código",
+    "description": "Mi historia une ingeniería, frontend, comunidad e identidad wayuu.",
+    "imageAlt": "Rina Plata participando en un espacio de comunidad tecnológica",
+    "paragraphs": [
+      "Soy Rina Plata, ingeniera de software con experiencia en desarrollo frontend, accesibilidad web y liderazgo comunitario. Entiendo la tecnología como una herramienta para abrir oportunidades, contar historias y crear productos más humanos.",
+      "Me apasiona construir interfaces accesibles, claras y útiles. Trabajo con Angular, React, TypeScript, accesibilidad y buenas prácticas de UX para que las experiencias digitales funcionen bien para más personas. Actualmente, incorporo inteligencia artificial en mis proyectos para mejorar la eficiencia y la personalización, siempre con un enfoque ético y centrado en el usuario.",
+      "También lidero y participo en comunidades donde hablo sobre educación, accesibilidad web, liderazgo femenino, identidad indígena e impacto social desde la tecnología."
+    ]
+  },
+  "experience": {
+    "eyebrow": "Experiencia",
+    "title": "Mi trayectoria profesional",
+    "description": "Experiencia aplicada en interfaces, APIs, accesibilidad y comunidades.",
+    "items": {
+      "enerbit": {
+        "role": "Ingeniera de software",
+        "period": "Mar 2026 - Actualidad",
+        "location": "Medellín, Antioquia, Colombia · En remoto",
+        "responsibilities": [
+          "Desarrollo de interfaces web modernas y eficientes.",
+          "Construcción de experiencias enfocadas en rendimiento, accesibilidad y usabilidad.",
+          "Trabajo remoto con equipos de producto y tecnología."
+        ],
+        "achievements": [
+          "Contribución a productos digitales del sector energético.",
+          "Aplicación de buenas prácticas modernas de frontend."
+        ]
+      },
+      "freelance": {
+        "role": "Desarrolladora freelance",
+        "period": "Nov 2025 - Actualidad",
+        "location": "Medellín, Antioquia, Colombia · En remoto",
+        "responsibilities": [
+          "Desarrollo de aplicaciones web seguras, escalables y de alta calidad.",
+          "Trabajo con .NET y Blazor para soluciones del sector salud/seguros.",
+          "Construcción de interfaces y flujos con atención a accesibilidad web."
+        ],
+        "achievements": [
+          "Participación en productos críticos con foco en seguridad y escalabilidad.",
+          "Integración de habilidades frontend y backend en soluciones reales."
+        ]
+      },
+      "syspotec": {
+        "role": "Desarrollador de front-end",
+        "period": "Nov 2023 - Nov 2025",
+        "location": "Colombia · En remoto",
+        "responsibilities": [
+          "Desarrollo de aplicaciones web utilizando Angular.",
+          "Creación de soluciones innovadoras, accesibles y eficientes para distintos proyectos.",
+          "Maquetación, construcción de componentes e integración con servicios."
+        ],
+        "achievements": [
+          "Contribución activa en productos web reales durante más de dos años.",
+          "Fortalecimiento de experiencia en Angular, accesibilidad y trabajo remoto."
+        ]
+      },
+      "bcpartners": {
+        "role": "Frontend Developer freelance",
+        "period": "Feb 2022 - Mar 2022",
+        "location": "Colombia",
+        "responsibilities": [
+          "Apoyo frontend como profesional independiente.",
+          "Seguimiento de tareas y documentación en Asana.",
+          "Participación en ajustes y mantenimiento de interfaces."
+        ],
+        "achievements": [
+          "Experiencia inicial en colaboración profesional remota.",
+          "Uso de AngularJS en contexto de proyecto real."
+        ]
+      },
+      "netuniversity": {
+        "role": "Authors Relationships Lead",
+        "period": "Ene 2020 - Nov 2021",
+        "location": "Antioquia, Colombia",
+        "responsibilities": [
+          "Moderación de redes sociales y acompañamiento a autores.",
+          "Seguimiento de cursos en línea y presencia en transmisiones.",
+          "Apoyo en reclutamiento de nuevos docentes."
+        ],
+        "achievements": [
+          "Fortalecimiento de procesos de comunidad y comunicación educativa.",
+          "Experiencia temprana articulando educación, tecnología y gestión de personas."
+        ]
+      }
+    }
+  },
+  "talks": {
+    "eyebrow": "Charlas y eventos",
+    "title": "Speaker en tecnología, comunidad e inclusión",
+    "description": "Conferencias, paneles, entrevistas y podcasts sobre frontend, accesibilidad, identidad y liderazgo.",
+    "viewMore": "Ver más charlas",
+    "allTalksTitle": "Todas las charlas, podcasts y entrevistas",
+    "allTalksDescription": "Un recorrido completo por conferencias, paneles, podcasts, artículos y encuentros comunitarios.",
+    "viewEvent": "Ver evento",
+    "backToHighlights": "Volver a destacadas",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "filters": {
+      "all": "Todas",
+      "speaker": "Charlas",
+      "panel": "Paneles",
+      "entrevista": "Entrevistas",
+      "hackathon": "Hackathon"
+    },
+    "types": {
+      "speaker": "Speaker",
+      "panel": "Panel",
+      "entrevista": "Entrevista",
+      "hackathon": "Hackathon"
+    },
+    "items": {
+      "jsconf-wayuu": {
+        "title": "Mi experiencia como programadora wayuu en el mundo de la tecnología",
+        "date": "2023",
+        "description": "Charla sobre experiencia profesional, identidad wayuu y participación de comunidades indígenas en tecnología.",
+        "topics": ["Wayuu", "Comunidad", "Inclusión"]
+      },
+      "wtm-emancipation": {
+        "title": "La tecnología como herramienta de emancipación de la mujer",
+        "date": "6 marzo 2026",
+        "description": "Lightning talk sobre cómo la tecnología impulsa la libertad, identidad y rol de la mujer en la sociedad, realizada junto a Miguel Teherán en Universidad EAFIT.",
+        "topics": ["Women Techmakers", "Tecnología", "Mujeres en tecnología"]
+      },
+      "caribeconf-accessibility": {
+        "title": "Accesibilidad, inclusión desde tu código",
+        "date": "26 abril 2025",
+        "description": "Charla sobre tecnología intercultural, accesible e inclusiva, integrando lenguas indígenas como el Wayuunaiki, estándares WCAG y herramientas como Playwright.",
+        "topics": ["Accesibilidad", "WCAG", "Wayuunaiki", "Playwright"]
+      },
+      "ciandt-ai-inclusion": {
+        "title": "Tecnología para todos: Repensando la innovación y la IA con inclusión",
+        "date": "noviembre 2025",
+        "description": "Charla sobre inteligencia artificial, innovación e inclusión para construir tecnología más accesible y útil para diferentes comunidades.",
+        "topics": ["Inteligencia artificial", "Innovación", "Inclusión"]
+      },
+      "pioneras-learning": {
+        "title": "Herramientas de aprendizaje dev",
+        "date": "25 julio 2020",
+        "description": "Primera charla como speaker en el lanzamiento del nodo Pioneras Cartagena, con panel sobre el rol de la mujer cartagenera en tecnología.",
+        "topics": ["Aprendizaje", "Mujeres en tecnología", "Comunidad"]
+      },
+      "we-can-code-it": {
+        "title": "We can code it!",
+        "date": "16 septiembre 2023",
+        "description": "Conversatorio sobre el talento, la historia y la participación de mujeres en tecnología junto a Daniela Gómez, Sandy Atencio y Vrilly Castro.",
+        "topics": ["Mujeres en tecnología", "Comunidad", "Historias tech"]
+      },
+      "datasoul-wayuu": {
+        "title": "Programadora Wayuu en la industria tech",
+        "date": "Podcast",
+        "description": "Episodio sobre experiencia profesional, identidad wayuu y participación de mujeres indígenas en la industria tecnológica.",
+        "topics": ["Podcast", "Wayuu", "Industria tech"]
+      },
+      "devlokos-career": {
+        "title": "La lucha de comenzar en el mundo del desarrollo de software",
+        "date": "2025",
+        "description": "Episodio S2 Ep042 sobre los retos, aprendizajes y experiencias al iniciar una carrera en desarrollo de software.",
+        "topics": ["Podcast", "Desarrollo de software", "Carrera tech"]
+      },
+      "telerik-inspiring": {
+        "title": "Inspiring Women: Rina Plata",
+        "date": "14 noviembre 2024",
+        "description": "Entrevista sobre identidad wayuu, trayectoria en tecnología, comunidades, liderazgo y aprendizajes al construir una carrera en STEM.",
+        "topics": ["Entrevista", "Wayuu", "STEM", "Comunidad"]
+      },
+      "pioneras-api-colombia": {
+        "title": "Descubriendo el poder de los datos abiertos: Explorando API Colombia con React.js",
+        "date": "2023",
+        "description": "Charla sobre el uso de datos abiertos y consumo de APIs públicas de Colombia para crear experiencias frontend con React.js.",
+        "topics": ["React.js", "Datos abiertos", "API Colombia"]
+      },
+      "kcd-diversity": {
+        "title": "Panel diversidad e inclusión en la industria STEAM",
+        "date": "2023",
+        "description": "Panel sobre diversidad, inclusión y representación en la industria STEAM junto a Marian Villa, Verónica Rodríguez, Kaky Rodríguez y Mariana Ramírez.",
+        "topics": ["Diversidad", "Inclusión", "STEAM"]
+      },
+      "tech-talk-code": {
+        "title": "Tech Talk: Ellas en el Código",
+        "date": "24 septiembre 2024",
+        "description": "Panel en vivo sobre mujeres en tecnología y experiencias profesionales en la industria junto a Valentina Pinzón, Caro Castañeda y Carlos Alarcón.",
+        "topics": ["Mujeres en tecnología", "Comunidad", "Panel"],
+        "alt": "Panel Tech Talk: Ellas en el Código con speakers de la comunidad tecnológica"
+      },
+      "putumayo-ancestral": {
+        "title": "El impacto de la tecnología en la conservación de los conocimientos ancestrales",
+        "date": "22 mayo 2024",
+        "description": "Charla en el encuentro Inspiración y Tecnología sobre preservación de saberes ancestrales desde la tecnología, realizada en el bloque laboratorio del Instituto Tecnológico de Putumayo.",
+        "topics": ["Conocimientos ancestrales", "Tecnología", "Comunidad", "Panel"]
+      },
+      "boyaconf-accessible-js": {
+        "title": "Programar para incluir con JavaScript: tecnología accesible",
+        "date": "2025",
+        "description": "Charla sobre cómo crear experiencias web accesibles e inclusivas utilizando JavaScript, enfocada en estándares WCAG y mejores prácticas de desarrollo.",
+        "topics": ["Accesibilidad", "WCAG", "JavaScript", "herramientas de testing"]
+      },
+      "hackseiiis": {
+        "title": "HACKSEIIIS - Primer Hackathon de TDEA",
+        "date": "2023",
+        "description": "Liderazgo y organización del primer hackathon organizado por estudiantes y docentes en el Tecnológico de Antioquia. Un evento que reunió diferentes universidades demostrando el impacto de la colaboración comunitaria, el liderazgo femenino y la innovación tecnológica.",
+        "topics": ["Hackathon", "Liderazgo", "Innovación", "Comunidad", "Educación"],
+        "alt": "Equipo organizador de HACKSEIIIS, primer hackathon del Tecnológico de Antioquia"
+      }
+    }
+  },
+  "communities": {
+    "eyebrow": "Comunidades",
+    "title": "Liderazgo comunitario y redes de aprendizaje",
+    "description": "Espacios donde contribuyo desde mentoría, organización, charlas y representación.",
+    "impactLabel": "Impacto",
+    "viewCommunity": "Ver comunidad",
+    "items": {
+      "guardianes": {
+        "role": "Fundadora y líder comunitaria",
+        "description": "Iniciativa que conecta identidad, memoria, educación y tecnología para visibilizar saberes indígenas.",
+        "impact": "Creación de espacios de aprendizaje y apoyo para niñas, niños y comunidades wayuu en La Guajira."
+      },
+      "api-colombia": {
+        "role": "Colaboradora",
+        "description": "Proyecto open source que ofrece una API REST pública, gratuita y sin autenticación para consultar información de Colombia.",
+        "impact": "Contribución al acceso abierto a datos sobre departamentos, regiones, turismo, cultura, comunidades nativas, aeropuertos y más, apoyando proyectos educativos y productos digitales."
+      },
+      "tech-community": {
+        "role": "Organizadora",
+        "description": "Comunidad colombiana que conecta personas, aprendizaje y oportunidades alrededor de la tecnología.",
+        "impact": "Organización de espacios para compartir conocimiento, fortalecer redes profesionales y visibilizar talento tech."
+      },
+      "pioneras-dev": {
+        "role": "Miembro activo",
+        "description": "Comunidad que impulsa el crecimiento de mujeres en tecnología.",
+        "impact": "Charlas, mentoría y apoyo a mujeres que fortalecen su camino profesional."
+      },
+      "women-techmakers": {
+        "role": "Embajadora hasta 2025",
+        "description": "Programa global que promueve visibilidad, comunidad y recursos para mujeres en tecnología.",
+        "impact": "Participación en espacios de conversación sobre liderazgo femenino, inclusión y comunidad tech hasta 2025."
+      },
+      "wids": {
+        "role": "Ambassador 2023-2024",
+        "description": "Comunidad enfocada en datos, aprendizaje y visibilidad de mujeres en ciencia y tecnología.",
+        "impact": "Representación como WiDS Ambassador en Medellín hasta 2024, conectando educación, tecnología y oportunidades para mujeres."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "title": "Productos digitales con enfoque humano",
+    "description": "Frontend, accesibilidad, educación e impacto social.",
+    "items": {
+      "portfolio": {
+        "name": "Portafolio profesional",
+        "description": "Sitio personal construido para presentar experiencia, charlas, comunidades y proyectos destacados.",
+        "impact": "Comunica una identidad profesional conectada con tecnología, accesibilidad e interculturalidad.",
+        "technologies": ["Angular", "TypeScript", "SCSS", "Accesibilidad"]
+      },
+      "communities": {
+        "name": "Tecnología para comunidades",
+        "description": "Prototipos y contenidos digitales para educación, comunidad e impacto social.",
+        "impact": "Acerca herramientas tecnológicas a conversaciones sobre territorio, educación e identidad.",
+        "technologies": ["JavaScript", "HTML", "CSS"]
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Habilidades",
+    "title": "Stack técnico y liderazgo",
+    "description": "Habilidades organizadas por áreas de trabajo.",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend / APIs",
+      "accessibility": "Accesibilidad",
+      "tools": "Herramientas",
+      "community": "Comunidad y liderazgo"
+    },
+    "items": {
+      "semanticHtml": "HTML semántico",
+      "accessibility": "Accesibilidad",
+      "webAccessibility": "Accesibilidad Web",
+      "webApplications": "Aplicaciones web",
+      "softwareQuality": "Calidad de software",
+      "technicalDocumentation": "Documentación técnica",
+      "communication": "Comunicación",
+      "communityManagement": "Gestión de comunidad",
+      "courseTracking": "Seguimiento de cursos",
+      "mentorship": "Mentoría",
+      "talks": "Charlas",
+      "volunteering": "Voluntariado",
+      "eventOrganization": "Organización de eventos",
+      "education": "Educación"
+    }
+  },
+  "achievements": {
+    "eyebrow": "Logros",
+    "title": "Reconocimientos y participaciones",
+    "description": "Hitos que reflejan aprendizaje, representación y contribución.",
+    "featuredBadge": "Reconocimiento destacado",
+    "viewRecognition": "Ver reconocimiento",
+    "items": {
+      "featured": {
+        "title": "Mujer destacada en el área de la tecnología",
+        "description": "Reconocimiento otorgado por el Tecnológico de Antioquia Institución Universitaria por contribuciones en tecnología, liderazgo comunitario, WiDS, Women Techmakers y Guardianes Ancestrales.",
+        "year": "Marzo 2024",
+        "alt": "Rina Plata sosteniendo el reconocimiento Mujer destacada en el área de tecnología otorgado por el Tecnológico de Antioquia",
+        "urlLabel": "Ver institución"
+      },
+      "jsconf": {
+        "title": "Speaker en JSConf",
+        "description": "Charla sobre su experiencia como desarrolladora wayuu en la industria tecnológica.",
+        "year": "2023"
+      },
+      "community": {
+        "title": "Liderazgo comunitario indígena",
+        "description": "Impulso de Guardianes Ancestrales como puente entre identidad, educación y tecnología.",
+        "year": "Actualidad"
+      },
+      "education": {
+        "title": "Formación en ingeniería de software",
+        "description": "Estudiante de Ingeniería de Software en el Tecnológico de Antioquia.",
+        "year": "2020 - 2025"
+      },
+      "languages": {
+        "title": "Lenguas e identidad",
+        "description": "Español y Wayuunaiki nativos, con inglés en nivel A2.",
+        "year": "Perfil"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de tecnología, comunidad o colaboración",
+    "description": "Conversemos por mis canales principales para colaborar, construir comunidad o compartir ideas.",
+    "email": "Correo",
+    "sendMessage": "Enviar mensaje",
+    "openLink": "Abrir enlace",
+    "cv": "Currículo",
+    "downloadPDF": "Descargar PDF",
+    "newTab": "en una nueva pestaña"
+  },
+  "footer": {
+    "builtWith": "Construido con Angular, accesibilidad y comunidad."
+  },
+  "common": {
+    "viewMore": "Ver más",
+    "viewLess": "Ver menos",
+    "language": "Idioma",
+    "spanish": "Español",
+    "english": "English",
+    "preferredLanguageSaved": "Tu idioma preferido se guardará automáticamente",
+    "switchToSpanish": "Cambiar a Español",
+    "switchToEnglish": "Switch to English"
+  }
+}

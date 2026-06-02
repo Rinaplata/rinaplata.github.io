@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PROJECTS } from '../../data/projects.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-projects-grid',
   standalone: true,
-  imports: [SectionHeadingComponent],
+  imports: [SectionHeadingComponent, TranslatePipe],
   template: `
     <section class="section section--deep" id="proyectos" aria-labelledby="projects-title">
       <app-section-heading
-        eyebrow="Proyectos"
-        title="Productos digitales con enfoque humano"
+        [eyebrow]="'projects.eyebrow' | t"
+        [title]="'projects.title' | t"
         headingId="projects-title"
-        description="Frontend, accesibilidad, educación e impacto social."
+        [description]="'projects.description' | t"
       />
 
       <div class="projects-grid">
@@ -24,26 +26,27 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
               height="340"
               loading="lazy"
               decoding="async"
-              [alt]="'Captura del proyecto ' + project.name"
+              alt=""
+              aria-hidden="true"
             >
             <div class="project-card__body">
-              <h3>{{ project.name }}</h3>
-              <p>{{ project.description }}</p>
-              <p class="impact">{{ project.impact }}</p>
-              <div class="tags" role="list" aria-label="Tecnologías del proyecto">
+              <h3>{{ project.name | t }}</h3>
+              <p>{{ project.description | t }}</p>
+              <p class="impact">{{ project.impact | t }}</p>
+              <div class="tags" role="list" [attr.aria-label]="'a11y.projectTechnologies' | t">
                 @for (tech of project.technologies; track tech) {
-                  <span role="listitem">{{ tech }}</span>
+                  <span role="listitem">{{ tech | t }}</span>
                 }
               </div>
               <div class="card-actions">
                 @if (project.githubUrl) {
                   <a [href]="project.githubUrl" target="_blank" rel="noreferrer">
-                    GitHub<span class="sr-only"> del proyecto {{ project.name }} en una nueva pestaña</span>
+                    GitHub<span class="sr-only"> {{ 'a11y.projectGithubNewTab' | t: { name: (project.name | t) } }}</span>
                   </a>
                 }
                 @if (project.demoUrl) {
                   <a [href]="project.demoUrl" target="_blank" rel="noreferrer">
-                    Demo<span class="sr-only"> del proyecto {{ project.name }} en una nueva pestaña</span>
+                    Demo<span class="sr-only"> {{ 'a11y.projectDemoNewTab' | t: { name: (project.name | t) } }}</span>
                   </a>
                 }
               </div>
@@ -56,4 +59,5 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
 })
 export class ProjectsGridComponent {
   readonly projects = PROJECTS;
+  readonly i18n = inject(I18nService);
 }

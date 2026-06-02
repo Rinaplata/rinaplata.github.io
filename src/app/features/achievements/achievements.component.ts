@@ -1,18 +1,20 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { ACHIEVEMENTS } from '../../data/achievements.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
+import { I18nService } from '../../core/services/i18n.service';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-achievements',
   standalone: true,
-  imports: [SectionHeadingComponent],
+  imports: [SectionHeadingComponent, TranslatePipe],
   template: `
     <section class="section achievements-section" id="logros" aria-labelledby="achievements-title">
       <app-section-heading
-        eyebrow="Logros"
-        title="Reconocimientos y participaciones"
+        [eyebrow]="'achievements.eyebrow' | t"
+        [title]="'achievements.title' | t"
         headingId="achievements-title"
-        description="Hitos que reflejan aprendizaje, representación y contribución."
+        [description]="'achievements.description' | t"
       />
 
       <div class="achievements-layout">
@@ -20,7 +22,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
           <div
             class="achievement-carousel"
             role="group"
-            [attr.aria-label]="'Reconocimiento: ' + featuredCard.title"
+            [attr.aria-label]="'a11y.achievementGroup' | t: { title: (featuredCard.title | t) }"
             (focusin)="setActiveCarousel(featuredCard.title)"
             (focusout)="clearActiveCarousel()"
             (touchstart)="onTouchStart($event)"
@@ -30,11 +32,11 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
               class="achievement-carousel__track"
               [style.transform]="'translateX(-' + (currentSlideIndex(featuredCard.title) * 100) + '%)'"
             >
-              <div class="achievement-carousel__slide" role="group" aria-label="Slide 1 de 2">
-                <span class="achievement-featured__badge">Reconocimiento destacado</span>
-                <p class="meta">{{ featuredCard.year }}</p>
-                <h3>{{ featuredCard.title }}</h3>
-                <p>{{ featuredCard.description }}</p>
+              <div class="achievement-carousel__slide" role="group" [attr.aria-label]="'a11y.achievementSlideText' | t">
+                <span class="achievement-featured__badge">{{ 'achievements.featuredBadge' | t }}</span>
+                <p class="meta">{{ featuredCard.year | t }}</p>
+                <h3>{{ featuredCard.title | t }}</h3>
+                <p>{{ featuredCard.description | t }}</p>
                 @if (featuredCard.url) {
                   <div class="card-actions">
                     <a
@@ -42,19 +44,19 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {{ featuredCard.urlLabel || 'Ver reconocimiento' }}<span class="sr-only">: {{ featuredCard.title }} en una nueva pestaña</span>
+                      {{ (featuredCard.urlLabel || 'achievements.viewRecognition') | t }}<span class="sr-only">: {{ featuredCard.title | t }} {{ 'a11y.openNewTab' | t }}</span>
                     </a>
                   </div>
                 }
               </div>
-              <div class="achievement-carousel__slide achievement-carousel__slide--image" role="group" aria-label="Slide 2 de 2">
+              <div class="achievement-carousel__slide achievement-carousel__slide--image" role="group" [attr.aria-label]="'a11y.achievementSlideImage' | t">
                 <img
                   [src]="featuredCard.images![0].src"
                   width="640"
                   height="520"
                   loading="lazy"
                   decoding="async"
-                  [alt]="featuredCard.images![0].alt"
+                  [alt]="featuredCard.images![0].alt | t"
                 >
               </div>
             </div>
@@ -65,7 +67,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                 type="button"
                 (click)="previousSlide(featuredCard.title)"
                 [disabled]="currentSlideIndex(featuredCard.title) === 0"
-                aria-label="Ver texto del reconocimiento"
+                [attr.aria-label]="'a11y.achievementText' | t"
               >
                 ‹
               </button>
@@ -77,7 +79,7 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
                 type="button"
                 (click)="nextSlide(featuredCard.title)"
                 [disabled]="currentSlideIndex(featuredCard.title) === 1"
-                aria-label="Ver fotografía del reconocimiento"
+                [attr.aria-label]="'a11y.achievementPhoto' | t"
               >
                 ›
               </button>
@@ -85,15 +87,15 @@ import { SectionHeadingComponent } from '../../shared/components/section-heading
           </div>
         </article>
 
-        <div class="achievement-secondary-list" role="list" aria-label="Otros logros">
+        <div class="achievement-secondary-list" role="list" [attr.aria-label]="'a11y.otherAchievements' | t">
           @for (achievement of secondaryCards; track achievement.title) {
           <article
             class="card achievement-card achievement-card--secondary"
             role="listitem"
           >
-            <p class="meta">{{ achievement.year }}</p>
-            <h3>{{ achievement.title }}</h3>
-            <p>{{ achievement.description }}</p>
+            <p class="meta">{{ achievement.year | t }}</p>
+            <h3>{{ achievement.title | t }}</h3>
+            <p>{{ achievement.description | t }}</p>
           </article>
           }
         </div>
@@ -105,6 +107,7 @@ export class AchievementsComponent {
   readonly achievements = ACHIEVEMENTS;
   readonly featuredCard = ACHIEVEMENTS[0];
   readonly secondaryCards = ACHIEVEMENTS.slice(1);
+  readonly i18n = inject(I18nService);
   private readonly slideIndexes = new Map<string, number>();
   private activeCarouselTitle = '';
   private touchStartX = 0;
