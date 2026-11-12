@@ -2,6 +2,36 @@ import { Talk } from '../models/portfolio.models';
 
 export const TALKS: Talk[] = [
   {
+    title: 'talks.items.jsconfmx-gestures.title',
+    event: 'JSConf MX',
+    date: 'talks.items.jsconfmx-gestures.date',
+    type: 'speaker',
+    description: 'talks.items.jsconfmx-gestures.description',
+    topics: ['talks.items.jsconfmx-gestures.topics.0', 'talks.items.jsconfmx-gestures.topics.1', 'talks.items.jsconfmx-gestures.topics.2', 'talks.items.jsconfmx-gestures.topics.3'],
+    image: 'assets/images/speaker/optimized/jsconfmx-2026-gestos-voz-mirada-900.jpg',
+    url: 'https://www.jsconf.mx/en/speakers/0UL5C3Vd_5'
+  },
+  {
+    title: 'talks.items.codinglatam-inclusion.title',
+    event: 'CodingLatam DevCon Honduras',
+    date: 'talks.items.codinglatam-inclusion.date',
+    type: 'speaker',
+    description: 'talks.items.codinglatam-inclusion.description',
+    topics: ['talks.items.codinglatam-inclusion.topics.0', 'talks.items.codinglatam-inclusion.topics.1', 'talks.items.codinglatam-inclusion.topics.2', 'talks.items.codinglatam-inclusion.topics.3'],
+    image: 'assets/images/speaker/optimized/codinglatam-devcon-2026-inclusion-900.jpg',
+    url: 'https://youtu.be/ylufEuODYJ0'
+  },
+  {
+    title: 'talks.items.caribeconf-2026-inclusion.title',
+    event: 'CaribeConf',
+    date: 'talks.items.caribeconf-2026-inclusion.date',
+    type: 'speaker',
+    description: 'talks.items.caribeconf-2026-inclusion.description',
+    topics: ['talks.items.caribeconf-2026-inclusion.topics.0', 'talks.items.caribeconf-2026-inclusion.topics.1', 'talks.items.caribeconf-2026-inclusion.topics.2', 'talks.items.caribeconf-2026-inclusion.topics.3'],
+    image: 'assets/images/speaker/optimized/caribeconf-2026-inclusion-900.jpg',
+    url: 'https://caribeconf.com'
+  },
+  {
     title: 'talks.items.jsconf-wayuu.title',
     event: 'JSConf',
     date: 'talks.items.jsconf-wayuu.date',

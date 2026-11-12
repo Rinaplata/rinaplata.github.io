@@ -17,7 +17,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     title: 'achievements.items.jsconf.title',
     description: 'achievements.items.jsconf.description',
-    year: '2023'
+    year: '2023 - 2026'
   },
   {
     title: 'achievements.items.community.title',

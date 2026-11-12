@@ -184,6 +184,24 @@
       "hackathon": "Hackathon"
     },
     "items": {
+      "jsconfmx-gestures": {
+        "title": "Controla la web con gestos, voz y mirada, usando JavaScript",
+        "date": "29 octubre 2026",
+        "description": "Charla en JSConf MX (Guadalajara) sobre interfaces web accesibles sin depender del mouse ni del teclado, con demos en vivo usando MediaPipe, WebGazer.js y Web Speech API, y cómo la IA ayuda a crear experiencias más inclusivas y adaptativas en tiempo real.",
+        "topics": ["Accesibilidad", "MediaPipe", "WebGazer.js", "Web Speech API"]
+      },
+      "codinglatam-inclusion": {
+        "title": "La inclusión también se programa",
+        "date": "2026",
+        "description": "Charla en CodingLatam DevCon Honduras sobre tipos de discapacidad, incluidas las temporales y situacionales, y las pautas WCAG. En vivo audita un sitio web hondureño, navega con lector de pantalla y controla una página solo con la mirada, el rostro o un gesto de la mano usando WebGazer.js y MediaPipe.",
+        "topics": ["Accesibilidad", "WCAG", "Lectores de pantalla", "MediaPipe"]
+      },
+      "caribeconf-2026-inclusion": {
+        "title": "La tecnología como herramienta de inclusión",
+        "date": "14 agosto 2026",
+        "description": "Charla en la segunda edición de CaribeConf en Barranquilla sobre cómo el desarrollo web y la inteligencia artificial pueden construir productos para todas las personas: reconocimiento de voz, seguimiento ocular e IA para eliminar barreras de acceso.",
+        "topics": ["Reconocimiento de voz", "Seguimiento ocular", "Inteligencia artificial", "Inclusión"]
+      },
       "jsconf-wayuu": {
         "title": "Mi experiencia como programadora wayuu en el mundo de la tecnología",
         "date": "2023",
@@ -380,7 +398,7 @@
       },
       "jsconf": {
         "title": "Speaker en JSConf",
-        "description": "Charla sobre su experiencia como desarrolladora wayuu en la industria tecnológica.",
+        "description": "Charla sobre su experiencia como desarrolladora wayuu en la industria tecnológica (2023) y sobre controlar la web con gestos, voz y mirada en JSConf MX (2026).",
         "year": "2023"
       },
       "community": {

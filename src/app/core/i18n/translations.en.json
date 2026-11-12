@@ -184,6 +184,24 @@
       "hackathon": "Hackathon"
     },
     "items": {
+      "jsconfmx-gestures": {
+        "title": "Control the Web with Gestures, Voice, and Gaze Using JavaScript",
+        "date": "October 29, 2026",
+        "description": "A JSConf MX (Guadalajara) talk about accessible web interfaces that don't depend on a mouse or keyboard. Live demos with MediaPipe, WebGazer.js, and the Web Speech API show how AI can make experiences more inclusive in real time.",
+        "topics": ["Accessibility", "MediaPipe", "WebGazer.js", "Web Speech API"]
+      },
+      "codinglatam-inclusion": {
+        "title": "Inclusion Is Also Coded",
+        "date": "2026",
+        "description": "A CodingLatam DevCon Honduras talk about types of disability, including temporary and situational ones, and the WCAG guidelines. Live, it audits a Honduran website, navigates with a screen reader, and controls a page with only gaze, face, or a hand gesture using WebGazer.js and MediaPipe.",
+        "topics": ["Accessibility", "WCAG", "Screen readers", "MediaPipe"]
+      },
+      "caribeconf-2026-inclusion": {
+        "title": "Technology as a Tool for Inclusion",
+        "date": "August 14, 2026",
+        "description": "A talk at the second edition of CaribeConf in Barranquilla about how web development and AI can build products for everyone: speech recognition, eye tracking, and AI to remove access barriers.",
+        "topics": ["Speech recognition", "Eye tracking", "Artificial Intelligence", "Inclusion"]
+      },
       "jsconf-wayuu": {
         "title": "My Experience as a Wayuu Programmer in Technology",
         "date": "2023",
@@ -380,7 +398,7 @@
       },
       "jsconf": {
         "title": "Speaker at JSConf",
-        "description": "Talk about her experience as a Wayuu developer in tech.",
+        "description": "Talks about her experience as a Wayuu developer in tech (2023) and controlling the web with gestures, voice, and gaze at JSConf MX (2026).",
         "year": "2023"
       },
       "community": {
