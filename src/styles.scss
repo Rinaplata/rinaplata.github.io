@@ -310,7 +310,7 @@ button {
   gap: 0.45rem;
   padding: 0 0.9rem 0 0.75rem;
   border-radius: var(--radius-pill);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -395,9 +395,9 @@ button {
 .section-heading__eyebrow {
   display: inline-block;
   color: var(--color-muted);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -411,7 +411,7 @@ button {
 
 .meta {
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -433,7 +433,7 @@ button {
   border-radius: var(--radius-pill);
   background: var(--color-surface-lilac);
   color: var(--color-primary-strong);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -446,7 +446,7 @@ button {
 .tags--large span {
   min-height: 34px;
   padding: 0.3rem 0.9rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .tags span.pill--frontend,
@@ -534,7 +534,7 @@ button {
 
 .hero__location {
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .hero__status {
@@ -547,7 +547,7 @@ button {
   border-radius: var(--radius-pill);
   background: var(--color-surface);
   color: var(--color-text);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -644,7 +644,7 @@ button {
   border-radius: var(--radius-pill);
   background: var(--color-caption-bg);
   color: var(--color-text);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   backdrop-filter: blur(8px);
 }
@@ -747,7 +747,7 @@ button {
 .about__photo figcaption {
   margin-top: 0.75rem;
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .about__copy {
@@ -805,7 +805,7 @@ button {
 
 .timeline__period span {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
@@ -840,7 +840,7 @@ button {
   display: grid;
   gap: 0.25rem;
   margin-top: 0.5rem;
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .achievement-list p::before {
@@ -910,7 +910,7 @@ button {
   justify-content: space-between;
   gap: 0.5rem;
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -927,7 +927,7 @@ button {
   border-radius: var(--radius-pill);
   background: rgba(17, 17, 19, 0.82);
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -954,7 +954,7 @@ button {
   border-radius: var(--radius-pill);
   background: var(--color-surface-soft);
   color: var(--color-text);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -962,7 +962,7 @@ button {
   display: -webkit-box;
   overflow: hidden;
   color: var(--color-muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   line-clamp: 3;
@@ -1068,12 +1068,12 @@ button {
 
 .community-card p:not(.meta) {
   color: var(--color-muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .community-card strong {
   margin-top: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -1100,7 +1100,7 @@ button {
 
 .project-card p {
   color: var(--color-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .project-card .impact {
@@ -1151,7 +1151,7 @@ button {
   border-radius: var(--radius-pill);
   background: var(--color-warning-bg);
   color: var(--color-warning-text);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -1170,13 +1170,13 @@ button {
 
 .demo-card p {
   color: var(--color-muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .demos-note {
   margin-top: 1.5rem;
   color: var(--color-muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 /* ==========================================================================
@@ -1187,14 +1187,14 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.6rem;
-  height: 1.4rem;
+  min-width: 1.75rem;
+  height: 1.5rem;
   margin-left: 0.35rem;
   padding: 0 0.4rem;
   border-radius: var(--radius-pill);
   background: var(--color-surface-soft);
   color: var(--color-muted);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -1265,12 +1265,12 @@ button {
 .talk-explorer__tab-meta,
 .talk-explorer__tab-event {
   color: var(--color-muted);
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
 .talk-explorer__tab-title {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -1369,7 +1369,7 @@ button {
 
 .talk-explorer__position {
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1476,7 +1476,7 @@ button {
 
 .milestone__year {
   color: var(--color-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -1541,7 +1541,7 @@ button {
   border-radius: var(--radius-pill);
   background: var(--color-surface-lilac);
   color: var(--color-primary-strong);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -1623,7 +1623,7 @@ button {
 .contact-card__copy {
   min-height: 40px;
   padding: 0 1rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .contact-card :focus-visible {
@@ -1646,7 +1646,7 @@ button {
   gap: 0.5rem;
   min-height: 44px;
   color: var(--color-on-deep-muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
 }
@@ -1780,7 +1780,7 @@ button {
 .field__hint,
 .field__error {
   margin-top: 0.45rem;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
 }
 
 .field__hint {

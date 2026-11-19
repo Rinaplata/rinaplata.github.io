@@ -42,7 +42,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
       border-radius: 999px;
       background: transparent;
       color: var(--color-muted);
-      font-size: 0.8rem;
+      font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       transition: background-color 150ms ease, color 150ms ease;
