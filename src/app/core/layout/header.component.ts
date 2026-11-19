@@ -1,5 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, ElementRef, HostListener, inject, signal, viewChild } from '@angular/core';
+import { FocusService } from '../services/focus.service';
 import { ThemeService } from '../services/theme.service';
 import { I18nService } from '../services/i18n.service';
 import { LanguageSwitcherComponent } from '../../shared/components/language-switcher.component';
@@ -18,18 +18,19 @@ const NAV_ITEMS = [
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, LanguageSwitcherComponent, TranslatePipe],
+  imports: [LanguageSwitcherComponent, TranslatePipe],
   template: `
     <header class="site-header">
-      <a class="skip-link" href="#main-content">{{ 'a11y.skipToMain' | t }}</a>
+      <a class="skip-link" href="#/#main-content" (click)="skipToMain($event)">{{ 'a11y.skipToMain' | t }}</a>
 
       <nav class="nav" [attr.aria-label]="'a11y.mainNavigation' | t">
-        <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()">
+        <a class="brand" href="#/#inicio" (click)="goTo('inicio', $event)">
           <img src="assets/images/rina/rina-avatar-192.jpg" width="32" height="32" alt="">
           <span class="brand__name">Rina Plata</span>
         </a>
 
         <button
+          #menuToggle
           class="icon-button nav-toggle"
           type="button"
           [attr.aria-expanded]="menuOpen()"
@@ -43,7 +44,7 @@ const NAV_ITEMS = [
         <ul class="nav-panel" [class.is-open]="menuOpen()" id="main-menu">
           @for (item of navItems; track item.fragment) {
             <li>
-              <a routerLink="/" [fragment]="item.fragment" (click)="closeMenu()">{{ item.label | t }}</a>
+              <a [href]="'#/#' + item.fragment" (click)="goTo(item.fragment, $event)">{{ item.label | t }}</a>
             </li>
           }
         </ul>
@@ -77,10 +78,35 @@ const NAV_ITEMS = [
 export class HeaderComponent {
   readonly theme = inject(ThemeService);
   readonly i18n = inject(I18nService);
+  private readonly focus = inject(FocusService);
+  private readonly menuToggle = viewChild<ElementRef<HTMLButtonElement>>('menuToggle');
   readonly navItems = NAV_ITEMS;
   readonly menuOpen = signal(false);
 
   closeMenu(): void {
     this.menuOpen.set(false);
+  }
+
+  goTo(fragment: string, event: MouseEvent): void {
+    event.preventDefault();
+    this.closeMenu();
+    this.focus.goToSection(fragment);
+  }
+
+  skipToMain(event: MouseEvent): void {
+    event.preventDefault();
+    const main = document.getElementById('main-content');
+
+    if (main) {
+      this.focus.focus(main);
+    }
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.menuOpen()) {
+      this.closeMenu();
+      this.menuToggle()?.nativeElement.focus();
+    }
   }
 }

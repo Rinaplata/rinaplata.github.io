@@ -3,6 +3,7 @@ import { COMMUNITIES } from '../../data/communities.data';
 import { PROFILE } from '../../data/profile.data';
 import { TALKS } from '../../data/talks.data';
 import { SocialIconComponent } from '../../shared/components/social-icon.component';
+import { FocusService } from '../../core/services/focus.service';
 import { I18nService } from '../../core/services/i18n.service';
 import { ExternalLinkDirective } from '../../shared/directives/external-link.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
@@ -27,12 +28,12 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
           <ul class="hero__actions" [attr.aria-label]="'a11y.primaryActions' | t">
             <li>
-              <a class="button button--primary" href="#charlas" (click)="scrollToSection('charlas', $event)">
+              <a class="button button--primary" href="#/#charlas" (click)="scrollToSection('charlas', $event)">
                 {{ 'hero.cta.talks' | t }} <span class="button__arrow" aria-hidden="true">↗</span>
               </a>
             </li>
             <li>
-              <a class="button" href="#contacto" (click)="scrollToSection('contacto', $event)">
+              <a class="button" href="#/#contacto" (click)="scrollToSection('contacto', $event)">
                 {{ 'hero.cta.contact' | t }} <span class="button__arrow" aria-hidden="true">↗</span>
               </a>
             </li>
@@ -85,26 +86,12 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 export class HeroComponent {
   readonly profile = PROFILE;
   readonly i18n = inject(I18nService);
+  private readonly focus = inject(FocusService);
   readonly talksCount = TALKS.length;
   readonly communitiesCount = COMMUNITIES.length;
 
   scrollToSection(fragment: string, event: MouseEvent): void {
     event.preventDefault();
-    this.scrollWhenReady(fragment);
-  }
-
-  private scrollWhenReady(fragment: string, attempts = 0): void {
-    const target = document.getElementById(fragment);
-
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      target.focus({ preventScroll: true });
-      history.replaceState(null, '', `#${fragment}`);
-      return;
-    }
-
-    if (attempts < 40) {
-      window.setTimeout(() => this.scrollWhenReady(fragment, attempts + 1), 75);
-    }
+    this.focus.goToSection(fragment);
   }
 }

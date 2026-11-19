@@ -29,10 +29,10 @@ type Reason = typeof REASONS[number];
           <div class="contact-card__email">
             <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
             <button type="button" class="button contact-card__copy" (click)="copyEmail()">
-              {{ copied() ? ('contact.copied' | t) : ('contact.copy' | t) }}
+              {{ 'contact.copy' | t }}
             </button>
+            <p class="contact-card__copied" aria-live="polite">{{ copied() ? ('contact.copiedAnnouncement' | t) : '' }}</p>
           </div>
-          <p class="sr-only" aria-live="polite">{{ copied() ? ('contact.copiedAnnouncement' | t) : '' }}</p>
 
           <ul class="contact-socials" id="redes-sociales" [attr.aria-label]="'a11y.contactChannels' | t">
             @for (social of profile.socials; track social.url) {
@@ -90,7 +90,7 @@ type Reason = typeof REASONS[number];
               [attr.aria-describedby]="showError() ? 'contact-message-error' : 'contact-message-hint'"
             ></textarea>
             @if (showError()) {
-              <p class="field__error" id="contact-message-error" role="alert">{{ 'contact.form.error' | t }}</p>
+              <p class="field__error" id="contact-message-error">{{ 'contact.form.error' | t }}</p>
             } @else {
               <p class="field__hint" id="contact-message-hint">{{ 'contact.form.hint' | t }}</p>
             }

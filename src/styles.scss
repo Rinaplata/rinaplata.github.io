@@ -1620,6 +1620,12 @@ button {
   background: #ffffff;
 }
 
+.contact-card__copied {
+  color: var(--color-on-deep-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .contact-card__copy {
   min-height: 40px;
   padding: 0 1rem;

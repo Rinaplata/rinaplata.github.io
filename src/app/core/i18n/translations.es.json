@@ -524,6 +524,11 @@
     "talks": "Charlas como speaker",
     "awards": "Reconocimientos"
   },
+  "pageTitles": {
+    "home": "Rina Plata | Ingeniería de software, frontend y comunidad",
+    "talks": "Charlas, podcasts y entrevistas | Rina Plata",
+    "cv": "Currículo | Rina Plata"
+  },
   "footer": {
     "builtWith": "Construido con Angular, accesibilidad y comunidad."
   },

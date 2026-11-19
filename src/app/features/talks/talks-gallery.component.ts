@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, signal, viewChildren } from '@angular/core';
+import { Component, ElementRef, inject, signal, viewChild, viewChildren } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { TALKS } from '../../data/talks.data';
@@ -70,6 +70,7 @@ type TalkFilter = 'all' | Talk['type'];
             <div class="talk-explorer__media">
               @if (playingVideo() && videoUrl(talk); as url) {
                 <iframe
+                  #videoFrame
                   [src]="url"
                   [title]="'talks.videoTitle' | t: { title: (talk.title | t) }"
                   width="720"
@@ -87,7 +88,7 @@ type TalkFilter = 'all' | Talk['type'];
                   [alt]="'a11y.talkImageAlt' | t: { title: (talk.title | t), event: talk.event }"
                 >
                 @if (videoId(talk)) {
-                  <button type="button" class="talk-explorer__play" (click)="playingVideo.set(true)">
+                  <button type="button" class="talk-explorer__play" (click)="playVideo()">
                     <span class="talk-explorer__play-icon" aria-hidden="true">▶</span>
                     {{ 'talks.playVideo' | t }}
                   </button>
@@ -154,6 +155,7 @@ export class TalksGalleryComponent {
   private readonly i18n = inject(I18nService);
   private readonly sanitizer = inject(DomSanitizer);
   private readonly tabs = viewChildren<ElementRef<HTMLButtonElement>>('tab');
+  private readonly videoFrame = viewChild<ElementRef<HTMLIFrameElement>>('videoFrame');
   private readonly videoUrls = new Map<string, SafeResourceUrl>();
 
   readonly talks = [...TALKS].sort((first, second) => this.getTalkYear(second.date) - this.getTalkYear(first.date));
@@ -195,6 +197,11 @@ export class TalksGalleryComponent {
     if (moveFocus) {
       queueMicrotask(() => this.tabs()[next]?.nativeElement.focus());
     }
+  }
+
+  playVideo(): void {
+    this.playingVideo.set(true);
+    window.setTimeout(() => this.videoFrame()?.nativeElement.focus());
   }
 
   step(direction: 1 | -1): void {

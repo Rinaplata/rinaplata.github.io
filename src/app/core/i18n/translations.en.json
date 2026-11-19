@@ -524,6 +524,11 @@
     "talks": "Talks as a speaker",
     "awards": "Awards"
   },
+  "pageTitles": {
+    "home": "Rina Plata | Software engineering, frontend, and community",
+    "talks": "Talks, podcasts, and interviews | Rina Plata",
+    "cv": "Resume | Rina Plata"
+  },
   "footer": {
     "builtWith": "Built with Angular, accessibility, and community."
   },

@@ -9,7 +9,7 @@ bootstrapApplication(AppComponent, {
       routes,
       withHashLocation(),
       withInMemoryScrolling({
-        anchorScrolling: 'enabled',
+        anchorScrolling: 'disabled',
         scrollPositionRestoration: 'enabled'
       })
     )
