@@ -9,12 +9,24 @@
       name="description"
       content="Portafolio de Rina Plata, ingeniera de software, desarrolladora frontend, speaker y líder comunitaria wayuu de Colombia."
     >
-    <meta name="theme-color" content="#0f766e">
+    <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
     <meta property="og:title" content="Rina Plata | Frontend, accesibilidad y comunidad">
     <meta property="og:description" content="Tecnología, accesibilidad, inclusión, liderazgo femenino y comunidades indígenas.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/images/optimized/perfil-1000.jpg">
+    <meta property="og:image" content="assets/images/rina/rina-og-1200.jpg">
     <link rel="icon" href="assets/images/figma-logo.ico">
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <app-root></app-root>

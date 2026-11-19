@@ -3,12 +3,13 @@ import { RouterLink } from '@angular/router';
 import { TALKS } from '../../data/talks.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
 import { I18nService } from '../../core/services/i18n.service';
+import { ExternalLinkDirective } from '../../shared/directives/external-link.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-all-talks-page',
   standalone: true,
-  imports: [RouterLink, SectionHeadingComponent, TranslatePipe],
+  imports: [RouterLink, SectionHeadingComponent, ExternalLinkDirective, TranslatePipe],
   template: `
     <section id="/charlas" class="section section--warm talks-page" aria-labelledby="all-talks-title">
       <app-section-heading
@@ -38,8 +39,8 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
       <div class="talks-all talks-all--page">
         <div class="talks-list">
-          @for (talk of filteredTalks; track talk.title) {
-            <article class="talk-card talk-card--compact">
+          @for (talk of filteredTalks; track talk.title; let i = $index) {
+            <article class="talk-card talk-card--compact" [attr.aria-labelledby]="'all-talk-title-' + i">
               <div class="talk-card__carousel" role="group" [attr.aria-label]="'a11y.talkImages' | t">
                 <img
                   [src]="currentTalkImage(talk).src"
@@ -75,7 +76,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
               <div class="talk-card__body">
                 <p class="meta">{{ talk.event }} · {{ talk.date | t }}</p>
                 <div class="talk-card__type-badge">{{ getTypeLabel(talk.type) }}</div>
-                <h3>{{ talk.title | t }}</h3>
+                <h2 [id]="'all-talk-title-' + i">{{ talk.title | t }}</h2>
                 <p class="talk-card__description" [class.is-expanded]="isDescriptionExpanded(talk.title)">
                   {{ talk.description | t }}
                 </p>

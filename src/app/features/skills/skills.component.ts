@@ -18,9 +18,9 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       />
 
       <div class="cards-grid cards-grid--three">
-        @for (group of skillGroups; track group.category) {
-          <article class="card skill-card">
-            <h3>{{ group.category | t }}</h3>
+        @for (group of skillGroups; track group.category; let i = $index) {
+          <article class="card skill-card" [attr.aria-labelledby]="'skill-title-' + i">
+            <h3 [id]="'skill-title-' + i">{{ group.category | t }}</h3>
             <div class="tags tags--large">
               @for (skill of group.skills; track skill) {
                 <span [class]="getSkillClass(group.category)">{{ skill | t }}</span>

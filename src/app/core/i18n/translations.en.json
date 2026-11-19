@@ -1,5 +1,8 @@
 {
   "a11y": {
+    "newTab": "opens in a new tab",
+    "darkMode": "Dark mode",
+    "highlights": "Highlights",
     "mainNavigation": "Primary navigation",
     "skipToMain": "Skip to main content",
     "menuToggle": "Open or close menu",
@@ -13,7 +16,7 @@
     "talkTopics": "Talk topics",
     "featuredTalks": "Featured talks",
     "talkImages": "Talk images",
-    "talkImageAlt": "{{ title }} presented at {{ event }}",
+    "talkImageAlt": "Rina Plata at {{ event }}",
     "previousTalkImage": "Previous: view the previous talk image",
     "nextTalkImage": "Next: view the next talk image",
     "openTalkNewTab": "for the talk {{ title }}",
@@ -35,6 +38,7 @@
   },
   "header": {
     "nav": {
+      "demos": "Demos",
       "home": "Home",
       "about": "About",
       "experience": "Experience",
@@ -47,10 +51,22 @@
     }
   },
   "hero": {
+    "status": "Open to talks and collaborations",
+    "headline": {
+      "before": "Software engineer building an",
+      "accent": "accessible web",
+      "after": "for everyone."
+    },
+    "photoCaption": "Medellín, Colombia",
+    "stats": {
+      "years": "years of experience",
+      "talks": "talks, panels, and interviews",
+      "communities": "communities I lead or support"
+    },
     "eyebrow": "Frontend · Accessibility · Community · Wayuu Identity",
     "role": "Software Engineer, Frontend Developer, and Community Leader",
-    "description": "I build modern web experiences that are easy to use and open to more people. My work connects tech, inclusion, women leaders, and native communities in Colombia.",
-    "imageAlt": "Rina Plata",
+    "description": "I am a Wayuu woman from San Juan del Cesar, La Guajira, Colombia. I build modern web experiences that are easy to use and open to more people. My work connects tech, inclusion, women leaders, and Indigenous communities.",
+    "imageAlt": "Rina Plata smiling, wearing a black blazer and a Wayuu necklace",
     "frontendCard": "Frontend",
     "frontendStack": "Angular · React · Accessibility",
     "communityCard": "Community",
@@ -62,10 +78,12 @@
     }
   },
   "about": {
+    "lead": "I believe technology is only good when everyone can use it.",
+    "photoCaption": "Wearing my Wayuu manta: my identity is in my code too.",
     "eyebrow": "About",
     "title": "More than code",
     "description": "My story connects software, frontend work, community, and Wayuu identity.",
-    "imageAlt": "Rina Plata at a tech community event",
+    "imageAlt": "Rina Plata in a red Wayuu manta, smiling, on an orange background",
     "paragraphs": [
       "I am Rina Plata, a software engineer with experience in frontend work, web access, and community leadership. I see tech as a tool to open doors, tell stories, and build products that feel more human.",
       "I enjoy building clear and useful interfaces. I work with Angular, React, TypeScript, access needs, and UX good practices so more people can use digital products. I also use AI in my projects to save time and improve the user experience, with care and respect for users.",
@@ -76,6 +94,7 @@
     "title": "Plain Language Summary",
     "description": "Here is the short version of this site.",
     "items": [
+      "I am Rina Plata, a Wayuu woman from San Juan del Cesar, La Guajira, and a software engineer.",
       "I build websites and apps that are easier for people to use.",
       "I work with teams, communities, and women in tech.",
       "I share talks about code, access, identity, and learning.",
@@ -160,9 +179,16 @@
     }
   },
   "talks": {
+    "filterLabel": "Filter talks by type",
+    "nowShowing": "Now showing: {{ title }}",
+    "resultsCount": "{{ count }} results",
+    "playVideo": "Watch video here",
+    "videoTitle": "Video: {{ title }}",
+    "previousTalk": "Previous talk",
+    "nextTalk": "Next talk",
     "eyebrow": "Talks & Events",
     "title": "Speaking on Tech, Community, and Inclusion",
-    "description": "Talks, panels, interviews, and podcasts about code, access, identity, and leadership.",
+    "description": "Pick a talk from the list to see the details, topics, and the video when there is a recording.",
     "viewMore": "View more talks",
     "allTalksTitle": "All Talks, Podcasts, and Interviews",
     "allTalksDescription": "A full list of talks, panels, podcasts, articles, and community events.",
@@ -384,8 +410,8 @@
   },
   "achievements": {
     "eyebrow": "Achievements",
-    "title": "Recognition and Milestones",
-    "description": "Milestones that show learning, service, and community work.",
+    "title": "Milestones on my path",
+    "description": "Open each milestone to read the story behind it.",
     "featuredBadge": "Featured Recognition",
     "viewRecognition": "View recognition",
     "items": {
@@ -395,6 +421,18 @@
         "year": "March 2024",
         "alt": "Rina Plata holding a tech award",
         "urlLabel": "View institution"
+      },
+      "master": {
+        "title": "Master's Degree in Innovation and Digital Transformation",
+        "description": "I'm currently studying this master's at the Universitat Oberta de Catalunya (UOC), connecting technology, strategy, and innovation with social impact.",
+        "year": "In progress",
+        "urlLabel": "View the master's"
+      },
+      "certifications": {
+        "title": "18 licenses and certifications",
+        "description": "I keep learning all the time. You can see the details of my 18 licenses and certifications on my LinkedIn profile.",
+        "year": "LinkedIn",
+        "urlLabel": "View certifications on LinkedIn"
       },
       "jsconf": {
         "title": "Speaker at JSConf",
@@ -419,15 +457,72 @@
     }
   },
   "contact": {
+    "copy": "Copy email",
+    "copied": "Copied!",
+    "copiedAnnouncement": "Email copied to clipboard",
+    "form": {
+      "details": "Your details and message",
+      "reason": "What would you like to talk about?",
+      "reasons": {
+        "talk": "Talk or event",
+        "collaboration": "Collaboration",
+        "mentoring": "Mentoring",
+        "other": "Something else"
+      },
+      "name": "Your name",
+      "message": "Message",
+      "required": "required",
+      "hint": "Your email app will open with the message ready.",
+      "error": "Write a message before continuing.",
+      "submit": "Open in my email"
+    },
+    "headline": {
+      "before": "Tell me about your",
+      "accent": "idea.",
+      "after": ""
+    },
     "eyebrow": "Contact",
     "title": "Let's Talk About Tech, Community, or Collaboration",
-    "description": "Reach out through my main channels to work together, build community, or share ideas.",
+    "description": "Pick a reason, write your message, and your email app will open ready to send.",
     "email": "Email",
     "sendMessage": "Send message",
     "openLink": "Open link",
     "cv": "Resume",
     "downloadPDF": "Download PDF",
     "newTab": ""
+  },
+  "demos": {
+    "eyebrow": "Lab",
+    "title": "Demos in progress",
+    "description": "Experiments I'm building to control the web without a mouse or keyboard. They come from my talks, and soon you'll be able to try them here.",
+    "status": "In progress",
+    "note": "Want to try them early or collaborate? Reach out in the contact section.",
+    "items": {
+      "gaze": {
+        "title": "Gaze navigation",
+        "description": "Select links and buttons just by looking at the screen, using the camera and eye tracking in the browser."
+      },
+      "gestures": {
+        "title": "Gesture control",
+        "description": "Scroll and trigger actions with a hand or face gesture, detected in real time with computer vision."
+      },
+      "voice": {
+        "title": "Voice commands",
+        "description": "Move between sections and read content with your voice, using the browser's built-in speech recognition."
+      }
+    }
+  },
+  "cv": {
+    "back": "Back to portfolio",
+    "downloadPdf": "Download resume as PDF",
+    "location": "Location",
+    "experience": "Experience",
+    "education": "Education",
+    "softwareEngineering": "Software Engineering",
+    "skills": "Skills",
+    "languages": "Languages",
+    "talks": "Talks as a speaker",
+    "awards": "Awards"
   },
   "footer": {
     "builtWith": "Built with Angular, accessibility, and community."

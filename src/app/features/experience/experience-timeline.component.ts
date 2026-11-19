@@ -18,23 +18,24 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       />
 
       <div class="timeline">
-        @for (item of experience; track item.role + item.company) {
-          <article class="timeline__item card">
-            <div>
-              <p class="meta">{{ item.period | t }} · {{ item.location | t }}</p>
-              <h3>{{ item.role | t }}</h3>
-              <strong>{{ item.company }}</strong>
-            </div>
+        @for (item of experience; track item.role + item.company; let i = $index) {
+          <article class="timeline__item" [attr.aria-labelledby]="'exp-role-' + i + ' exp-company-' + i">
+            <p class="timeline__period">
+              {{ item.period | t }}
+              <span>{{ item.location | t }}</span>
+            </p>
+            <h3 [id]="'exp-role-' + i">{{ item.role | t }}</h3>
+            <p class="timeline__company" [id]="'exp-company-' + i">{{ item.company }}</p>
             <ul>
               @for (responsibility of item.responsibilities; track responsibility) {
                 <li>{{ responsibility | t }}</li>
               }
             </ul>
-            <div class="tags" role="list" [attr.aria-label]="'a11y.usedTechnologies' | t">
+            <ul class="tags" [attr.aria-label]="'a11y.usedTechnologies' | t">
               @for (tech of item.technologies; track tech) {
-                <span role="listitem">{{ tech | t }}</span>
+                <li>{{ tech | t }}</li>
               }
-            </div>
+            </ul>
             <div class="achievement-list">
               @for (achievement of item.achievements; track achievement) {
                 <p>{{ achievement | t }}</p>

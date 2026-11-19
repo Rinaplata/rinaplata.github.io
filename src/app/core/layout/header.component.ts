@@ -6,13 +6,13 @@ import { LanguageSwitcherComponent } from '../../shared/components/language-swit
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 const NAV_ITEMS = [
-  { label: 'header.nav.home', fragment: 'inicio' },
   { label: 'header.nav.about', fragment: 'sobre-mi' },
   { label: 'header.nav.experience', fragment: 'experiencia' },
   { label: 'header.nav.talks', fragment: 'charlas' },
   { label: 'header.nav.communities', fragment: 'comunidades' },
   { label: 'header.nav.projects', fragment: 'proyectos' },
-  { label: 'header.nav.contact', fragment: 'redes-sociales' }
+  { label: 'header.nav.demos', fragment: 'demos' },
+  { label: 'header.nav.contact', fragment: 'contacto' }
 ];
 
 @Component({
@@ -24,7 +24,10 @@ const NAV_ITEMS = [
       <a class="skip-link" href="#main-content">{{ 'a11y.skipToMain' | t }}</a>
 
       <nav class="nav" [attr.aria-label]="'a11y.mainNavigation' | t">
-        <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()">Rina Plata</a>
+        <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()">
+          <img src="assets/images/rina/rina-avatar-192.jpg" width="32" height="32" alt="">
+          <span class="brand__name">Rina Plata</span>
+        </a>
 
         <button
           class="icon-button nav-toggle"
@@ -52,7 +55,6 @@ const NAV_ITEMS = [
             class="theme-toggle"
             type="button"
             [attr.aria-pressed]="theme.isDark()"
-            [attr.aria-label]="theme.isDark() ? ('a11y.themeLight' | t) : ('a11y.themeDark' | t)"
             (click)="theme.toggle()"
           >
             @if (theme.isDark()) {
@@ -65,24 +67,12 @@ const NAV_ITEMS = [
                 <path d="M18.7 4.2 19.4 6l1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7L18 6l.7-1.8ZM14.6 2l.45 1.15L16.2 3.6l-1.15.45L14.6 5.2l-.45-1.15L13 3.6l1.15-.45L14.6 2Z" />
               </svg>
             }
+            <span class="theme-toggle__label">{{ 'a11y.darkMode' | t }}</span>
           </button>
         </div>
       </nav>
     </header>
-  `,
-  styles: [`
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .nav-actions {
-        gap: 0.5rem;
-      }
-    }
-  `]
+  `
 })
 export class HeaderComponent {
   readonly theme = inject(ThemeService);

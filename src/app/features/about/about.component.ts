@@ -17,25 +17,24 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       />
 
       <div class="about__grid">
-        <img
-          src="assets/images/optimized/about-700.jpg"
-          width="520"
-          height="640"
-          loading="lazy"
-          decoding="async"
-          alt=""
-          aria-hidden="true"
-        >
+        <figure class="about__photo">
+          <img
+            src="assets/images/rina/rina-about-720.jpg"
+            srcset="assets/images/rina/rina-about-720.jpg 720w, assets/images/rina/rina-about-1080.jpg 1080w"
+            sizes="(max-width: 900px) 100vw, 460px"
+            width="720"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+            [alt]="'about.imageAlt' | t"
+          >
+          <figcaption>{{ 'about.photoCaption' | t }}</figcaption>
+        </figure>
         <div class="about__copy">
-          <p>
-            {{ 'about.paragraphs.0' | t }}
-          </p>
-          <p>
-            {{ 'about.paragraphs.1' | t }}
-          </p>
-          <p>
-            {{ 'about.paragraphs.2' | t }}
-          </p>
+          <p class="about__lead">{{ 'about.lead' | t }}</p>
+          <p>{{ 'about.paragraphs.0' | t }}</p>
+          <p>{{ 'about.paragraphs.1' | t }}</p>
+          <p>{{ 'about.paragraphs.2' | t }}</p>
         </div>
       </div>
     </section>

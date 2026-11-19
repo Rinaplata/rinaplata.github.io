@@ -2,12 +2,13 @@ import { Component, inject } from '@angular/core';
 import { COMMUNITIES } from '../../data/communities.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
 import { I18nService } from '../../core/services/i18n.service';
+import { ExternalLinkDirective } from '../../shared/directives/external-link.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-communities',
   standalone: true,
-  imports: [SectionHeadingComponent, TranslatePipe],
+  imports: [SectionHeadingComponent, ExternalLinkDirective, TranslatePipe],
   template: `
     <section class="section" id="comunidades" aria-labelledby="communities-title">
       <app-section-heading
@@ -18,8 +19,8 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       />
 
       <div class="cards-grid cards-grid--three">
-        @for (community of communities; track community.name) {
-          <article class="card community-card">
+        @for (community of communities; track community.name; let i = $index) {
+          <article class="card community-card" [attr.aria-labelledby]="'community-title-' + i">
             @if (community.image) {
               <img
                 class="community-card__logo"
@@ -33,7 +34,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
               >
             }
             <p class="meta">{{ community.role | t }}</p>
-            <h3>{{ community.name }}</h3>
+            <h3 [id]="'community-title-' + i">{{ community.name }}</h3>
             <p>{{ community.description | t }}</p>
             <strong>{{ 'communities.impactLabel' | t }}</strong>
             <p>{{ community.impact | t }}</p>

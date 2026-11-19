@@ -2,12 +2,13 @@ import { Component, inject } from '@angular/core';
 import { PROJECTS } from '../../data/projects.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
 import { I18nService } from '../../core/services/i18n.service';
+import { ExternalLinkDirective } from '../../shared/directives/external-link.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-projects-grid',
   standalone: true,
-  imports: [SectionHeadingComponent, TranslatePipe],
+  imports: [SectionHeadingComponent, ExternalLinkDirective, TranslatePipe],
   template: `
     <section class="section section--deep" id="proyectos" aria-labelledby="projects-title">
       <app-section-heading
@@ -18,8 +19,8 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       />
 
       <div class="projects-grid">
-        @for (project of projects; track project.name) {
-          <article class="project-card">
+        @for (project of projects; track project.name; let i = $index) {
+          <article class="project-card" [attr.aria-labelledby]="'project-title-' + i">
             <img
               [src]="project.image"
               width="560"
@@ -30,7 +31,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
               aria-hidden="true"
             >
             <div class="project-card__body">
-              <h3>{{ project.name | t }}</h3>
+              <h3 [id]="'project-title-' + i">{{ project.name | t }}</h3>
               <p>{{ project.description | t }}</p>
               <p class="impact">{{ project.impact | t }}</p>
               <div class="tags" role="list" [attr.aria-label]="'a11y.projectTechnologies' | t">

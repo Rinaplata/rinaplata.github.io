@@ -1,5 +1,8 @@
 {
   "a11y": {
+    "newTab": "se abre en una pestaña nueva",
+    "darkMode": "Modo oscuro",
+    "highlights": "Datos destacados",
     "mainNavigation": "Navegación principal",
     "skipToMain": "Saltar al contenido principal",
     "menuToggle": "Abrir o cerrar menú",
@@ -13,7 +16,7 @@
     "talkTopics": "Temas de la charla",
     "featuredTalks": "Charlas destacadas",
     "talkImages": "Imágenes de la charla",
-    "talkImageAlt": "{{ title }} presentado en {{ event }}",
+    "talkImageAlt": "Rina Plata en {{ event }}",
     "previousTalkImage": "Anterior: ver imagen anterior de la charla",
     "nextTalkImage": "Siguiente: ver siguiente imagen de la charla",
     "openTalkNewTab": "de la charla {{ title }}",
@@ -35,6 +38,7 @@
   },
   "header": {
     "nav": {
+      "demos": "Demos",
       "home": "Inicio",
       "about": "Sobre mí",
       "experience": "Experiencia",
@@ -47,10 +51,22 @@
     }
   },
   "hero": {
+    "status": "Disponible para charlas y colaboraciones",
+    "headline": {
+      "before": "Ingeniera de software que construye",
+      "accent": "web accesible",
+      "after": "para todas las personas."
+    },
+    "photoCaption": "Medellín, Colombia",
+    "stats": {
+      "years": "años de experiencia",
+      "talks": "charlas, paneles y entrevistas",
+      "communities": "comunidades que lidero o acompaño"
+    },
     "eyebrow": "Frontend · Accesibilidad · Comunidad · Identidad Wayuu",
     "role": "Ingeniera de software, desarrolladora frontend y líder comunitaria",
-    "description": "Construyo experiencias web modernas y accesibles, conectando tecnología, inclusión, liderazgo femenino y comunidades indígenas de Colombia.",
-    "imageAlt": "Rina Plata",
+    "description": "Soy mujer wayuu de San Juan del Cesar, La Guajira, Colombia. Construyo experiencias web modernas y accesibles, conectando tecnología, inclusión, liderazgo femenino y comunidades indígenas.",
+    "imageAlt": "Rina Plata sonriendo, con chaqueta negra y collar wayuu",
     "frontendCard": "Frontend",
     "frontendStack": "Angular · React · Accesibilidad",
     "communityCard": "Comunidad",
@@ -62,10 +78,12 @@
     }
   },
   "about": {
+    "lead": "Creo que la tecnología solo es buena si todas las personas pueden usarla.",
+    "photoCaption": "Con mi manta wayuu: mi identidad también está en mi código.",
     "eyebrow": "Acerca de",
     "title": "Más que código",
     "description": "Mi historia une ingeniería, frontend, comunidad e identidad wayuu.",
-    "imageAlt": "Rina Plata participando en un espacio de comunidad tecnológica",
+    "imageAlt": "Rina Plata con manta wayuu roja, sonriendo, sobre fondo naranja",
     "paragraphs": [
       "Soy Rina Plata, ingeniera de software con experiencia en desarrollo frontend, accesibilidad web y liderazgo comunitario. Entiendo la tecnología como una herramienta para abrir oportunidades, contar historias y crear productos más humanos.",
       "Me apasiona construir interfaces accesibles, claras y útiles. Trabajo con Angular, React, TypeScript, accesibilidad y buenas prácticas de UX para que las experiencias digitales funcionen bien para más personas. Actualmente, incorporo inteligencia artificial en mis proyectos para mejorar la eficiencia y la personalización, siempre con un enfoque ético y centrado en el usuario.",
@@ -76,6 +94,7 @@
     "title": "Resumen en lenguaje claro",
     "description": "Esta es la versión corta de este sitio.",
     "items": [
+      "Soy Rina Plata, mujer wayuu de San Juan del Cesar, La Guajira, e ingeniera de software.",
       "Construyo sitios y aplicaciones más fáciles de usar.",
       "Trabajo con equipos, comunidades y mujeres en tecnología.",
       "Comparto charlas sobre código, accesibilidad, identidad y aprendizaje.",
@@ -160,9 +179,16 @@
     }
   },
   "talks": {
+    "filterLabel": "Filtrar charlas por tipo",
+    "nowShowing": "Mostrando: {{ title }}",
+    "resultsCount": "{{ count }} resultados",
+    "playVideo": "Ver video aquí",
+    "videoTitle": "Video: {{ title }}",
+    "previousTalk": "Charla anterior",
+    "nextTalk": "Charla siguiente",
     "eyebrow": "Charlas y eventos",
     "title": "Speaker en tecnología, comunidad e inclusión",
-    "description": "Conferencias, paneles, entrevistas y podcasts sobre frontend, accesibilidad, identidad y liderazgo.",
+    "description": "Elige una charla de la lista para ver los detalles, los temas y, cuando hay grabación, el video.",
     "viewMore": "Ver más charlas",
     "allTalksTitle": "Todas las charlas, podcasts y entrevistas",
     "allTalksDescription": "Un recorrido completo por conferencias, paneles, podcasts, artículos y encuentros comunitarios.",
@@ -384,8 +410,8 @@
   },
   "achievements": {
     "eyebrow": "Logros",
-    "title": "Reconocimientos y participaciones",
-    "description": "Hitos que reflejan aprendizaje, representación y contribución.",
+    "title": "Hitos de mi camino",
+    "description": "Abre cada hito para conocer la historia detrás.",
     "featuredBadge": "Reconocimiento destacado",
     "viewRecognition": "Ver reconocimiento",
     "items": {
@@ -393,8 +419,20 @@
         "title": "Mujer destacada en el área de la tecnología",
         "description": "Reconocimiento otorgado por el Tecnológico de Antioquia Institución Universitaria por contribuciones en tecnología, liderazgo comunitario, WiDS, Women Techmakers y Guardianes Ancestrales.",
         "year": "Marzo 2024",
-        "alt": "Rina Plata sosteniendo el reconocimiento Mujer destacada en el área de tecnología otorgado por el Tecnológico de Antioquia",
+        "alt": "Rina Plata con su reconocimiento Mujer destacada en tecnología",
         "urlLabel": "Ver institución"
+      },
+      "master": {
+        "title": "Máster universitario en Innovación y Transformación Digital",
+        "description": "Actualmente curso este máster en la Universitat Oberta de Catalunya (UOC), para unir tecnología, estrategia e innovación con impacto social.",
+        "year": "En curso",
+        "urlLabel": "Ver el máster"
+      },
+      "certifications": {
+        "title": "18 licencias y certificaciones",
+        "description": "Sigo aprendiendo de forma continua. Puedes ver el detalle de mis 18 licencias y certificaciones en mi perfil de LinkedIn.",
+        "year": "LinkedIn",
+        "urlLabel": "Ver certificaciones en LinkedIn"
       },
       "jsconf": {
         "title": "Speaker en JSConf",
@@ -419,15 +457,72 @@
     }
   },
   "contact": {
+    "copy": "Copiar correo",
+    "copied": "¡Copiado!",
+    "copiedAnnouncement": "Correo copiado al portapapeles",
+    "form": {
+      "details": "Tus datos y mensaje",
+      "reason": "¿Sobre qué quieres hablar?",
+      "reasons": {
+        "talk": "Charla o evento",
+        "collaboration": "Colaboración",
+        "mentoring": "Mentoría",
+        "other": "Otro tema"
+      },
+      "name": "Tu nombre",
+      "message": "Mensaje",
+      "required": "obligatorio",
+      "hint": "Se abrirá tu aplicación de correo con el mensaje listo.",
+      "error": "Escribe un mensaje antes de continuar.",
+      "submit": "Abrir en mi correo"
+    },
+    "headline": {
+      "before": "Cuéntame tu",
+      "accent": "idea.",
+      "after": ""
+    },
     "eyebrow": "Contacto",
     "title": "Hablemos de tecnología, comunidad o colaboración",
-    "description": "Conversemos por mis canales principales para colaborar, construir comunidad o compartir ideas.",
+    "description": "Elige un motivo, escribe tu mensaje y se abrirá tu correo listo para enviar.",
     "email": "Correo",
     "sendMessage": "Enviar mensaje",
     "openLink": "Abrir enlace",
     "cv": "Currículo",
     "downloadPDF": "Descargar PDF",
     "newTab": ""
+  },
+  "demos": {
+    "eyebrow": "Laboratorio",
+    "title": "Demos en construcción",
+    "description": "Experimentos que estoy construyendo para controlar la web sin mouse ni teclado. Nacen de mis charlas y pronto podrás probarlos aquí.",
+    "status": "En construcción",
+    "note": "¿Quieres probarlos antes o colaborar? Escríbeme desde la sección de contacto.",
+    "items": {
+      "gaze": {
+        "title": "Navegación con la mirada",
+        "description": "Seleccionar enlaces y botones solo mirando la pantalla, usando la cámara y seguimiento ocular en el navegador."
+      },
+      "gestures": {
+        "title": "Control con gestos",
+        "description": "Desplazarse y activar acciones con un gesto de la mano o del rostro, detectado en tiempo real con visión por computador."
+      },
+      "voice": {
+        "title": "Comandos de voz",
+        "description": "Navegar por las secciones y leer contenido con la voz, usando el reconocimiento de voz nativo del navegador."
+      }
+    }
+  },
+  "cv": {
+    "back": "Volver al portafolio",
+    "downloadPdf": "Descargar CV en PDF",
+    "location": "Ubicación",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "softwareEngineering": "Ingeniería de Software",
+    "skills": "Habilidades",
+    "languages": "Idiomas",
+    "talks": "Charlas como speaker",
+    "awards": "Reconocimientos"
   },
   "footer": {
     "builtWith": "Construido con Angular, accesibilidad y comunidad."

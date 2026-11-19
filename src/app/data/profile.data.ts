@@ -3,7 +3,6 @@ export const PROFILE = {
   roleKey: 'hero.role',
   email: 'rinamarcelaplata@gmail.com',
   location: 'Medellín, Antioquia, Colombia',
-  cv: 'assets/pdf/Rina_Plata_Frontend_EN.pdf',
   guardianesUrl: 'https://guardianesancestrales.com/#about',
   socials: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rina-plata/', icon: 'linkedin' },

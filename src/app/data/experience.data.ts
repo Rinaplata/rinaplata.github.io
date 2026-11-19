@@ -19,7 +19,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     role: 'experience.items.freelance.role',
-    company: 'freelance',
+    company: 'Freelance',
     period: 'experience.items.freelance.period',
     location: 'experience.items.freelance.location',
     technologies: ['.NET', 'Blazor', 'Angular', 'skills.items.webAccessibility', 'skills.items.webApplications', 'skills.items.softwareQuality'],

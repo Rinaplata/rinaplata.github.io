@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "cv:pdf": "node scripts/generate-cv-pdf.mjs"
   },
   "dependencies": {
     "@angular/animations": "^21.2.11",

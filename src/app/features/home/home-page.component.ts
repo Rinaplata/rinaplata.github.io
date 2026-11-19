@@ -3,6 +3,7 @@ import { AboutComponent } from '../about/about.component';
 import { AchievementsComponent } from '../achievements/achievements.component';
 import { CommunitiesComponent } from '../communities/communities.component';
 import { ContactComponent } from '../contact/contact.component';
+import { DemosComponent } from '../demos/demos.component';
 import { ExperienceTimelineComponent } from '../experience/experience-timeline.component';
 import { HeroComponent } from './hero.component';
 import { ProjectsGridComponent } from '../projects/projects-grid.component';
@@ -20,6 +21,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     TalksGalleryComponent,
     CommunitiesComponent,
     ProjectsGridComponent,
+    DemosComponent,
     SkillsComponent,
     AchievementsComponent,
     ContactComponent,
@@ -36,6 +38,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
           <li>{{ 'plain.items.1' | t }}</li>
           <li>{{ 'plain.items.2' | t }}</li>
           <li>{{ 'plain.items.3' | t }}</li>
+          <li>{{ 'plain.items.4' | t }}</li>
         </ul>
       </div>
     </section>
@@ -61,6 +64,11 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     }
     @defer (on idle) {
       <app-projects-grid />
+    } @placeholder {
+      <div class="section-defer-placeholder" aria-hidden="true"></div>
+    }
+    @defer (on idle) {
+      <app-demos />
     } @placeholder {
       <div class="section-defer-placeholder" aria-hidden="true"></div>
     }

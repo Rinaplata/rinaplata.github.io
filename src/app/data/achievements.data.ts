@@ -15,6 +15,20 @@ export const ACHIEVEMENTS: Achievement[] = [
     urlLabel: 'achievements.items.featured.urlLabel'
   },
   {
+    title: 'achievements.items.master.title',
+    description: 'achievements.items.master.description',
+    year: 'achievements.items.master.year',
+    url: 'https://www.uoc.edu/es/estudios/masters/master-universitario-innovacion-transformacion-digital',
+    urlLabel: 'achievements.items.master.urlLabel'
+  },
+  {
+    title: 'achievements.items.certifications.title',
+    description: 'achievements.items.certifications.description',
+    year: 'achievements.items.certifications.year',
+    url: 'https://www.linkedin.com/in/rina-plata/details/certifications/',
+    urlLabel: 'achievements.items.certifications.urlLabel'
+  },
+  {
     title: 'achievements.items.jsconf.title',
     description: 'achievements.items.jsconf.description',
     year: '2023 - 2026'
