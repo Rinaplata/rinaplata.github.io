@@ -1,5 +1,6 @@
 {
   "a11y": {
+    "breadcrumb": "Ruta de navegación",
     "newTab": "se abre en una pestaña nueva",
     "darkMode": "Modo oscuro",
     "highlights": "Datos destacados",
@@ -122,7 +123,7 @@
       },
       "freelance": {
         "role": "Desarrolladora freelance",
-        "period": "Nov 2025 - Actualidad",
+        "period": "Nov 2025 - Sep 2026",
         "location": "Medellín, Antioquia, Colombia · En remoto",
         "responsibilities": [
           "Desarrollo de aplicaciones web seguras, escalables y de alta calidad.",
@@ -525,11 +526,16 @@
     "awards": "Reconocimientos"
   },
   "pageTitles": {
+    "talksShort": "Charlas",
+    "cvShort": "Currículo",
+    "accessibility": "Accesibilidad | Rina Plata",
+    "accessibilityShort": "Accesibilidad",
     "home": "Rina Plata | Ingeniería de software, frontend y comunidad",
     "talks": "Charlas, podcasts y entrevistas | Rina Plata",
     "cv": "Currículo | Rina Plata"
   },
   "footer": {
+    "accessibility": "Accesibilidad y glosario",
     "builtWith": "Construido con Angular, accesibilidad y comunidad."
   },
   "common": {
@@ -541,5 +547,193 @@
     "preferredLanguageSaved": "Tu idioma preferido se guardará automáticamente",
     "switchToSpanish": "Cambiar a Español",
     "switchToEnglish": "Switch to English"
+  },
+  "preferences": {
+    "title": "Ajustes",
+    "theme": {
+      "label": "Tema",
+      "light": "Claro",
+      "dark": "Oscuro"
+    },
+    "textSize": {
+      "label": "Tamaño del texto",
+      "normal": "Normal",
+      "large": "Grande",
+      "xlarge": "Muy grande"
+    },
+    "spacing": {
+      "label": "Espaciado del texto",
+      "normal": "Normal",
+      "wide": "Amplio"
+    },
+    "contrast": {
+      "label": "Contraste",
+      "normal": "Normal",
+      "high": "Alto"
+    },
+    "motion": {
+      "label": "Animaciones",
+      "normal": "Activadas",
+      "reduced": "Reducidas"
+    },
+    "reset": "Restablecer",
+    "moreInfo": "Accesibilidad y glosario"
+  },
+  "accessibilityPage": {
+    "title": "Accesibilidad",
+    "intro": "Este portafolio busca cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 en su nivel más alto, AAA. Aquí explico cómo adaptar el sitio, qué significan algunos términos y en qué estado está cada requisito.",
+    "preferences": {
+      "title": "Adapta el sitio a tu manera",
+      "description": "Usa el botón «Ajustes» en la parte superior de cualquier página. Tus elecciones se guardan en este navegador.",
+      "items": [
+        "Tema claro u oscuro.",
+        "Tamaño del texto: normal, grande o muy grande.",
+        "Espaciado amplio entre líneas, letras, palabras y párrafos.",
+        "Contraste alto, con colores puros y bordes marcados.",
+        "Animaciones reducidas, para evitar movimiento en pantalla."
+      ]
+    },
+    "glossary": {
+      "title": "Glosario",
+      "description": "Palabras que aparecen en el sitio y que pueden ser poco comunes.",
+      "pronunciationLabel": "Se pronuncia",
+      "terms": {
+        "wayuu": {
+          "term": "Wayuu",
+          "pronunciation": "ua-YÚU",
+          "definition": "Pueblo indígena de la península de La Guajira, entre Colombia y Venezuela. Rina es mujer wayuu de San Juan del Cesar."
+        },
+        "wayuunaiki": {
+          "term": "Wayuunaiki",
+          "pronunciation": "ua-yuu-NÁI-ki",
+          "definition": "Lengua del pueblo wayuu. Es una de las lenguas nativas de Rina."
+        },
+        "manta": {
+          "term": "Manta wayuu",
+          "definition": "Vestido largo, amplio y colorido que usan las mujeres wayuu. Es una prenda de identidad cultural."
+        },
+        "accessibility": {
+          "term": "Accesibilidad web",
+          "definition": "Diseñar y programar sitios para que todas las personas puedan usarlos, incluidas las personas con discapacidad."
+        },
+        "screenReader": {
+          "term": "Lector de pantalla",
+          "definition": "Programa que lee en voz alta el contenido de la pantalla. Lo usan, por ejemplo, personas ciegas o con baja visión."
+        },
+        "frontend": {
+          "term": "Frontend",
+          "definition": "La parte de un sitio o aplicación que las personas ven y usan: botones, textos, formularios y diseño."
+        },
+        "speaker": {
+          "term": "Speaker",
+          "definition": "Persona que da una charla en un evento o conferencia."
+        },
+        "hackathon": {
+          "term": "Hackathon",
+          "definition": "Evento en el que equipos crean soluciones tecnológicas en poco tiempo, normalmente uno o dos días."
+        },
+        "mediapipe": {
+          "term": "MediaPipe",
+          "definition": "Herramienta de Google que reconoce manos, rostros y gestos usando la cámara."
+        },
+        "webgazer": {
+          "term": "WebGazer.js",
+          "definition": "Librería de JavaScript que estima hacia dónde mira una persona usando la cámara del computador."
+        },
+        "speechApi": {
+          "term": "Web Speech API",
+          "definition": "Función de los navegadores que permite reconocer la voz y convertir texto en voz."
+        }
+      }
+    },
+    "abbreviations": {
+      "title": "Siglas y abreviaturas",
+      "items": {
+        "wcag": {
+          "short": "WCAG",
+          "long": "Web Content Accessibility Guidelines: Pautas de Accesibilidad para el Contenido Web."
+        },
+        "ia": {
+          "short": "IA",
+          "long": "Inteligencia artificial."
+        },
+        "ux": {
+          "short": "UX",
+          "long": "User experience: experiencia de usuario."
+        },
+        "api": {
+          "short": "API",
+          "long": "Application Programming Interface: interfaz que permite que dos programas se comuniquen."
+        },
+        "uoc": {
+          "short": "UOC",
+          "long": "Universitat Oberta de Catalunya."
+        },
+        "pdf": {
+          "short": "PDF",
+          "long": "Portable Document Format: formato de documento para descargar o imprimir."
+        },
+        "html": {
+          "short": "HTML",
+          "long": "HyperText Markup Language: lenguaje que define la estructura de una página web."
+        },
+        "css": {
+          "short": "CSS",
+          "long": "Cascading Style Sheets: lenguaje que define el diseño de una página web."
+        },
+        "wids": {
+          "short": "WiDS",
+          "long": "Women in Data Science: comunidad de mujeres en ciencia de datos."
+        }
+      }
+    },
+    "status": {
+      "title": "Estado de cumplimiento (nivel AAA)",
+      "description": "Resultado de pruebas automáticas (axe, Lighthouse, WAVE e IBM Equal Access) y de pruebas con teclado. Falta validarlo con personas usuarias de tecnologías de apoyo.",
+      "caption": "Criterios WCAG 2.2 de nivel AAA, cómo se cumplen y su estado",
+      "criterion": "Criterio",
+      "how": "Cómo se cumple",
+      "state": "Estado",
+      "labels": {
+        "meets": "Cumple",
+        "partial": "Pendiente",
+        "na": "No aplica"
+      },
+      "items": {
+        "contrast": "Contraste de al menos 7:1 en texto normal, en tema claro y oscuro.",
+        "presentation": "Panel de ajustes con tema, tamaño, espaciado y contraste; líneas de menos de 80 caracteres y texto sin justificar.",
+        "imagesOfText": "No hay imágenes de texto; solo fotos de eventos con texto incidental.",
+        "keyboard": "Todo se puede usar solo con teclado.",
+        "motion": "Las animaciones se pueden reducir desde Ajustes o desde el sistema.",
+        "location": "Migas de pan y títulos de página indican dónde estás.",
+        "linkPurpose": "Cada enlace se entiende por su propio texto.",
+        "headings": "El contenido está organizado con encabezados de sección.",
+        "focusNotObscured": "Nada tapa el elemento que tiene el foco: el encabezado no es fijo y los menús se cierran al salir de ellos.",
+        "focusAppearance": "Contorno de foco de 3 px con alto contraste.",
+        "targetSize": "Botones y enlaces de al menos 44 × 44 px, salvo enlaces dentro de un párrafo.",
+        "unusualWords": "Glosario con los términos poco comunes.",
+        "abbreviations": "Lista de siglas con su significado.",
+        "readingLevel": "Resumen en lenguaje claro al inicio del sitio.",
+        "pronunciation": "El glosario indica cómo se pronuncian las palabras en wayuunaiki.",
+        "changeOnRequest": "Nada cambia sin que lo pidas; los enlaces que abren una pestaña nueva lo indican.",
+        "help": "El formulario de contacto explica qué pasará y qué campos son obligatorios.",
+        "errorPrevention": "El formulario abre tu correo para que revises el mensaje antes de enviarlo.",
+        "video": "Los videos de YouTube de las charlas tienen subtítulos automáticos, pero aún no tienen lengua de señas, audiodescripción extendida ni transcripción completa.",
+        "notApplicable": "El sitio no tiene audio en directo ni de fondo, límites de tiempo, sesiones ni inicio de sesión."
+      }
+    },
+    "limits": {
+      "title": "Limitaciones conocidas",
+      "items": [
+        "Los videos de las charlas están en YouTube y no cuentan con interpretación en lengua de señas ni transcripción completa.",
+        "Algunos enlaces llevan a sitios externos (LinkedIn, YouTube, sitios de eventos) cuya accesibilidad no depende de este portafolio.",
+        "Algunas fotos de eventos contienen texto en pancartas o carteles; su descripción alternativa resume lo importante."
+      ]
+    },
+    "feedback": {
+      "title": "¿Encontraste una barrera?",
+      "description": "Cuéntamelo para corregirla. Escríbeme a"
+    },
+    "updated": "Última revisión: noviembre de 2026."
   }
 }

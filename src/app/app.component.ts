@@ -6,6 +6,7 @@ import { FooterComponent } from './core/layout/footer.component';
 import { HeaderComponent } from './core/layout/header.component';
 import { FocusService } from './core/services/focus.service';
 import { I18nService } from './core/services/i18n.service';
+import { PreferencesService } from './core/services/preferences.service';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ export class AppComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly focus = inject(FocusService);
   private readonly i18n = inject(I18nService);
+  private readonly preferences = inject(PreferencesService);
   private readonly destroyRef = inject(DestroyRef);
   private firstNavigation = true;
   private titleKey = 'pageTitles.home';

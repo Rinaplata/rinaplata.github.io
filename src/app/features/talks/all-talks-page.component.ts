@@ -3,15 +3,17 @@ import { RouterLink } from '@angular/router';
 import { TALKS } from '../../data/talks.data';
 import { SectionHeadingComponent } from '../../shared/components/section-heading.component';
 import { I18nService } from '../../core/services/i18n.service';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb.component';
 import { ExternalLinkDirective } from '../../shared/directives/external-link.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-all-talks-page',
   standalone: true,
-  imports: [RouterLink, SectionHeadingComponent, ExternalLinkDirective, TranslatePipe],
+  imports: [RouterLink, BreadcrumbComponent, SectionHeadingComponent, ExternalLinkDirective, TranslatePipe],
   template: `
-    <section id="/charlas" class="section section--warm talks-page" aria-labelledby="all-talks-title">
+    <section class="section section--warm talks-page" aria-labelledby="all-talks-title">
+      <app-breadcrumb current="pageTitles.talksShort" />
       <app-section-heading
         [eyebrow]="'talks.eyebrow' | t"
         [title]="'talks.allTalksTitle' | t"

@@ -25,6 +25,13 @@
         if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark');
         }
+        var p = JSON.parse(localStorage.getItem('reading-preferences') || '{}');
+        var c = document.documentElement.classList;
+        if (p.textSize === 'large') c.add('text-large');
+        if (p.textSize === 'xlarge') c.add('text-xlarge');
+        if (p.spacing === 'wide') c.add('spacing-wide');
+        if (p.contrast === 'high') c.add('contrast-high');
+        if (p.motion === 'reduced') c.add('motion-reduced');
       } catch (e) {}
     </script>
   </head>

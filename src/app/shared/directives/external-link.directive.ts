@@ -26,6 +26,20 @@ export class ExternalLinkDirective implements AfterViewInit {
     anchor.target = '_blank';
     anchor.rel = 'noopener noreferrer';
 
+    const visibleText = [...anchor.childNodes]
+      .filter(node => !(node instanceof HTMLElement && (node.classList.contains('sr-only') || node.getAttribute('aria-hidden') === 'true')))
+      .map(node => node.textContent ?? '')
+      .join('')
+      .trim();
+
+    if (visibleText && !anchor.querySelector('.button__arrow')) {
+      const icon = document.createElement('span');
+      icon.className = 'external-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = '↗';
+      anchor.appendChild(icon);
+    }
+
     const hint = document.createElement('span');
     hint.className = 'sr-only';
     anchor.appendChild(hint);

@@ -1,5 +1,6 @@
 {
   "a11y": {
+    "breadcrumb": "Breadcrumb",
     "newTab": "opens in a new tab",
     "darkMode": "Dark mode",
     "highlights": "Highlights",
@@ -122,7 +123,7 @@
       },
       "freelance": {
         "role": "Freelance Developer",
-        "period": "Nov 2025 - Present",
+        "period": "Nov 2025 - Sep 2026",
         "location": "Medellin, Antioquia, Colombia · Remote",
         "responsibilities": [
           "Build secure, scalable web apps.",
@@ -525,11 +526,16 @@
     "awards": "Awards"
   },
   "pageTitles": {
+    "talksShort": "Talks",
+    "cvShort": "Resume",
+    "accessibility": "Accessibility | Rina Plata",
+    "accessibilityShort": "Accessibility",
     "home": "Rina Plata | Software engineering, frontend, and community",
     "talks": "Talks, podcasts, and interviews | Rina Plata",
     "cv": "Resume | Rina Plata"
   },
   "footer": {
+    "accessibility": "Accessibility and glossary",
     "builtWith": "Built with Angular, accessibility, and community."
   },
   "common": {
@@ -541,5 +547,193 @@
     "preferredLanguageSaved": "Your preferred language will be saved automatically",
     "switchToSpanish": "Switch to Spanish",
     "switchToEnglish": "Switch to English"
+  },
+  "preferences": {
+    "title": "Settings",
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "textSize": {
+      "label": "Text size",
+      "normal": "Normal",
+      "large": "Large",
+      "xlarge": "Extra large"
+    },
+    "spacing": {
+      "label": "Text spacing",
+      "normal": "Normal",
+      "wide": "Wide"
+    },
+    "contrast": {
+      "label": "Contrast",
+      "normal": "Normal",
+      "high": "High"
+    },
+    "motion": {
+      "label": "Animations",
+      "normal": "On",
+      "reduced": "Reduced"
+    },
+    "reset": "Reset",
+    "moreInfo": "Accessibility and glossary"
+  },
+  "accessibilityPage": {
+    "title": "Accessibility",
+    "intro": "This portfolio aims to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at their highest level, AAA. Here you can see how to adapt the site, what some terms mean, and the status of each requirement.",
+    "preferences": {
+      "title": "Adapt the site your way",
+      "description": "Use the “Settings” button at the top of any page. Your choices are saved in this browser.",
+      "items": [
+        "Light or dark theme.",
+        "Text size: normal, large, or extra large.",
+        "Wide spacing between lines, letters, words, and paragraphs.",
+        "High contrast, with pure colors and strong borders.",
+        "Reduced animations, to avoid motion on screen."
+      ]
+    },
+    "glossary": {
+      "title": "Glossary",
+      "description": "Words used on this site that may be unfamiliar.",
+      "pronunciationLabel": "Pronounced",
+      "terms": {
+        "wayuu": {
+          "term": "Wayuu",
+          "pronunciation": "wah-YOO",
+          "definition": "Indigenous people of the La Guajira peninsula, between Colombia and Venezuela. Rina is a Wayuu woman from San Juan del Cesar."
+        },
+        "wayuunaiki": {
+          "term": "Wayuunaiki",
+          "pronunciation": "wah-yoo-NIGH-kee",
+          "definition": "Language of the Wayuu people. It is one of Rina's native languages."
+        },
+        "manta": {
+          "term": "Wayuu manta",
+          "definition": "Long, loose, colorful dress worn by Wayuu women. It is a garment of cultural identity."
+        },
+        "accessibility": {
+          "term": "Web accessibility",
+          "definition": "Designing and coding websites so everyone can use them, including people with disabilities."
+        },
+        "screenReader": {
+          "term": "Screen reader",
+          "definition": "Software that reads screen content aloud. It is used, for example, by blind people or people with low vision."
+        },
+        "frontend": {
+          "term": "Frontend",
+          "definition": "The part of a website or app that people see and use: buttons, text, forms, and layout."
+        },
+        "speaker": {
+          "term": "Speaker",
+          "definition": "A person who gives a talk at an event or conference."
+        },
+        "hackathon": {
+          "term": "Hackathon",
+          "definition": "An event where teams build tech solutions in a short time, usually one or two days."
+        },
+        "mediapipe": {
+          "term": "MediaPipe",
+          "definition": "A Google tool that recognizes hands, faces, and gestures using the camera."
+        },
+        "webgazer": {
+          "term": "WebGazer.js",
+          "definition": "A JavaScript library that estimates where a person is looking using the computer's camera."
+        },
+        "speechApi": {
+          "term": "Web Speech API",
+          "definition": "A browser feature that recognizes speech and turns text into speech."
+        }
+      }
+    },
+    "abbreviations": {
+      "title": "Abbreviations",
+      "items": {
+        "wcag": {
+          "short": "WCAG",
+          "long": "Web Content Accessibility Guidelines."
+        },
+        "ia": {
+          "short": "AI",
+          "long": "Artificial intelligence (IA in Spanish)."
+        },
+        "ux": {
+          "short": "UX",
+          "long": "User experience."
+        },
+        "api": {
+          "short": "API",
+          "long": "Application Programming Interface: a way for two programs to talk to each other."
+        },
+        "uoc": {
+          "short": "UOC",
+          "long": "Universitat Oberta de Catalunya (Open University of Catalonia)."
+        },
+        "pdf": {
+          "short": "PDF",
+          "long": "Portable Document Format: a document format for downloading or printing."
+        },
+        "html": {
+          "short": "HTML",
+          "long": "HyperText Markup Language: defines the structure of a web page."
+        },
+        "css": {
+          "short": "CSS",
+          "long": "Cascading Style Sheets: defines the design of a web page."
+        },
+        "wids": {
+          "short": "WiDS",
+          "long": "Women in Data Science: a community of women in data science."
+        }
+      }
+    },
+    "status": {
+      "title": "Conformance status (level AAA)",
+      "description": "Based on automated tests (axe, Lighthouse, WAVE, and IBM Equal Access) and keyboard testing. It still needs validation with people who use assistive technologies.",
+      "caption": "WCAG 2.2 level AAA criteria, how they are met, and their status",
+      "criterion": "Criterion",
+      "how": "How it is met",
+      "state": "Status",
+      "labels": {
+        "meets": "Meets",
+        "partial": "Pending",
+        "na": "Not applicable"
+      },
+      "items": {
+        "contrast": "Contrast of at least 7:1 for normal text, in light and dark themes.",
+        "presentation": "Settings panel with theme, size, spacing, and contrast; lines under 80 characters and no justified text.",
+        "imagesOfText": "No images of text; only event photos with incidental text.",
+        "keyboard": "Everything works with a keyboard alone.",
+        "motion": "Animations can be reduced in Settings or in the operating system.",
+        "location": "Breadcrumbs and page titles show where you are.",
+        "linkPurpose": "Every link makes sense from its own text.",
+        "headings": "Content is organized with section headings.",
+        "focusNotObscured": "Nothing covers the focused element: the header is not fixed and menus close when you leave them.",
+        "focusAppearance": "3 px high-contrast focus outline.",
+        "targetSize": "Buttons and links are at least 44 × 44 px, except links inside a paragraph.",
+        "unusualWords": "A glossary explains unusual terms.",
+        "abbreviations": "A list explains abbreviations.",
+        "readingLevel": "A plain-language summary at the start of the site.",
+        "pronunciation": "The glossary shows how to pronounce Wayuunaiki words.",
+        "changeOnRequest": "Nothing changes unless you ask; links that open a new tab say so.",
+        "help": "The contact form explains what will happen and which fields are required.",
+        "errorPrevention": "The form opens your email app so you can review the message before sending it.",
+        "video": "The talk videos on YouTube have automatic captions but no sign language, extended audio description, or full transcript yet.",
+        "notApplicable": "The site has no live or background audio, time limits, sessions, or sign-in."
+      }
+    },
+    "limits": {
+      "title": "Known limitations",
+      "items": [
+        "Talk videos are hosted on YouTube and do not have sign language interpretation or full transcripts.",
+        "Some links go to external sites (LinkedIn, YouTube, event sites) whose accessibility does not depend on this portfolio.",
+        "Some event photos include text on banners or signs; their alternative text summarizes what matters."
+      ]
+    },
+    "feedback": {
+      "title": "Found a barrier?",
+      "description": "Let me know so I can fix it. Email me at"
+    },
+    "updated": "Last reviewed: November 2026."
   }
 }

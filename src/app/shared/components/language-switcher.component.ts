@@ -36,7 +36,7 @@ import { TranslatePipe } from '../pipes/translate.pipe';
 
     .language-button {
       min-width: 44px;
-      min-height: 38px;
+      min-height: 44px;
       padding: 0 0.7rem;
       border: 0;
       border-radius: 999px;

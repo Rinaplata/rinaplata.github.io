@@ -6,6 +6,7 @@ import { PROFILE } from '../../data/profile.data';
 import { SKILLS } from '../../data/skills.data';
 import { TALKS } from '../../data/talks.data';
 import { I18nService } from '../../core/services/i18n.service';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb.component';
 import { ExternalLinkDirective } from '../../shared/directives/external-link.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
@@ -17,9 +18,10 @@ const CV_PDF = {
 @Component({
   selector: 'app-cv-page',
   standalone: true,
-  imports: [RouterLink, ExternalLinkDirective, TranslatePipe],
+  imports: [RouterLink, BreadcrumbComponent, ExternalLinkDirective, TranslatePipe],
   template: `
     <article class="cv" aria-labelledby="cv-title">
+      <app-breadcrumb current="pageTitles.cvShort" />
       <div class="cv__actions">
         <a class="button" routerLink="/" fragment="contacto">
           <span class="button__arrow" aria-hidden="true">←</span> {{ 'cv.back' | t }}
