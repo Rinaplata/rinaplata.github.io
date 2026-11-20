@@ -173,11 +173,10 @@ button {
 }
 
 .skip-link {
-  position: fixed;
-  left: 1rem;
-  top: 1rem;
+  position: absolute;
+  left: -1000px;
+  top: 0.75rem;
   z-index: 50;
-  transform: translateY(-200%);
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -190,7 +189,7 @@ button {
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+  left: 1rem;
 }
 
 .route-fragment-anchor {
